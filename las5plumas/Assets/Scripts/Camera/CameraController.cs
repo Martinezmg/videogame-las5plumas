@@ -1,120 +1,131 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
-public class CameraController : MonoBehaviour {
-    public Transform target;
-
-
-    //Para la suavidad del movimiento
-    [Header("Transform smoothness")]
-    public float lerpSmothness = 1f;
-    [Range(0, 1)]
-    public float quaternionLerpSmothness = 0.05f;
-    
-    //Para controllador del zoom de la camara
-    [Header("Zoom controller")]
-    public float sizeCameraTimer = 1.5f;
-    [Space(10)]
-    public float baseCameraSize;
-    public float currentCameraSize;
-    public float minSizeCamera = -2f;
-    public float maxSizeCamera = 2f;
-    [Space(10)]
-    public float sizeCameraSmothness = 1f;
-    
-    private Camera thisCamera;
-
-    private IEnumerator ccurrentZoomTimer;
-
-    //misc
-    private bool idle = true;
-    
-    private void Start()
+namespace Project.Game
+{
+    [RequireComponent(typeof(Camera))]
+    public class CameraController : MonoBehaviour
     {
-        //this is for camera manager
-        CameraManager.camer.transformc = transform;
-        
-        transform.position = target.position;
-        transform.rotation = target.rotation;
+        public Transform target;
+        public Transform menuTarget;
+        private Transform lastTarget;
 
-        //zooming controller
-        thisCamera = GetComponent<Camera>();
-        baseCameraSize = thisCamera.orthographicSize;
-        currentCameraSize = baseCameraSize;
-    }
-    
 
-    private void Update()
-    {
+        //Para la suavidad del movimiento
+        [Header("Transform smoothness")]
+        public float lerpSmothness = 1f;
+        [Range(0, 1)]
+        public float quaternionLerpSmothness = 0.05f;
 
-    #region MoveToPoint
-        if (!idle)
+        //Para controllador del zoom de la camara
+        [Header("Zoom controller")]
+        public float sizeCameraTimer = 1.5f;
+        [Space(10)]
+        public float baseCameraSize;
+        public float currentCameraSize;
+        public float minSizeCamera = -2f;
+        public float maxSizeCamera = 2f;
+        [Space(10)]
+        public float sizeCameraSmothness = 1f;
+
+        private IEnumerator ccurrentZoomTimer;
+
+        //misc
+        private bool idle = true;
+
+        private void Start()
         {
-            MoveToNewTarget();
+
+            transform.position = target.position;
+            transform.rotation = target.rotation;
+
+            //zooming controller
+            baseCameraSize = Camera.main.orthographicSize;
+            currentCameraSize = baseCameraSize;
         }
-    #endregion
-
-    #region ZoomController
-        currentCameraSize -= Input.GetAxis("Mouse ScrollWheel") * sizeCameraSmothness;
-        currentCameraSize = Mathf.Clamp(currentCameraSize, baseCameraSize - minSizeCamera, baseCameraSize + maxSizeCamera);
-        
-        thisCamera.orthographicSize = Mathf.Lerp(thisCamera.orthographicSize, currentCameraSize, Time.deltaTime * sizeCameraSmothness);
 
 
-        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        private void Update()
         {
-            if (ccurrentZoomTimer != null)
+
+            #region MoveToPoint
+            if (!idle)
             {
-                StopCoroutine(ccurrentZoomTimer);
+                MoveToNewTarget();
             }
+            #endregion
 
-            ccurrentZoomTimer = CZoomTimer();
-            StartCoroutine(ccurrentZoomTimer);
-            
+            #region ZoomController
+            currentCameraSize -= Input.GetAxis("Mouse ScrollWheel") * sizeCameraSmothness;
+            currentCameraSize = Mathf.Clamp(currentCameraSize, baseCameraSize - minSizeCamera, baseCameraSize + maxSizeCamera);
+
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, currentCameraSize, Time.deltaTime * sizeCameraSmothness);
+
+
+            if (Input.GetAxis("Mouse ScrollWheel") != 0)
+            {
+                if (ccurrentZoomTimer != null)
+                {
+                    StopCoroutine(ccurrentZoomTimer);
+                }
+
+                ccurrentZoomTimer = CZoomTimer();
+                StartCoroutine(ccurrentZoomTimer);
+
+            }
+            #endregion
+
+            if (Input.GetMouseButton(2))
+            {
+
+            }
         }
-        #endregion
 
-        if (Input.GetMouseButton(2)) 
+        private IEnumerator CZoomTimer()
         {
+            yield return new WaitForSeconds(sizeCameraTimer);
 
+            while (currentCameraSize > 0.1f || currentCameraSize < -.01f)
+            {
+                currentCameraSize = Mathf.Lerp(currentCameraSize, baseCameraSize, Time.deltaTime * sizeCameraSmothness);
+                yield return null;
+            }
         }
-    }
 
-    private IEnumerator CZoomTimer()
-    {
-        yield return new WaitForSeconds(sizeCameraTimer);
-        
-        while (currentCameraSize > 0.1f || currentCameraSize < -.01f)
+        public void SetNewTarget(Transform t)
         {
-            currentCameraSize = Mathf.Lerp(currentCameraSize, baseCameraSize, Time.deltaTime * sizeCameraSmothness);
-            yield return null;
+            target = t;
+
+            idle = false;
         }
-    }
 
-    public void SetNewTarget(Transform t)
-    {
-        target = t;
-
-        idle = false;
-    }
-
-    private void MoveToNewTarget()
-    {
-        float distanceA = Vector3.Distance(transform.position, target.position);
-        float distanceB = Vector3.Distance(transform.eulerAngles, target.eulerAngles);
-
-        if (distanceA > 0.1f && distanceB > 0.1f)
+        private void MoveToNewTarget()
         {
-            transform.position = Vector3.Slerp(transform.position, target.position, Time.deltaTime * lerpSmothness);
+            float distanceA = Vector3.Distance(transform.position, target.position);
+            float distanceB = Vector3.Distance(transform.eulerAngles, target.eulerAngles);
 
-            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, quaternionLerpSmothness);
+            if (distanceA > 0.1f && distanceB > 0.1f)
+            {
+                transform.position = Vector3.Slerp(transform.position, target.position, Time.deltaTime * lerpSmothness);
+
+                transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, quaternionLerpSmothness);
+            }
+            else
+            {
+                idle = true;
+            }
         }
-        else
+
+        public void MoveToMenu()
         {
-            idle = true;
+            lastTarget = target;
+            SetNewTarget(menuTarget);
         }
+
+        public void MoveToGame()
+        {
+            SetNewTarget(lastTarget);
+        }
+
     }
-    
 }
