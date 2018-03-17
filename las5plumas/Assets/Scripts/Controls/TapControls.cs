@@ -1,33 +1,56 @@
 ﻿using UnityEngine;
-using Project.Interactables;
+using UnityEngine.Events;
 
 namespace Project.Game
 {
+    [System.Serializable]
+    public class FocusGameObject : UnityEvent<Collider> { }
+
     public class TapControls : BaseControls
     {
-        public Transform player;
+        public FocusGameObject e_focusGameObject;
+        public UnityEvent e_tap;
+        public UnityEvent e_taptap;
 
-        protected override void TouchUpdate(Touch touch, ref Ray touchRay)
+        private void Start()
         {
-            base.TouchUpdate(touch, ref touchRay);
+            if (e_focusGameObject == null)
+                e_focusGameObject = new FocusGameObject();
+
+            if (e_tap == null)
+                e_tap = new UnityEvent();
+
+            if (e_taptap == null)
+                e_taptap = new UnityEvent();
+        }
+
+        protected override void TouchUpdate(ref TouchV2 touch, ref Ray touchRay)
+        {
+            base.TouchUpdate(ref touch, ref touchRay);
 
             RaycastHit hit;
 
             if (touch.phase == TouchPhase.Began)
             {
-                if (RayCastTouch(touchRay.origin, touchRay.direction, out hit))  //Taps interaction
+                if (touch.tapCount == 1)
                 {
-                    if (touch.tapCount == 2)
+                    if (RayCastTouch(touchRay.origin, touchRay.direction, out hit))  //Taps interaction
                     {
-                        hit.transform.GetComponent<Actioner>().TriggerSpecialAction(player);
-                        return;
+                        //turn to object hit
+                        if (e_focusGameObject != null)
+                            e_focusGameObject.Invoke(hit.collider);
                     }
 
-                    if (touch.tapCount == 1)
-                    {
-                        hit.transform.GetComponent<Actioner>().TriggerAction(player);
-                        return;
-                    }
+                    //invoque tap event
+                    if (e_tap != null)
+                        e_tap.Invoke();
+                }
+
+                if (touch.tapCount == 2)
+                {
+                    //invoque taptap event
+                    if (e_taptap != null)
+                        e_taptap.Invoke();
                 }
             }
         }

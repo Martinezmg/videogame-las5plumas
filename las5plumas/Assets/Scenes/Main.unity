@@ -4201,7 +4201,6 @@ GameObject:
   - component: {fileID: 467289124}
   - component: {fileID: 467289127}
   - component: {fileID: 467289123}
-  - component: {fileID: 467289128}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -4231,18 +4230,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 467289121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ca18c8dd3887c4e89b99ca363a6dfe, type: 3}
+  m_Script: {fileID: 11500000, guid: e5f429e33046c8e42ac26ebf59bed62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
-  rangedRadius: 5
-  meleeRadius: 1
-  specialRadius: 1
-  interactTransform: {fileID: 467289122}
-  interactActive: 1
-  actioner: {fileID: 467289128}
-  particles: {fileID: 1682966989096540, guid: eb4d6911befd8b84ab5590571ec83d17, type: 2}
-  ui: {fileID: 153880351}
+  agent: {fileID: 467289124}
+  rotation_pivot: {fileID: 349636687}
 --- !u!195 &467289124
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4305,17 +4297,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 467289124}
   animator: {fileID: 349636688}
---- !u!114 &467289128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 467289121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4e442982f5d8e4da13884ec545f236, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &518979269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5873,6 +5854,8 @@ GameObject:
   - component: {fileID: 1945899058}
   - component: {fileID: 1945899059}
   - component: {fileID: 1945899060}
+  - component: {fileID: 1945899062}
+  - component: {fileID: 1945899061}
   m_Layer: 8
   m_Name: GameManager
   m_TagString: Untagged
@@ -5912,7 +5895,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945899056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff95f09600eaeac4881f012d5f73007d, type: 3}
   m_Name: 
@@ -5928,24 +5911,87 @@ MonoBehaviour:
   m_GameObject: {fileID: 1945899056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7c14a9ea50a322499839530e9418c05, type: 3}
+  m_Script: {fileID: 11500000, guid: 754b5df785f448b46948889050a27b40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  event:
+  e_setAgentPlane:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 467289121}
-        m_MethodName: 
+      - m_Target: {fileID: 467289123}
+        m_MethodName: RotatePlane
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  e_rotateAgent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 467289123}
+        m_MethodName: RotateAgent
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Project.Game.RotateAgentEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  e_setAgentMove:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1945899061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945899056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd45ea9d6e9fcde40b08d49891ca33ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  e_focusGameObject:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Project.Game.FocusGameObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  e_tap:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  e_taptap:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1945899062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945899056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3807f414efeacce408b32a83002fd2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  e_swipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Project.Game.SwipeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!1 &1949971976
 GameObject:

@@ -1,14 +1,16 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Project.Game
 {
     enum Swipe { left, rigth, up, down, none };
 
+    [System.Serializable]
+    public class SwipeEvent : UnityEvent<int> {}
+
     public class SwipeControls : BaseControls
     {
-        public bool swipeLeft, swipeRight, swipeUp, swipeDown, forceCancel = false;
-        Swipe swipe = Swipe.none;
+        private bool swipeLeft, swipeRight, swipeUp, swipeDown, forceCancel = false;
 
         private Vector2 origin;
         private Vector2 current;
@@ -21,13 +23,15 @@ namespace Project.Game
         private float time_treshold = 1f;
         private float swipeDistance_treshold = 1.25f;
 
-        event Action<Swipe> UIUpdate;
-        event Action<Swipe> GameUpdate;
+        public SwipeEvent e_swipe;
 
-        private bool internalBlock0 = false;
-        private bool internalBlock1 = false;
+        private void Start()
+        {
+            if (e_swipe == null)
+                e_swipe = new SwipeEvent();
+        }
 
-        protected override void TouchUpdate(Touch touch, ref Ray touchRay)
+        protected override void TouchUpdate(ref TouchV2 touch)
         {
             if (touch.phase == TouchPhase.Began)
             {
@@ -40,7 +44,6 @@ namespace Project.Game
             else if (touch.phase == TouchPhase.Canceled)
             {
                 forceCancel = true;
-                Debug.Log("Called by canceled or stationary");
             }
             else if (touch.phase == TouchPhase.Ended)
             {
@@ -52,7 +55,6 @@ namespace Project.Game
                 if (v.magnitude < minDistance || Time.time - time > time_treshold)
                     return;
 
-
                 float x = v.x;
                 float y = v.y;
 
@@ -60,35 +62,27 @@ namespace Project.Game
                 {
                     if (x < 0)
                     {
-                        if (GameState == GameState.paused && UIUpdate != null)
-                            UIUpdate(Swipe.rigth);
-                        if (GameState == GameState.running && GameUpdate != null)
-                            GameUpdate(Swipe.rigth);
+                        if (e_swipe != null)
+                            e_swipe.Invoke((int)Swipe.rigth);
                     }
 
                     else
                     {
-                        if (GameState == GameState.paused && UIUpdate != null)
-                            UIUpdate(Swipe.left);
-                        if (GameState == GameState.running && GameUpdate != null)
-                            GameUpdate(Swipe.left);
+                        if (e_swipe != null)
+                            e_swipe.Invoke((int)Swipe.left);
                     }
                 }
                 else
                 {
                     if (y < 0)
                     {
-                        if (GameState == GameState.paused && UIUpdate != null)
-                            UIUpdate(Swipe.down);
-                        if (GameState == GameState.running && GameUpdate != null)
-                            GameUpdate(Swipe.down);
+                        if (e_swipe != null)
+                            e_swipe.Invoke((int)Swipe.down);
                     }
                     else
                     {
-                        if (GameState == GameState.paused && UIUpdate != null)
-                            UIUpdate(Swipe.up);
-                        if (GameState == GameState.running && GameUpdate != null)
-                            GameUpdate(Swipe.up);
+                        if (e_swipe != null)
+                            e_swipe.Invoke((int)Swipe.up);
                     }
                 }
             }
@@ -111,7 +105,6 @@ namespace Project.Game
                 {
                     forceCancel = true;
 
-                    Debug.Log("Called by angle");
                     return;
                 }
 
