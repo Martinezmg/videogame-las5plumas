@@ -19,7 +19,7 @@ namespace Project.Game.UI
 
         public string debug = "";
 
-        public Controls mainControls;
+        //public Controls mainControls;
         public GameObject defaulPanel;
         public event Action<Swipe> UIUpdate;
 
@@ -119,12 +119,12 @@ namespace Project.Game.UI
 
         private void OnEnable()
         {
-            mainControls.enabled = false;
+           // mainControls.enabled = false;
         }
 
         private void OnDisable()
         {
-            mainControls.enabled = true;
+            //mainControls.enabled = true;
 
             ResetUI();
             gameObject.SetActive(false);

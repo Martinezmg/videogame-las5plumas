@@ -1,65 +1,55 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using System;
+using UnityEngine;
 
 namespace Project.Game
 {
-    [System.Serializable]
-    public class RotateAgentEvent : UnityEvent<float> { }
-
     public class MovementControls : BaseControls
     {
-        private Vector2 origin_point;
         private int touch_id;
         private bool isWalking = false;
         private float move_treshold = 50f;
 
-        public UnityEvent e_setAgentPlane;
-        public RotateAgentEvent e_rotateAgent;
-        public UnityEvent e_setAgentMove;
-
-        private void Start()
-        {
-            if (e_setAgentPlane == null)
-                e_setAgentPlane = new UnityEvent();
-
-            if (e_rotateAgent == null)
-                e_rotateAgent = new RotateAgentEvent();
-
-            if (e_setAgentMove == null)
-                e_setAgentMove = new UnityEvent();
-        }
+        public event Action         E_setAgentPlane;
+        public event Action<float>  E_rotateAgent;
+        public event Action<float>  E_setAgentMove;
+        public event Action<bool>   E_isMoving;
 
         protected override void TouchUpdate(ref TouchV2 touch)
         {
             if (isWalking && touch.fingerId != touch_id)
                 return;
-            
+
+            base.TouchUpdate(ref touch);
+
             if (touch.phase == TouchPhase.Began)
             {
-                origin_point = touch.position;
                 touch_id = touch.fingerId;
                 isWalking = true;
+                if (E_isMoving != null)
+                    E_isMoving(isWalking);
+
             }
 
             if (touch.phase == TouchPhase.Moved)
             {
                 //this is RotatePlane from PlayerMovmentEngine
-                if (e_setAgentPlane != null)
-                    e_setAgentPlane.Invoke();
+                if (E_setAgentPlane != null)
+                    E_setAgentPlane();
 
-                Vector2 currentDirection = touch.position - origin_point;
+                Vector2 currentDirection = touch.position - touch.origin;
 
                 if (currentDirection.magnitude > move_treshold)
                 {
-                    float angle = Vector2.SignedAngle(currentDirection, Vector2.up);
+                    touch.availability = false;
 
                     //This is RotateAgent from PlayerMovementEngine
-                    if (e_rotateAgent != null)
-                        e_rotateAgent.Invoke(angle);
+                    float angle = Vector2.SignedAngle(currentDirection, Vector2.up);
+                    if (E_rotateAgent!=null)
+                        E_rotateAgent(angle);
 
                     //This is MoveAgent grom PlayerMovementEngine
-                    if (e_setAgentMove != null)
-                        e_setAgentMove.Invoke();
+                    if (E_setAgentMove != null)
+                        E_setAgentMove(currentDirection.magnitude/move_treshold);
                 }
             }
 
@@ -67,14 +57,14 @@ namespace Project.Game
             {
                 if (isWalking)
                 {
-                    Vector2 currentDirection = touch.position - origin_point;
+                    Vector2 currentDirection = touch.position - touch.origin;
 
                     if (currentDirection.magnitude > move_treshold)
                     {
 
                         //This is MoveAgent grom PlayerMovementEngine
-                        if (e_setAgentMove != null)
-                            e_setAgentMove.Invoke();
+                        if (E_setAgentMove != null)
+                            E_setAgentMove(currentDirection.magnitude / move_treshold);
                     }
                 }
 
@@ -83,8 +73,22 @@ namespace Project.Game
             if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 isWalking = false;
-                origin_point = Vector2.zero;
+                if (E_isMoving != null)
+                    E_isMoving(isWalking);
+            }
+        }
+
+        private void LateUpdate()
+        {
+            if (touch0.phase == TouchPhase.Ended && touch0.fingerId == touch_id)
+            {
                 touch_id = 0;
+                touch0.availability = true;
+            }
+            if (touch1.phase == TouchPhase.Ended && touch0.fingerId == touch_id)
+            {
+                touch_id = 0;
+                touch1.availability = true;
             }
         }
 

@@ -1,122 +1,114 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using System;
+using UnityEngine;
 
 namespace Project.Game
 {
     enum Swipe { left, rigth, up, down, none };
 
-    [System.Serializable]
-    public class SwipeEvent : UnityEvent<int> {}
-
     public class SwipeControls : BaseControls
     {
-        private bool swipeLeft, swipeRight, swipeUp, swipeDown, forceCancel = false;
-
-        private Vector2 origin;
-        private Vector2 current;
-        private Vector2 delta;
+        private int touch_id;
 
         private float angle;
         private float minDistance = 10f;
         private float time;
 
         private float time_treshold = 1f;
-        private float swipeDistance_treshold = 1.25f;
+        private float swipeDistance_treshold = 2f;
 
-        public SwipeEvent e_swipe;
+        public event Action<int> E_swipe;
+
+        public bool debug = false;
 
         private void Start()
         {
-            if (e_swipe == null)
-                e_swipe = new SwipeEvent();
+            if (debug)
+                E_swipe += Test_swipe;
         }
 
         protected override void TouchUpdate(ref TouchV2 touch)
         {
             if (touch.phase == TouchPhase.Began)
             {
-                Reset();
-
-                time = Time.time;
-                origin = touch.position;
-                current = touch.position;
-            }
-            else if (touch.phase == TouchPhase.Canceled)
-            {
-                forceCancel = true;
-            }
-            else if (touch.phase == TouchPhase.Ended)
-            {
-                if (forceCancel)
+                if (!touch.availability || touch_id != 0)
                     return;
 
-                Vector2 v = current - origin;
+                touch_id = touch.fingerId;
+                time = Time.time;
+            }
+            else if (touch.phase == TouchPhase.Canceled && touch.fingerId == touch_id)
+            {
+                Reset();
+            }
+            else if (touch.phase == TouchPhase.Ended && touch.fingerId == touch_id)
+            {
+                Vector2 v = touch.position - touch.origin;
 
                 if (v.magnitude < minDistance || Time.time - time > time_treshold)
+                {
+                    Reset();
                     return;
+                }
 
                 float x = v.x;
                 float y = v.y;
+                
 
                 if (Mathf.Abs(x) > Mathf.Abs(y))
                 {
                     if (x < 0)
                     {
-                        if (e_swipe != null)
-                            e_swipe.Invoke((int)Swipe.rigth);
+                        if (E_swipe != null)
+                            E_swipe((int)Swipe.rigth);
                     }
 
                     else
                     {
-                        if (e_swipe != null)
-                            e_swipe.Invoke((int)Swipe.left);
+                        if (E_swipe != null)
+                            E_swipe((int)Swipe.left);
                     }
                 }
                 else
                 {
                     if (y < 0)
                     {
-                        if (e_swipe != null)
-                            e_swipe.Invoke((int)Swipe.down);
+                        if (E_swipe != null)
+                            E_swipe((int)Swipe.down);
                     }
                     else
                     {
-                        if (e_swipe != null)
-                            e_swipe.Invoke((int)Swipe.up);
+                        if (E_swipe != null)
+                            E_swipe((int)Swipe.up);
                     }
                 }
             }
             else
             {
-                if (forceCancel)
+                if (touch.fingerId != touch_id)
                     return;
 
-                if (current == origin)
+                if (touch.position == touch.origin)
                 {
-                    current = touch.position;
-                    angle = Vector2.SignedAngle(current - origin, Vector2.zero);
+                    angle = Vector2.SignedAngle(touch.position - touch.origin, Vector2.zero);
                     return;
                 }
-
-                delta = touch.position - current;
-                float deltaAngle = Vector2.SignedAngle(delta, Vector2.zero);
+                
+                float deltaAngle = Vector2.SignedAngle(touch.touch.deltaPosition, Vector2.zero);
 
                 if (Mathf.Abs(deltaAngle) > Mathf.Abs(angle) * swipeDistance_treshold)
                 {
-                    forceCancel = true;
-
+                    Reset();
                     return;
                 }
-
-                current = touch.position;
             }
         }
 
         private void Reset()
         {
-            origin = current = delta = Vector2.zero;
             angle = 0;
-            swipeLeft = swipeRight = swipeUp = swipeDown = forceCancel = false;
+            touch_id = 0;
         }
+
+        private void Test_swipe(int s) { Debug.Log("Swipe to " + (Swipe)s); }
     }
 }

@@ -8,11 +8,13 @@ namespace Project.Game
         {
             public Touch touch;
             public bool availability;
+            public Vector2 origin;
 
             public Vector2 position { get { return touch.position; } }
             public int tapCount { get { return touch.tapCount; } }
             public int fingerId { get { return touch.fingerId; } }
             public TouchPhase phase { get { return touch.phase; } }
+            
         }
 
         private bool isEnable = true;
@@ -20,8 +22,8 @@ namespace Project.Game
         protected Ray touchRay0;
         protected Ray touchRay1;
 
-        protected TouchV2 touch0;
-        protected TouchV2 touch1;
+        protected static TouchV2 touch0;
+        protected static TouchV2 touch1;
 
         public bool IsEnable
         {
@@ -77,7 +79,13 @@ namespace Project.Game
             }
         }
 
-        protected virtual void TouchUpdate(ref TouchV2 touch) { }
+        protected virtual void TouchUpdate(ref TouchV2 touch)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                touch.origin = touch.position;
+            }
+        }
 
         protected virtual void TouchUpdate(ref TouchV2 touch, ref Ray touchRay)
         {
