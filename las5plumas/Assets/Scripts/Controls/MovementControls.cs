@@ -7,7 +7,8 @@ namespace Project.Game
     {
         private int touch_id;
         private bool isWalking = false;
-        private float move_treshold = 50f;
+        [SerializeField]
+        private float move_treshold = 150f;
 
         public event Action         E_setAgentPlane;
         public event Action<float>  E_rotateAgent;
@@ -16,27 +17,27 @@ namespace Project.Game
 
         protected override void TouchUpdate(ref TouchV2 touch)
         {
-            if (isWalking && touch.fingerId != touch_id)
+            if (isWalking && touch.FingerId != touch_id)
                 return;
 
             base.TouchUpdate(ref touch);
 
-            if (touch.phase == TouchPhase.Began)
+            if (touch.Phase == TouchPhase.Began)
             {
-                touch_id = touch.fingerId;
+                touch_id = touch.FingerId;
                 isWalking = true;
                 if (E_isMoving != null)
                     E_isMoving(isWalking);
 
             }
 
-            if (touch.phase == TouchPhase.Moved)
+            if (touch.Phase == TouchPhase.Moved)
             {
                 //this is RotatePlane from PlayerMovmentEngine
                 if (E_setAgentPlane != null)
                     E_setAgentPlane();
 
-                Vector2 currentDirection = touch.position - touch.origin;
+                Vector2 currentDirection = touch.Position - touch.origin;
 
                 if (currentDirection.magnitude > move_treshold)
                 {
@@ -53,11 +54,11 @@ namespace Project.Game
                 }
             }
 
-            if (touch.phase == TouchPhase.Stationary)
+            if (touch.Phase == TouchPhase.Stationary)
             {
                 if (isWalking)
                 {
-                    Vector2 currentDirection = touch.position - touch.origin;
+                    Vector2 currentDirection = touch.Position - touch.origin;
 
                     if (currentDirection.magnitude > move_treshold)
                     {
@@ -70,7 +71,7 @@ namespace Project.Game
 
             }
 
-            if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            if (touch.Phase == TouchPhase.Ended || touch.Phase == TouchPhase.Canceled)
             {
                 isWalking = false;
                 if (E_isMoving != null)
@@ -80,12 +81,12 @@ namespace Project.Game
 
         private void LateUpdate()
         {
-            if (touch0.phase == TouchPhase.Ended && touch0.fingerId == touch_id)
+            if (touch0.Phase == TouchPhase.Ended && touch0.FingerId == touch_id)
             {
                 touch_id = 0;
                 touch0.availability = true;
             }
-            if (touch1.phase == TouchPhase.Ended && touch0.fingerId == touch_id)
+            if (touch1.Phase == TouchPhase.Ended && touch0.FingerId == touch_id)
             {
                 touch_id = 0;
                 touch1.availability = true;

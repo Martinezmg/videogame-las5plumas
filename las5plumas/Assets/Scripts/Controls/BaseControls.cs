@@ -10,10 +10,10 @@ namespace Project.Game
             public bool availability;
             public Vector2 origin;
 
-            public Vector2 position { get { return touch.position; } }
-            public int tapCount { get { return touch.tapCount; } }
-            public int fingerId { get { return touch.fingerId; } }
-            public TouchPhase phase { get { return touch.phase; } }
+            public Vector2 Position { get { return touch.position; } }
+            public int TapCount { get { return touch.tapCount; } }
+            public int FingerId { get { return touch.fingerId; } }
+            public TouchPhase Phase { get { return touch.phase; } }
             
         }
 
@@ -25,18 +25,7 @@ namespace Project.Game
         protected static TouchV2 touch0;
         protected static TouchV2 touch1;
 
-        public bool IsEnable
-        {
-            get
-            {
-                return isEnable;
-            }
-
-            set
-            {
-                isEnable = value;
-            }
-        }
+        public bool IsEnable { get { return isEnable; } set { isEnable = value; } }
 
         private void Start()
         {
@@ -81,16 +70,16 @@ namespace Project.Game
 
         protected virtual void TouchUpdate(ref TouchV2 touch)
         {
-            if (touch.phase == TouchPhase.Began)
+            if (touch.Phase == TouchPhase.Began)
             {
-                touch.origin = touch.position;
+                touch.origin = touch.Position;
             }
         }
 
         protected virtual void TouchUpdate(ref TouchV2 touch, ref Ray touchRay)
         {
-            Vector3 v1 = new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane);
-            Vector3 v2 = new Vector3(touch.position.x, touch.position.y, Camera.main.farClipPlane);
+            Vector3 v1 = new Vector3(touch.Position.x, touch.Position.y, Camera.main.nearClipPlane);
+            Vector3 v2 = new Vector3(touch.Position.x, touch.Position.y, Camera.main.farClipPlane);
 
             Vector3 p1 = Camera.main.ScreenToWorldPoint(v1);
             Vector3 p2 = Camera.main.ScreenToWorldPoint(v2);

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Project.Interactables;
 
@@ -9,7 +8,12 @@ namespace Project.Game.Player
     {
         public TapControls tapControls;
 
-        Interactable interactableTarget = null;
+        public Interactable interactableTarget = null;
+        
+        private List<string> CMDS { get; set; }
+        public string cmd = "use";
+
+
 
         private void Start()
         {
@@ -19,25 +23,26 @@ namespace Project.Game.Player
         public void Action()
         {
             if (interactableTarget != null)
-                interactableTarget.Interact();
-
-
+                interactableTarget.Interact(cmd);
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Entro en el colider de " + collision.gameObject.name);
+            Interactable t = other.GetComponent<Interactable>();
 
-            if (interactableTarget != null)
-                return;
+            if (t!=null && interactableTarget==null)
+                interactableTarget = t;
 
-            interactableTarget = collision.gameObject.GetComponent<Interactable>();
+            //agarrar los comandos disponibles para este objecto con el que se puede interactuar
+
         }
 
-        private void OnCollisionExit(Collision collision)
+        private void OnTriggerExit(Collider other)
         {
-            interactableTarget = null;
+            Interactable t = other.GetComponent<Interactable>();
+
+            if (t != null)
+                interactableTarget = null;
         }
-        
     }
 }

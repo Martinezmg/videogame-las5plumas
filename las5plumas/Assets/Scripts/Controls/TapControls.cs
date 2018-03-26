@@ -32,19 +32,19 @@ namespace Project.Game
 
             base.TouchUpdate(ref touch, ref touchRay);
 
-            if (touch.phase == TouchPhase.Began)
+            if (touch.Phase == TouchPhase.Began)
             {
-                origin = touch.position;
+                origin = touch.Position;
             }
 
-            if (touch.phase == TouchPhase.Ended)
+            if (touch.Phase == TouchPhase.Ended)
             {
-                float magnitude = (touch.position - origin).magnitude;
+                float magnitude = (touch.Position - origin).magnitude;
 
                 if (magnitude > 5f)
                     return;
 
-                if (touch.tapCount == 1)
+                if (touch.TapCount == 1)
                 {
                     RaycastHit hit;
 
@@ -60,7 +60,7 @@ namespace Project.Game
                         E_tap();
                 }
 
-                if (touch.tapCount == 2)
+                if (touch.TapCount == 2)
                 {
                     //invoque taptap event
                     if (E_taptap != null)

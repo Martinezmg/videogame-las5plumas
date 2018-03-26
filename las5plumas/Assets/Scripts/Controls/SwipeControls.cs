@@ -28,21 +28,21 @@ namespace Project.Game
 
         protected override void TouchUpdate(ref TouchV2 touch)
         {
-            if (touch.phase == TouchPhase.Began)
+            if (touch.Phase == TouchPhase.Began)
             {
                 if (!touch.availability || touch_id != 0)
                     return;
 
-                touch_id = touch.fingerId;
+                touch_id = touch.FingerId;
                 time = Time.time;
             }
-            else if (touch.phase == TouchPhase.Canceled && touch.fingerId == touch_id)
+            else if (touch.Phase == TouchPhase.Canceled && touch.FingerId == touch_id)
             {
                 Reset();
             }
-            else if (touch.phase == TouchPhase.Ended && touch.fingerId == touch_id)
+            else if (touch.Phase == TouchPhase.Ended && touch.FingerId == touch_id)
             {
-                Vector2 v = touch.position - touch.origin;
+                Vector2 v = touch.Position - touch.origin;
 
                 if (v.magnitude < minDistance || Time.time - time > time_treshold)
                 {
@@ -84,12 +84,12 @@ namespace Project.Game
             }
             else
             {
-                if (touch.fingerId != touch_id)
+                if (touch.FingerId != touch_id)
                     return;
 
-                if (touch.position == touch.origin)
+                if (touch.Position == touch.origin)
                 {
-                    angle = Vector2.SignedAngle(touch.position - touch.origin, Vector2.zero);
+                    angle = Vector2.SignedAngle(touch.Position - touch.origin, Vector2.zero);
                     return;
                 }
                 
