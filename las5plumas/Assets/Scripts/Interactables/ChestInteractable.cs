@@ -13,7 +13,7 @@ namespace Project.Interactables
         private int openHash = Animator.StringToHash("OpenTrigger");
 
         
-        public void AnimationComplete()
+        public void AnimationCompleted()
         {
             if (debug)
             {

@@ -34,9 +34,11 @@ namespace Project.Interactables
     {
         private States states;
         private Transitions transitions;
-        //private Action initialState;
         private Action currentState;
         private Action finalState;
+
+        private Dictionary<string, List<string>> possiblesCMDS;
+        public List<string> PosiblesCMDS { get { return possiblesCMDS[currentState.Method.Name]; } }
 
         public Action CurrentState { get { return currentState; } }
         public Action FinalState { get { return finalState; } }
@@ -44,17 +46,15 @@ namespace Project.Interactables
 
         public StateMachine(States states_, Action iniState_, Action finalState_)
         {
-            //initialState = iniState_;
             currentState = iniState_;
             finalState = finalState_;
 
             states = states_;
             transitions = new Transitions();
-        }
 
-        public void AddState(Action state)
-        {
-            states.Add(state);
+            possiblesCMDS = new Dictionary<string, List<string>>();
+            foreach (var item in states)
+                possiblesCMDS.Add(item.Method.Name, new List<string>());
         }
 
         public void AddTransition(Action currentState, string cmd, Action nextState)
@@ -65,6 +65,10 @@ namespace Project.Interactables
             Debug.Assert(!transitions.ContainsKey(ts));
                 
             transitions.Add(ts, nextState);
+
+            if (!possiblesCMDS[currentState.Method.Name].Contains(cmd))
+                possiblesCMDS[currentState.Method.Name].Add(cmd);
+
         }
 
         private bool GetNext(string command, out Action nextState)
@@ -87,5 +91,7 @@ namespace Project.Interactables
 
             return false;
         }
+
+
     }
 }

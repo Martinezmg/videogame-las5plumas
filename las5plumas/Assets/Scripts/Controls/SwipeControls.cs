@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Project.Game
 {
-    enum Swipe { left, rigth, up, down, none };
+    public enum Swipe { left, rigth, up, down, none };
 
     public class SwipeControls : BaseControls
     {

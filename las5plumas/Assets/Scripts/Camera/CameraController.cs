@@ -7,41 +7,24 @@ namespace Project.Game
     public class CameraController : MonoBehaviour
     {
         public Transform target;
-        public Transform menuTarget;
-        private Transform lastTarget;
-
 
         //Para la suavidad del movimiento
         [Header("Transform smoothness")]
         public float lerpSmothness = 1f;
         [Range(0, 1)]
-        public float quaternionLerpSmothness = 0.05f;
-
-        //Para controllador del zoom de la camara
-        [Header("Zoom controller")]
-        public float sizeCameraTimer = 1.5f;
-        [Space(10)]
-        public float baseCameraSize;
-        public float currentCameraSize;
-        public float minSizeCamera = -2f;
-        public float maxSizeCamera = 2f;
-        [Space(10)]
-        public float sizeCameraSmothness = 1f;
-
-        private IEnumerator ccurrentZoomTimer;
+        public float quaternionLerpSmothness = 0.05f;        
 
         //misc
         private bool idle = true;
 
         private void Start()
         {
-
-            transform.position = target.position;
-            transform.rotation = target.rotation;
-
-            //zooming controller
-            baseCameraSize = Camera.main.orthographicSize;
-            currentCameraSize = baseCameraSize;
+            if (target != null)
+            {
+                transform.position = target.position;
+                transform.rotation = target.rotation;
+            }
+            
         }
 
 
@@ -54,42 +37,6 @@ namespace Project.Game
                 MoveToNewTarget();
             }
             #endregion
-
-            #region ZoomController
-            currentCameraSize -= Input.GetAxis("Mouse ScrollWheel") * sizeCameraSmothness;
-            currentCameraSize = Mathf.Clamp(currentCameraSize, baseCameraSize - minSizeCamera, baseCameraSize + maxSizeCamera);
-
-            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, currentCameraSize, Time.deltaTime * sizeCameraSmothness);
-
-
-            if (Input.GetAxis("Mouse ScrollWheel") != 0)
-            {
-                if (ccurrentZoomTimer != null)
-                {
-                    StopCoroutine(ccurrentZoomTimer);
-                }
-
-                ccurrentZoomTimer = CZoomTimer();
-                StartCoroutine(ccurrentZoomTimer);
-
-            }
-            #endregion
-
-            if (Input.GetMouseButton(2))
-            {
-
-            }
-        }
-
-        private IEnumerator CZoomTimer()
-        {
-            yield return new WaitForSeconds(sizeCameraTimer);
-
-            while (currentCameraSize > 0.1f || currentCameraSize < -.01f)
-            {
-                currentCameraSize = Mathf.Lerp(currentCameraSize, baseCameraSize, Time.deltaTime * sizeCameraSmothness);
-                yield return null;
-            }
         }
 
         public void SetNewTarget(Transform t)
@@ -114,17 +61,6 @@ namespace Project.Game
             {
                 idle = true;
             }
-        }
-
-        public void MoveToMenu()
-        {
-            lastTarget = target;
-            SetNewTarget(menuTarget);
-        }
-
-        public void MoveToGame()
-        {
-            SetNewTarget(lastTarget);
         }
 
     }
