@@ -735,19 +735,9 @@ Prefab:
       objectReference: {fileID: 946298659}
     - target: {fileID: 114342912844496666, guid: 5df92560e7f6f1a419c9dd65de0eb49f,
         type: 2}
-      propertyPath: lastPointInGameMenu
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114342912844496666, guid: 5df92560e7f6f1a419c9dd65de0eb49f,
-        type: 2}
       propertyPath: lastPointInGame
       value: 
       objectReference: {fileID: 1846525362}
-    - target: {fileID: 114342912844496666, guid: 5df92560e7f6f1a419c9dd65de0eb49f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5df92560e7f6f1a419c9dd65de0eb49f, type: 2}
   m_IsPrefabParent: 0

@@ -24,177 +24,142 @@ namespace Project.Game
         }
         #endregion
 
+
         //trigger actions each time inventory object is updated
-        public event Action inventoryUpdated;
-        private void InventoryUpdate() { if (inventoryUpdated!=null) inventoryUpdated(); }
+        public event Action<string> InventoryUpdated;
+        
 
-        //stackable
-        private Dictionary<string, int> items;
-                
-        public GameObject axe;
-        public GameObject sword;
-        public GameObject bow;
-        public GameObject hammer;
+        public bool update = false;
 
-        private GameObject objectEquipped;
+        //DB
+        public InventorySO inventoryDB;
+        public List<ItemUI> inventoryUI = new List<ItemUI>();
 
-        public GameObject lighter;
 
-        private bool potion1;
-        private bool potion2;
-
-        private bool scroll;
 
         private void Start()
         {
-            //cargar datos de la base de datos
-
-            //mientras tanto
-            items = new Dictionary<string, int>
+            /*foreach (var item in inventoryDB.items)
             {
-                {"keys",   0},
-                {"coins",  0},
-                {"tokens", 0},
-                {"orange", 0},
-                {"green",  0},
-                {"blue",   0},
-                {"purple", 0},
-            };
+                if(!inventoryUI.Contains(new ItemUI(item.name)))
+                    inventoryUI.Add(new ItemUI(item.name));
+            }*/
+
+            foreach (var item in inventoryDB.items)
+            {
+                InventoryUpdate(item);
+            }
+        }
+
+        private void Update()
+        {
+            if (update)
+            {
+                update = false;
+
+                foreach (var item in inventoryDB.items)
+                {
+                    InventoryUpdate(item);
+                }
+
+            }
         }
 
         public void AddItem(string itemName)
         {
-            items[itemName]++;
+            Item i;
 
-            InventoryUpdate();
-        }
-
-        public bool UseItem(string itemName)
-        {
-            Debug.Assert(!(items[itemName] < 0), itemName + " no puede ser menos que 0");
-
-            if (items[itemName] == 0)
-                return false;
-
-            items[itemName]--;
-
-            InventoryUpdate();
-
-            return true;
-        }
-
-        public bool EquipAxe()
-        {
-            if (axe == null)
+            if(inventoryDB.AddItem(itemName, out i))
             {
-                return false;
+                InventoryUpdate(i);
             }
-
-            objectEquipped = axe;
-
-            InventoryUpdate();
-
-            return true;
         }
-        public bool EquipSword()
+
+        public void UseItem(string itemName)
         {
-            if (sword == null)
+            Item i;
+
+            if (inventoryDB.UseItem(itemName, out i))
             {
-                return false;
+                InventoryUpdate(i);
             }
-
-            objectEquipped = sword;
-            InventoryUpdate();
-
-            return true;
         }
-        public bool EquipBow()
+
+        public void EquipItem(string itemName)
         {
-            if (bow == null)
+            Item i;
+
+            if (inventoryDB.EquipItem(itemName, out i))
             {
-                return false;
+                InventoryUpdate(i);
             }
-
-            objectEquipped = bow;
-            InventoryUpdate();
-
-            return true;
         }
-        public bool EquipHammer()
+
+        private void InventoryUpdate(Item item)
         {
-            if (hammer == null)
+            ItemUI itemUI = inventoryUI.Find(x => x.name == item.name);
+
+            if (item != null)
             {
-                return false;
+                if (item.quantity <= 0)
+                {
+                    //this part should be execute by a corutine when player goes to inventory, 
+                    //Color c = itemUI.sprite.color;
+                    //itemUI.sprite.color = new Color(c.r, c.g, c.b, 0f);
+                    StartCoroutine("FadeItemOut", itemUI);
+                }
+                else if (item.quantity == 1)
+                {
+                    //this part should be execute by a corutine when player goes to inventory, 
+                    //Color c = itemUI.sprite.color;
+                    //itemUI.sprite.color = new Color(c.r, c.g, c.b, 255f);
+                    StartCoroutine("FadeItemIn", itemUI);
+                }
+                else
+                {
+                    //increase counter of the item if it supports it
+                    Debug.Log("Count: " + item.quantity.ToString());
+                }
             }
-
-            objectEquipped = hammer;
-            InventoryUpdate();
-
-            return true;
         }
 
-        public void UnequipObject()
+        private IEnumerator FadeItemIn(object item)
         {
-            if (objectEquipped != null)
-            {
-                objectEquipped = null;
+            ItemUI nitem = item as ItemUI;
 
-                InventoryUpdate();
-            }
-                
+            Color c = nitem.sprite.color;
+            float t = 1f;
+            float a = 0f;
+
+            /* while (a < 255f)
+             {
+                 nitem.sprite.color = new Color(c.r, c.g, c.b, Mathf.Lerp(a, 255f, t * Time.deltaTime));
+
+                 yield return null;
+             }*/
+            nitem.sprite.color = new Color(c.r, c.g, c.b, 255f);
+            yield return null;
+
         }
-
-        public bool UsePotion1()
+        private IEnumerator FadeItemOut(object item)
         {
-            if (potion1)
+            ItemUI nitem = item as ItemUI;
+
+            Color c = nitem.sprite.color;
+            float t = 1f;
+            float a = 255f;
+
+            /*while (a > 0f)
             {
-                potion1 = !potion1;
-                InventoryUpdate();
+                nitem.sprite.color = new Color(c.r, c.g, c.b, Mathf.Lerp(a, 0f, t * Time.deltaTime));
 
-                return true;
-            }
-
-            return false;
-        }
-        public bool UsePotion2()
-        {
-            if (potion2)
-            {
-                potion2 = !potion2;
-                InventoryUpdate();
-
-                return true;
-            }
-
-            return false;
+                yield return null;
+            }*/
+            nitem.sprite.color = new Color(c.r, c.g, c.b, 0f);
+            yield return null;
         }
 
-        public bool TakePotion1()
-        {
-            if (potion1)
-            {
-                return false;
-            }
 
-            potion1 = !potion1;
-
-            InventoryUpdate();
-
-            return true;
-        }
-        public bool TakePotion2()
-        {
-            if (potion2)
-            {
-                return false;
-            }
-
-            potion2 = !potion2;
-
-            InventoryUpdate();
-
-            return true;
-        }
 
 
     }

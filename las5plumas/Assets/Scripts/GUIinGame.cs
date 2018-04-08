@@ -111,7 +111,7 @@ namespace Project.GUI
         private void OnDisable()
         {
             Debug.Log("DEACTIVATED");
-            cameraController.SetNewTarget(lastPointInGame);
+            cameraController.SetNewTarget(lastPointInGame); 
         }
     }
 }

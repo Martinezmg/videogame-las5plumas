@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2782b020ee0b4fc40845b0a01249e788, type: 3}
+  m_Name: Inventory
+  m_EditorClassIdentifier: 
+  items:
+  - name: feather1
+    quantity: 0
+  - name: feather2
+    quantity: 0
+  - name: feather3
+    quantity: 0
+  - name: feather4
+    quantity: 0
+  - name: feather5
+    quantity: 0
+  - name: moons
+    quantity: 0
+  - name: coins
+    quantity: 0
+  - name: axe
+    quantity: 1
+  - name: bow
+    quantity: 0
+  - name: sword
+    quantity: 0
+  - name: hammer
+    quantity: 0
+  - name: ligther
+    quantity: 1
+  - name: keys
+    quantity: 1
+  - name: potion1
+    quantity: 0
+  - name: potion2
+    quantity: 0
+  - name: scroll
+    quantity: 0
+  - name: orange
+    quantity: 0
+  - name: green
+    quantity: 0
+  - name: blue
+    quantity: 0
+  - name: purple
+    quantity: 0
