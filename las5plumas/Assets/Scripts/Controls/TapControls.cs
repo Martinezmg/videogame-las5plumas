@@ -50,6 +50,11 @@ namespace Project.Game
 
                     if (RayCastTouch(touchRay.origin, touchRay.direction, out hit))  //Taps interaction
                     {
+                        if (debug)
+                        {
+                            Debug.Log(hit.collider.tag + " HITTED");
+                        }
+
                         //turn to object hit
                         if (E_focusGameObject != null)
                             E_focusGameObject(hit.collider);
