@@ -58,7 +58,7 @@ namespace Project.ScriptableObjects
                 if (item.quantity <= 0)
                     return false;                
 
-                item.quantity++;
+                //item.quantity++;
 
                 return true;
             }

@@ -5,7 +5,7 @@ using TouchScript.Gestures;
 
 namespace Project.Game.Player
 {
-    public class PlayerActioner : MonoBehaviour
+    public class PlayerActioner : MonoBehaviour, IManager
     {
         public TapGesture tapGesture;
 
@@ -22,6 +22,12 @@ namespace Project.Game.Player
         private void OnDisable()
         {
             tapGesture.Tapped -= Action;
+        }
+
+        private void Awake()
+        {
+            MainManager.Instance.playGesturesFromGame += EnableComponent;
+            MainManager.Instance.stopGesturesFromGame += DisableComponent;
         }
 
         public void Action(object sender, System.EventArgs e)
@@ -47,6 +53,16 @@ namespace Project.Game.Player
 
             if (t != null)
                 interactableTarget = null;
+        }
+
+        public void DisableComponent()
+        {
+            enabled = false;
+        }
+
+        public void EnableComponent()
+        {
+            enabled = true;
         }
     }
 }

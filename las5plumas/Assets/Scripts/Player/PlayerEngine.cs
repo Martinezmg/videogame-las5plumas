@@ -8,9 +8,13 @@ namespace Project.Game.Player
     using GestureState = TouchScript.Gestures.Gesture.GestureState;
 
     [RequireComponent(typeof(NavMeshAgent))]
-    public class PlayerEngine : MonoBehaviour
-    {        
+    public class PlayerEngine : MonoBehaviour, IManager
+    {
+        //touchscript
         public TapGesture tapGesture;
+        public Vector2 startScreenPosition;
+        public float movementTreshold;
+        public GestureState gestureState;
 
         public NavMeshAgent agent;
         public float speed = 1;
@@ -22,12 +26,14 @@ namespace Project.Game.Player
         private float rotationLerpSpeed = 0.35f;
 
         public float SpeedPercent { get { return speedPercent; } }
+        
 
-
-        //touchscript
-        public Vector2 startScreenPosition;
-        public float movementTreshold;
-        public GestureState gestureState;
+        #region Unity
+        private void Awake()
+        {
+            MainManager.Instance.stopGesturesFromGame += DisableComponent;
+            MainManager.Instance.playGesturesFromGame += EnableComponent;
+        }
 
         private void OnEnable()
         {
@@ -39,30 +45,6 @@ namespace Project.Game.Player
         {
             tapGesture.StateChanged -= UpdateMovement;
             tapGesture.Tapped -= ResetMovement;
-        }
-
-        public void SetMovement(object sender, EventArgs e)
-        {
-            startScreenPosition = tapGesture.ScreenPosition;
-            isMoving = true;
-        }
-
-        private void UpdateMovement(object sender, EventArgs e)
-        {
-            if (tapGesture.State == GestureState.Possible)
-            {
-                isMoving = true;
-                startScreenPosition = tapGesture.ScreenPosition;
-            }
-            if (tapGesture.State == GestureState.Failed)
-            {
-                isMoving = false;
-            }
-        }
-
-        private void ResetMovement(object sender, EventArgs e)
-        {
-            isMoving = false;
         }
 
         private void Start()
@@ -93,8 +75,30 @@ namespace Project.Game.Player
             if (!isMoving && speedPercent > 0)
                 speedPercent = Mathf.Lerp(speedPercent, 0f, Time.deltaTime * 2 * speed);
         }
+        #endregion
+        
+        #region TouchScript
+        private void UpdateMovement(object sender, EventArgs e)
+        {
+            if (tapGesture.State == GestureState.Possible)
+            {
+                isMoving = true;
+                startScreenPosition = tapGesture.ScreenPosition;
+            }
+            if (tapGesture.State == GestureState.Failed)
+            {
+                isMoving = false;
+            }
+        }
 
-        //Motion mechanics
+        private void ResetMovement(object sender, EventArgs e)
+        {
+            isMoving = false;
+        }
+
+        #endregion
+
+        #region Motion Mechanics
 
         public void RotatePlane()
         {
@@ -127,5 +131,17 @@ namespace Project.Game.Player
         }
 
         public void IsMoving(bool m) { isMoving = m; }
+
+        #endregion
+
+        public void DisableComponent()
+        {
+            enabled = false;
+        }
+
+        public void EnableComponent()
+        {
+            enabled = true;
+        }
     }
 }

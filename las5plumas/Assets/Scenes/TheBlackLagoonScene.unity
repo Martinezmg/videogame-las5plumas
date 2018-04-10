@@ -672,12 +672,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tapGesture: {fileID: 949607535}
-  agent: {fileID: 467289124}
-  speed: 1.5
-  rotation_pivot: {fileID: 242509871}
   startScreenPosition: {x: 0, y: 0}
   movementTreshold: 0
   gestureState: 0
+  agent: {fileID: 467289124}
+  speed: 1.5
+  rotation_pivot: {fileID: 242509871}
 --- !u!195 &467289124
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -798,6 +798,11 @@ Prefab:
       propertyPath: controls
       value: 
       objectReference: {fileID: 1945899062}
+    - target: {fileID: 114342912844496666, guid: 5df92560e7f6f1a419c9dd65de0eb49f,
+        type: 2}
+      propertyPath: swipeGesture
+      value: 
+      objectReference: {fileID: 1943809014}
     - target: {fileID: 114342912844496666, guid: 5df92560e7f6f1a419c9dd65de0eb49f,
         type: 2}
       propertyPath: cameraController
@@ -1269,111 +1274,24 @@ Transform:
   m_Father: {fileID: 1610457509}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 61.097004, y: -206.765, z: -25.994001}
---- !u!1 &949607534 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1635612960749722, guid: fbbb09b1b3f74564baaf16edbd91731f,
+--- !u!114 &949607535 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114063695805670026, guid: fbbb09b1b3f74564baaf16edbd91731f,
     type: 2}
   m_PrefabInternal: {fileID: 1676575458}
---- !u!114 &949607535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 949607534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a878a6ff128243dfb1d89ca0273f059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnStateChange:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  basicEditor: 0
-  generalProps: 0
-  limitsProps: 0
-  advancedProps: 0
-  minPointers: 0
-  maxPointers: 1
-  useSendMessage: 0
-  sendStateChangeMessages: 0
-  sendMessageTarget: {fileID: 0}
-  useUnityEvents: 0
-  sendStateChangeEvents: 0
-  requireGestureToFail: {fileID: 0}
-  friendlyGestures: []
-  OnTap:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  numberOfTapsRequired: 1
-  timeLimit: Infinity
-  distanceLimit: Infinity
-  combinePointers: 0
-  combinePointersInterval: 0.3
---- !u!114 &949607536
+--- !u!114 &949607536 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 949607534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114923047337888040, guid: fbbb09b1b3f74564baaf16edbd91731f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1676575458}
   m_Script: {fileID: 11500000, guid: bc7fd33c57d694994b0ab9f33fcdcbea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Fullscreen @ Camera
-  type: 0
-  _camera: {fileID: 12852207}
---- !u!114 &949607537
+--- !u!114 &949607537 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 949607534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114952088622632552, guid: fbbb09b1b3f74564baaf16edbd91731f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1676575458}
   m_Script: {fileID: 11500000, guid: 74ae431eff8434b0897d3f7f1cff4311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnStateChange:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  basicEditor: 0
-  generalProps: 0
-  limitsProps: 0
-  advancedProps: 0
-  minPointers: 0
-  maxPointers: 0
-  useSendMessage: 0
-  sendStateChangeMessages: 0
-  sendMessageTarget: {fileID: 0}
-  useUnityEvents: 0
-  sendStateChangeEvents: 0
-  requireGestureToFail: {fileID: 0}
-  friendlyGestures: []
-  OnTransformStart:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnTransform:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnTransformComplete:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  type: 4
-  screenTransformThreshold: 0.1
-  minScreenPointsDistance: 0.5
 --- !u!1001 &987706506
 Prefab:
   m_ObjectHideFlags: 0
@@ -2024,21 +1942,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114703635657128750, guid: fbbb09b1b3f74564baaf16edbd91731f,
+    - target: {fileID: 114923047337888040, guid: fbbb09b1b3f74564baaf16edbd91731f,
         type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114197951964619566, guid: fbbb09b1b3f74564baaf16edbd91731f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114880866109936634, guid: fbbb09b1b3f74564baaf16edbd91731f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 12852207}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fbbb09b1b3f74564baaf16edbd91731f, type: 2}
   m_IsPrefabParent: 0
@@ -2379,6 +2287,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70f1ba7a33b5d44ca6ab457b7d442b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1943809014 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114669526158802206, guid: fbbb09b1b3f74564baaf16edbd91731f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1676575458}
+  m_Script: {fileID: 11500000, guid: 1ba67d04e07d3491989322c6414feaf3, type: 3}
 --- !u!114 &1945899062 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114197951964619566, guid: fbbb09b1b3f74564baaf16edbd91731f,

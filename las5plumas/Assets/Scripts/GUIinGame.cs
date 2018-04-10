@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Project.Game;
+using TouchScript.Gestures;
+using System;
 
 namespace Project.GUI
 {
@@ -13,6 +13,8 @@ namespace Project.GUI
         }
 
         public SwipeControls controls;
+        public FlickGesture swipeGesture;
+        public TouchScript.Gestures.Gesture.GestureState state;
         public CameraController cameraController;
 
         public Transform pInventory;
@@ -23,19 +25,20 @@ namespace Project.GUI
 
         private Points currentPoint = Points.inventory;
 
-        private void Start()
+        private void Awake()
         {
             cameraController = Camera.main.GetComponent<CameraController>();
-            controls.E_swipe += GoTo;
+        }
+
+        private void Update()
+        {
+            state = swipeGesture.State;
         }
 
         public void EnableGUIinGame() { enabled = true; }
 
         public void GoTo(int d)
         {
-            if (!enabled)
-                return;
-
             switch ((Swipe)d)
             {
                 case Swipe.left:
@@ -95,23 +98,46 @@ namespace Project.GUI
 
         private void OnEnable()
         {
-            if (!enabled)
-            {
+            swipeGesture.Flicked += SwipeHandler;
 
-            }
-
-            Debug.Log("ACTIVATED");
+            MainManager.Instance.StopGesturesFromGame();
 
             lastPointInGame.position = cameraController.target.position;
             lastPointInGame.rotation = cameraController.target.rotation;
 
             cameraController.SetNewTarget(pInventory);
         }
-
         private void OnDisable()
         {
-            Debug.Log("DEACTIVATED");
+            swipeGesture.Flicked -= SwipeHandler;
+
+            MainManager.Instance.PlayGesturesFromGame();
+
             cameraController.SetNewTarget(lastPointInGame); 
         }
+
+        private void SwipeHandler(object sender, EventArgs e)
+        {
+            Vector2 v = swipeGesture.ScreenFlickVector;
+
+            float x = v.x;
+            float y = v.y;
+
+            if (Mathf.Abs(x) > Mathf.Abs(y))
+            {
+                if (x < 0)
+                    GoTo((int)Swipe.rigth);
+                else
+                    GoTo((int)Swipe.left);
+            }
+            else
+            {
+                if (y < 0)
+                    GoTo((int)Swipe.down);
+                else
+                    GoTo((int)Swipe.up);
+            }
+        }
+
     }
 }

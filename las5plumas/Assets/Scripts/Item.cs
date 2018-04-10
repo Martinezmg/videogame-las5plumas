@@ -36,5 +36,13 @@ namespace Project
         {
             this.name = name;
         }
+
+        public void UpdateObjectName()
+        {
+            if (sprite == null)
+                return;
+
+            sprite.name = name;            
+        }
     }
 }

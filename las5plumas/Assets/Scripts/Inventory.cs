@@ -35,6 +35,9 @@ namespace Project.Game
         public InventorySO inventoryDB;
         public List<ItemUI> inventoryUI = new List<ItemUI>();
 
+        //selector
+        public Transform selector;
+
 
 
         private void Start()
@@ -49,6 +52,9 @@ namespace Project.Game
             {
                 InventoryUpdate(item);
             }
+
+            foreach (var item in inventoryUI)
+                item.UpdateObjectName();
         }
 
         private void Update()
@@ -81,6 +87,9 @@ namespace Project.Game
 
             if (inventoryDB.UseItem(itemName, out i))
             {
+                ItemUI itemUI = inventoryUI.Find(x => x.name == i.name);
+                selector.localPosition = itemUI.sprite.transform.localPosition;
+
                 InventoryUpdate(i);
             }
         }
@@ -99,7 +108,7 @@ namespace Project.Game
         {
             ItemUI itemUI = inventoryUI.Find(x => x.name == item.name);
 
-            if (item != null)
+            if (itemUI != null)
             {
                 if (item.quantity <= 0)
                 {
@@ -107,6 +116,8 @@ namespace Project.Game
                     //Color c = itemUI.sprite.color;
                     //itemUI.sprite.color = new Color(c.r, c.g, c.b, 0f);
                     StartCoroutine("FadeItemOut", itemUI);
+
+
                 }
                 else if (item.quantity == 1)
                 {
@@ -138,6 +149,7 @@ namespace Project.Game
                  yield return null;
              }*/
             nitem.sprite.color = new Color(c.r, c.g, c.b, 255f);
+            nitem.sprite.GetComponent<Collider>().enabled = true;
             yield return null;
 
         }
@@ -156,6 +168,7 @@ namespace Project.Game
                 yield return null;
             }*/
             nitem.sprite.color = new Color(c.r, c.g, c.b, 0f);
+            nitem.sprite.GetComponent<Collider>().enabled = false;
             yield return null;
         }
 

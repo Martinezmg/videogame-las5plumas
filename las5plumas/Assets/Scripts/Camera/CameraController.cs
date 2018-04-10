@@ -23,11 +23,14 @@ namespace Project.Game
         [Range(1f, 4.5f)]
         public float minZoom = 4f;
 
+        public TouchScript.Gestures.Gesture.GestureState state;
+
         //misc
         private bool idle = true;
 
         private void OnEnable()
         {
+            
             zoomGesture.Transformed += ZoomHandler;
         }
 
@@ -38,7 +41,7 @@ namespace Project.Game
 
         private void ZoomHandler(object sender, EventArgs e)
         {
-            Debug.Log(zoomGesture.DeltaScale);
+            //Debug.Log(zoomGesture.DeltaScale);
 
             float delta = zoomGesture.DeltaScale;
             float size = GetComponent<Camera>().orthographicSize;
@@ -51,8 +54,6 @@ namespace Project.Game
             {
                 GetComponent<Camera>().orthographicSize *= (1 + Mathf.Abs(1 - zoomGesture.DeltaScale));
             }
-
-            //GetComponent<Camera>().orthographicSize *= zoomGesture.DeltaScale;
         }
 
         private void Start()
@@ -69,6 +70,7 @@ namespace Project.Game
 
         private void Update()
         {
+            state = zoomGesture.State;
 
             #region MoveToPoint
             if (!idle)

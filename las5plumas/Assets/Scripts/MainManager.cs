@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Project.Game
@@ -11,27 +12,38 @@ namespace Project.Game
         MAINSCENE
     }
 
-    public class GameManagerScript : MonoBehaviour
+    public class MainManager : MonoBehaviour
     {
         public GameState currentGameState;
 
         public bool audioActive = true;
 
+        public event Action stopGesturesFromGame;
+        public event Action playGesturesFromGame;
+
         #region Singleton
-        public static GameManagerScript instance;
+        public static MainManager Instance;
 
         private void Awake()
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 return;
             }
 
-            instance = this;
+            Instance = this;
         }
         #endregion
 
-        
+        public void StopGesturesFromGame()
+        {
+            stopGesturesFromGame();
+        }
+
+        public void PlayGesturesFromGame()
+        {
+            playGesturesFromGame();
+        }
 
         public void StartGame()
         {
