@@ -1,26 +1,30 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Project.Interactables;
+using TouchScript.Gestures;
 
 namespace Project.Game.Player
 {
     public class PlayerActioner : MonoBehaviour
     {
-        public TapControls tapControls;
+        public TapGesture tapGesture;
 
         public Interactable interactableTarget = null;
         
         private List<string> CMDS { get; set; }
         public string cmd = "use";
 
-
-
-        private void Start()
+        private void OnEnable()
         {
-            tapControls.E_tap += Action;
+            tapGesture.Tapped += Action;
         }
 
-        public void Action()
+        private void OnDisable()
+        {
+            tapGesture.Tapped -= Action;
+        }
+
+        public void Action(object sender, System.EventArgs e)
         {
             if (interactableTarget != null)
                 interactableTarget.Interact(cmd);

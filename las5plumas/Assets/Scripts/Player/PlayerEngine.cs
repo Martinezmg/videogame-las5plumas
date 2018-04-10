@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using TouchScript.Gestures;
+using System;
 
 namespace Project.Game.Player
 {
+    using GestureState = TouchScript.Gestures.Gesture.GestureState;
+
     [RequireComponent(typeof(NavMeshAgent))]
     public class PlayerEngine : MonoBehaviour
-    {
-        public MovementControls motionControls;
+    {        
+        public TapGesture tapGesture;
 
         public NavMeshAgent agent;
         public float speed = 1;
@@ -19,17 +23,73 @@ namespace Project.Game.Player
 
         public float SpeedPercent { get { return speedPercent; } }
 
+
+        //touchscript
+        public Vector2 startScreenPosition;
+        public float movementTreshold;
+        public GestureState gestureState;
+
+        private void OnEnable()
+        {
+            tapGesture.StateChanged += UpdateMovement;
+            tapGesture.Tapped += ResetMovement;
+        }
+
+        private void OnDisable()
+        {
+            tapGesture.StateChanged -= UpdateMovement;
+            tapGesture.Tapped -= ResetMovement;
+        }
+
+        public void SetMovement(object sender, EventArgs e)
+        {
+            startScreenPosition = tapGesture.ScreenPosition;
+            isMoving = true;
+        }
+
+        private void UpdateMovement(object sender, EventArgs e)
+        {
+            if (tapGesture.State == GestureState.Possible)
+            {
+                isMoving = true;
+                startScreenPosition = tapGesture.ScreenPosition;
+            }
+            if (tapGesture.State == GestureState.Failed)
+            {
+                isMoving = false;
+            }
+        }
+
+        private void ResetMovement(object sender, EventArgs e)
+        {
+            isMoving = false;
+        }
+
         private void Start()
         {
             agent = GetComponent<NavMeshAgent>();
-            
-            motionControls.E_rotateAgent   += RotateAgent;
-            motionControls.E_setAgentMove  += MoveAgent;
-            motionControls.E_setAgentPlane += RotatePlane;
         }
 
         private void Update()
         {
+            gestureState = tapGesture.State;
+
+            if (isMoving)
+            {
+                RotatePlane();
+
+                Vector2 currentDirection = tapGesture.ScreenPosition - startScreenPosition;
+
+                if (currentDirection.magnitude > movementTreshold)
+                {
+                    float angle = Vector2.SignedAngle(currentDirection, Vector2.up);
+                    float s = currentDirection.magnitude;
+
+                    RotateAgent(angle);
+                    MoveAgent(s / (s + movementTreshold));
+                }
+            }
+
             if (!isMoving && speedPercent > 0)
                 speedPercent = Mathf.Lerp(speedPercent, 0f, Time.deltaTime * 2 * speed);
         }

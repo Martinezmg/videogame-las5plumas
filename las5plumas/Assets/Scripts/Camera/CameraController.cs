@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
+using TouchScript.Gestures.TransformGestures;
+using System;
 
 namespace Project.Game
 {
@@ -12,13 +14,51 @@ namespace Project.Game
         [Header("Transform smoothness")]
         public float lerpSmothness = 1f;
         [Range(0, 1)]
-        public float quaternionLerpSmothness = 0.05f;        
+        public float quaternionLerpSmothness = 0.05f;
+
+        public ScreenTransformGesture zoomGesture;
+        private float defaultZoomSize;
+        [Range(5f, 10f)]
+        public float maxZoom = 8f;
+        [Range(1f, 4.5f)]
+        public float minZoom = 4f;
 
         //misc
         private bool idle = true;
 
+        private void OnEnable()
+        {
+            zoomGesture.Transformed += ZoomHandler;
+        }
+
+        private void OnDisable()
+        {
+            zoomGesture.Transformed -= ZoomHandler;
+        }
+
+        private void ZoomHandler(object sender, EventArgs e)
+        {
+            Debug.Log(zoomGesture.DeltaScale);
+
+            float delta = zoomGesture.DeltaScale;
+            float size = GetComponent<Camera>().orthographicSize;
+
+            if (delta >= 1f && size > minZoom)
+            {
+                GetComponent<Camera>().orthographicSize *= (1 - Mathf.Abs(1 - zoomGesture.DeltaScale));
+            }
+            else if(delta < 1f && size < maxZoom)
+            {
+                GetComponent<Camera>().orthographicSize *= (1 + Mathf.Abs(1 - zoomGesture.DeltaScale));
+            }
+
+            //GetComponent<Camera>().orthographicSize *= zoomGesture.DeltaScale;
+        }
+
         private void Start()
         {
+            defaultZoomSize = GetComponent<Camera>().orthographicSize;
+
             if (target != null)
             {
                 transform.position = target.position;
@@ -26,7 +66,6 @@ namespace Project.Game
             }
             
         }
-
 
         private void Update()
         {
