@@ -3,6 +3,11 @@ using UnityEngine;
 
 namespace Project
 {
+    public enum ActionType
+    {
+        USE, OPEN, ATTACK, BURN
+    }
+
     [Serializable]
     public class Item
     {
@@ -31,10 +36,12 @@ namespace Project
     {
         public string name;
         public SpriteRenderer sprite;
+        public ActionType action;
 
         public ItemUI(string name)
         {
             this.name = name;
+            action = ActionType.USE;
         }
 
         public void UpdateObjectName()

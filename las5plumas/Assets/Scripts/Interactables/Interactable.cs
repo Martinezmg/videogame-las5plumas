@@ -7,12 +7,11 @@ namespace Project.Interactables
     {
         public bool debug = false;
 
-        public string CMD { get; protected set; }
         public string CurrentState { get; protected set; }
 
         protected StateMachine SM;
 
-        public virtual void Interact(string cmd)
+        public virtual void Interact(ActionType cmd)
         {
             if (debug)
                 Debug.Log("Interacted with " + gameObject.name);

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Project.Interactables;
 using TouchScript.Gestures;
 
@@ -11,8 +10,11 @@ namespace Project.Game.Player
 
         public Interactable interactableTarget = null;
         
-        private List<string> CMDS { get; set; }
-        public string cmd = "use";
+        public static ActionType defaultAction = ActionType.USE;
+        [SerializeField]
+        private ActionType currentAction;
+        public ActionType CurrentAction { get { return currentAction; } set { currentAction = value; } }
+
 
         private void OnEnable()
         {
@@ -28,12 +30,15 @@ namespace Project.Game.Player
         {
             MainManager.Instance.playGesturesFromGame += EnableComponent;
             MainManager.Instance.stopGesturesFromGame += DisableComponent;
+
+            currentAction = defaultAction;
         }
 
         public void Action(object sender, System.EventArgs e)
         {
+            //OJO AQUI FALTA 
             if (interactableTarget != null)
-                interactableTarget.Interact(cmd);
+                interactableTarget.Interact(currentAction);
         }
 
         private void OnTriggerEnter(Collider other)

@@ -2849,50 +2849,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f376d3a7771eb43a88b6b1e1843e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selector: {fileID: 4320091000636646}
   update: 0
   inventoryDB: {fileID: 11400000, guid: 46b663d1a020ffd4e8be5dd8f9c777dd, type: 2}
   inventoryUI:
   - name: feather1
     sprite: {fileID: 212359901802734610}
+    action: 0
   - name: feather2
     sprite: {fileID: 212547983000089214}
+    action: 0
   - name: feather3
     sprite: {fileID: 212633543117910448}
+    action: 0
   - name: feather4
     sprite: {fileID: 212213032937451602}
+    action: 0
   - name: feather5
     sprite: {fileID: 212696346935352546}
+    action: 0
   - name: moons
     sprite: {fileID: 212820255968588094}
+    action: 0
   - name: coins
     sprite: {fileID: 212844335631865232}
+    action: 0
   - name: axe
     sprite: {fileID: 212576895286152796}
+    action: 2
   - name: bow
     sprite: {fileID: 212607619412476592}
+    action: 2
   - name: sword
     sprite: {fileID: 212472888799515432}
+    action: 2
   - name: hammer
     sprite: {fileID: 212142259494375764}
+    action: 2
   - name: ligther
     sprite: {fileID: 212092182834382928}
+    action: 3
   - name: keys
     sprite: {fileID: 212736394929228126}
+    action: 1
   - name: potion1
     sprite: {fileID: 212697794770103092}
+    action: 0
   - name: potion2
     sprite: {fileID: 212002285709346892}
+    action: 0
   - name: scroll
     sprite: {fileID: 212335605367886688}
+    action: 0
   - name: orange
     sprite: {fileID: 212467475715887320}
+    action: 0
   - name: green
     sprite: {fileID: 212227938219323080}
+    action: 0
   - name: blue
     sprite: {fileID: 212409321943125252}
+    action: 0
   - name: purple
     sprite: {fileID: 212612690958638364}
-  selector: {fileID: 4320091000636646}
+    action: 0
 --- !u!114 &114741666864803444
 MonoBehaviour:
   m_ObjectHideFlags: 1

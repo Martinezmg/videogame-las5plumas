@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Project.ScriptableObjects;
+using Project.GUI;
 using UnityEngine;
 
 namespace Project.Game
@@ -27,7 +28,10 @@ namespace Project.Game
 
         //trigger actions each time inventory object is updated
         public event Action<string> InventoryUpdated;
-        
+
+
+        //selector
+        public Transform selector;
 
         public bool update = false;
 
@@ -35,19 +39,11 @@ namespace Project.Game
         public InventorySO inventoryDB;
         public List<ItemUI> inventoryUI = new List<ItemUI>();
 
-        //selector
-        public Transform selector;
 
 
 
         private void Start()
         {
-            /*foreach (var item in inventoryDB.items)
-            {
-                if(!inventoryUI.Contains(new ItemUI(item.name)))
-                    inventoryUI.Add(new ItemUI(item.name));
-            }*/
-
             foreach (var item in inventoryDB.items)
             {
                 InventoryUpdate(item);
@@ -88,7 +84,10 @@ namespace Project.Game
             if (inventoryDB.UseItem(itemName, out i))
             {
                 ItemUI itemUI = inventoryUI.Find(x => x.name == i.name);
+
                 selector.localPosition = itemUI.sprite.transform.localPosition;
+                //mandar el objeto seleccionado a canvasUI
+                GUIManager.instance.ObjectEquipped.EquipObjectUI(itemUI);
 
                 InventoryUpdate(i);
             }

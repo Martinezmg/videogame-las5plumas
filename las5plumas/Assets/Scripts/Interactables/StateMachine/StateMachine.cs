@@ -10,9 +10,9 @@ namespace Project.Interactables
     internal class StateTransition
     {
         readonly public Action CurrentState; //#0
-        readonly string Command;      //#1
+        readonly ActionType Command;      //#1
 
-        public StateTransition(Action currentState, string command)
+        public StateTransition(Action currentState, ActionType command)
         {       
             CurrentState = currentState;
             Command = command;
@@ -36,10 +36,7 @@ namespace Project.Interactables
         private Transitions transitions;
         private Action currentState;
         private Action finalState;
-
-        private Dictionary<string, List<string>> possiblesCMDS;
-        public List<string> PosiblesCMDS { get { return possiblesCMDS[currentState.Method.Name]; } }
-
+        
         public Action CurrentState { get { return currentState; } }
         public Action FinalState { get { return finalState; } }
         public bool IsFinal { get { return currentState == finalState; } }
@@ -51,27 +48,21 @@ namespace Project.Interactables
 
             states = states_;
             transitions = new Transitions();
-
-            possiblesCMDS = new Dictionary<string, List<string>>();
-            foreach (var item in states)
-                possiblesCMDS.Add(item.Method.Name, new List<string>());
+            
         }
 
-        public void AddTransition(Action currentState, string cmd, Action nextState)
+        public void AddTransition(Action currentState, ActionType cmd, Action nextState)
         {
             StateTransition ts = new StateTransition(currentState, cmd);
 
             //ensure unique transitions
             Debug.Assert(!transitions.ContainsKey(ts));
                 
-            transitions.Add(ts, nextState);
-
-            if (!possiblesCMDS[currentState.Method.Name].Contains(cmd))
-                possiblesCMDS[currentState.Method.Name].Add(cmd);
+            transitions.Add(ts, nextState);            
 
         }
 
-        private bool GetNext(string command, out Action nextState)
+        private bool GetNext(ActionType command, out Action nextState)
         {
             StateTransition tempTransition = new StateTransition(CurrentState, command);
 
@@ -79,7 +70,7 @@ namespace Project.Interactables
         }
 
         //Esto es lo que deberia estar dentro de Interact()
-        public bool MoveNext(string command)
+        public bool MoveNext(ActionType command)
         {
             Action tempState;
 

@@ -34,19 +34,19 @@ namespace Project.Interactables
             SM = new StateMachine(
                 new List<Action> {
                     Locked,
-                    Open
+                    Opened
                 },
                 Locked,
-                Open
+                Opened
                 );
 
-            SM.AddTransition(Locked,"unlock", Open);
+            SM.AddTransition(Locked, ActionType.OPEN, Opened);
 
             CurrentState = SM.CurrentState.Method.Name;
 
         }
 
-        private void Open()
+        private void Opened()
         {
             if (debug)
                 Debug.Log(gameObject.name + " is Opened.");

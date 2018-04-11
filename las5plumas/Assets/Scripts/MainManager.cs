@@ -17,6 +17,7 @@ namespace Project.Game
         public GameState currentGameState;
 
         public bool audioActive = true;
+        public AudioSource audioSource;
 
         public event Action stopGesturesFromGame;
         public event Action playGesturesFromGame;
@@ -70,6 +71,7 @@ namespace Project.Game
         public void Sound()
         {
             audioActive = !audioActive;
+            audioSource.mute = audioActive;
 
             if (!audioActive)
                 Debug.Log("Sound MUTED");

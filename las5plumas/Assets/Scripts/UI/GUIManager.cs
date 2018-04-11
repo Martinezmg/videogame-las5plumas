@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Project.GUI
@@ -23,6 +24,8 @@ namespace Project.GUI
         public GameObject gameButtons;
         public GameObject inventoryButtons;
         public GameObject menuButtons;
+
+        public ObjectUI ObjectEquipped;
 
         private void OnEnable()
         {
