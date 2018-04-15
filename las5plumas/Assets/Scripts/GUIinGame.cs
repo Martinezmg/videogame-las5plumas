@@ -11,8 +11,7 @@ namespace Project.GUI
         {
             inventory, progress, store
         }
-
-        public SwipeControls controls;
+        
         public FlickGesture swipeGesture;
         public TouchScript.Gestures.Gesture.GestureState state;
         public CameraController cameraController;

@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TouchScript.Gestures;
 
 namespace Project.Game
 {
@@ -21,6 +22,9 @@ namespace Project.Game
 
         public event Action stopGesturesFromGame;
         public event Action playGesturesFromGame;
+
+        public TapGesture tapGesture;
+        public TapGesture holdtapGesture;
 
         #region Singleton
         public static MainManager Instance;

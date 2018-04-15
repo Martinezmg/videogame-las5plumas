@@ -7,7 +7,7 @@ namespace Project.Interactables
 {
     public class ChestInteractable : Interactable
     {
-        public GameObject content;
+        public Interactable content;
 
         public Animator anim;
         private int openHash = Animator.StringToHash("OpenTrigger");
@@ -22,8 +22,9 @@ namespace Project.Interactables
 
             if (content != null)
             {
-                Inventory.inventory.AddItem("keys");
-                Destroy(content);
+                content.Interact();
+                /*.inventory.AddItem("keys");
+                Destroy(content);*/
             }
         }
 

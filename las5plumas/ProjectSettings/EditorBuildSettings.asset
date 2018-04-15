@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 3ef4a7c73d1347f438f5dc0426a47a88
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 45c7450e81557ac4e9109655b01b8c7b
+    path: Assets/Scenes/TheBlackLagoonScene.unity
+    guid: 70da173f8ff8c994dac23fe7fd048061

@@ -5,7 +5,7 @@ namespace Project
 {
     public enum ActionType
     {
-        USE, OPEN, ATTACK, BURN
+        USE, OPEN, ATTACK, BURN, NONE
     }
 
     [Serializable]

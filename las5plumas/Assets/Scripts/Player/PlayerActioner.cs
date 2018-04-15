@@ -28,10 +28,15 @@ namespace Project.Game.Player
 
         private void Awake()
         {
-            MainManager.Instance.playGesturesFromGame += EnableComponent;
-            MainManager.Instance.stopGesturesFromGame += DisableComponent;
+            
 
             currentAction = defaultAction;
+        }
+
+        private void Start()
+        {
+            MainManager.Instance.playGesturesFromGame += EnableComponent;
+            MainManager.Instance.stopGesturesFromGame += DisableComponent;
         }
 
         public void Action(object sender, System.EventArgs e)
@@ -45,9 +50,12 @@ namespace Project.Game.Player
         {
             Interactable t = other.GetComponent<Interactable>();
 
-            if (t!=null && interactableTarget==null)
+            if (t!=null && interactableTarget == null)
+            {
                 interactableTarget = t;
-
+                interactableTarget.Interact();
+            }
+                
             //agarrar los comandos disponibles para este objecto con el que se puede interactuar
 
         }

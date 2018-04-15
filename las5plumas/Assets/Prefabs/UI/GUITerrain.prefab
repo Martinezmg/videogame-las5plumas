@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 65319869603828236}
   - component: {fileID: 114166528407089012}
   - component: {fileID: 114538031595324166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 65510573404757398}
   - component: {fileID: 114115490865236724}
   - component: {fileID: 114436382169753442}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: moonShard_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 65374859450470744}
   - component: {fileID: 114797696322095648}
   - component: {fileID: 114517154465074210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: f4_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 65445841980086736}
   - component: {fileID: 114344101091157870}
   - component: {fileID: 114567561986111290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lamp_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 65717781808775034}
   - component: {fileID: 114831015651762086}
   - component: {fileID: 114348652497589384}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: keyRing_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 65671558940348764}
   - component: {fileID: 114197537721112884}
   - component: {fileID: 114006361720092464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: f1_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 65756322785365282}
   - component: {fileID: 114388810871121066}
   - component: {fileID: 114836209068289026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: axe_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 65731995671295628}
   - component: {fileID: 114900289803962474}
   - component: {fileID: 114082355778008730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: stone4_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 65921855268520244}
   - component: {fileID: 114741666864803444}
   - component: {fileID: 114660507783777824}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: stone1_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 65367216659199012}
   - component: {fileID: 114948675460126166}
   - component: {fileID: 114374713496904522}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sword_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 65604531898771100}
   - component: {fileID: 114878315442236386}
   - component: {fileID: 114356583333308976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: coins_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 65314102600272110}
   - component: {fileID: 114287178964291008}
   - component: {fileID: 114192828067439300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hammer_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 65756213948126454}
   - component: {fileID: 114714608879985642}
   - component: {fileID: 114250323271761538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: potionLife_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 65442874826885160}
   - component: {fileID: 114639098996108036}
   - component: {fileID: 114916577540701524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: scroll_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 65966033759925968}
   - component: {fileID: 114431720291580646}
   - component: {fileID: 114184148465872290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: f2_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   - component: {fileID: 65907192879779866}
   - component: {fileID: 114383052598793232}
   - component: {fileID: 114837290269517378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: potionMagic_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 65020221394474914}
   - component: {fileID: 114313905864007748}
   - component: {fileID: 114091895655293374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: f3_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 65880725926224646}
   - component: {fileID: 114667347414107910}
   - component: {fileID: 114829159909342588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: stone3_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 65471418871206328}
   - component: {fileID: 114353733602980108}
   - component: {fileID: 114160077432470916}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: f5_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 65549181967363188}
   - component: {fileID: 114810704237672106}
   - component: {fileID: 114830780149612174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: stone2_inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2430,7 +2430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6f37bd75928154b803457c30ab924f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controls: {fileID: 0}
   swipeGesture: {fileID: 0}
   state: 0
   cameraController: {fileID: 0}

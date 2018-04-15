@@ -2,7 +2,6 @@
 
 namespace Project.Interactables
 {
-    [RequireComponent(typeof(Collider))]
     public class Interactable: MonoBehaviour
     {
         public bool debug = false;
@@ -15,12 +14,18 @@ namespace Project.Interactables
         {
             if (debug)
                 Debug.Log("Interacted with " + gameObject.name);
-
+            
             if (SM.MoveNext(cmd))
             {
                 SM.CurrentState();
                 CurrentState = SM.CurrentState.Method.Name;
             }
+        }
+
+        public virtual void Interact()
+        {
+            if (debug)
+                Debug.Log("Interacted with " + gameObject.name);
         }
     }
 }

@@ -19,15 +19,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4635976658143876}
-  - component: {fileID: 114703635657128750}
-  - component: {fileID: 114197951964619566}
-  - component: {fileID: 114880866109936634}
   - component: {fileID: 114903651968913310}
   - component: {fileID: 114063695805670026}
   - component: {fileID: 114923047337888040}
   - component: {fileID: 114952088622632552}
   - component: {fileID: 114669526158802206}
   - component: {fileID: 82349132546128268}
+  - component: {fileID: 114261045445519908}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -59,10 +57,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dce6e7053efabe04ab4ba39dee67d217, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.225
+  m_Volume: 0.104
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -148,7 +146,46 @@ MonoBehaviour:
   generalProps: 0
   limitsProps: 0
   advancedProps: 0
-  minPointers: 0
+  minPointers: 1
+  maxPointers: 1
+  useSendMessage: 0
+  sendStateChangeMessages: 0
+  sendMessageTarget: {fileID: 0}
+  useUnityEvents: 0
+  sendStateChangeEvents: 0
+  requireGestureToFail: {fileID: 0}
+  friendlyGestures: []
+  OnTap:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  numberOfTapsRequired: 1
+  timeLimit: Infinity
+  distanceLimit: 1
+  combinePointers: 0
+  combinePointersInterval: 0.3
+--- !u!114 &114261045445519908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635612960749722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a878a6ff128243dfb1d89ca0273f059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TouchScript.Gestures.Gesture+GestureEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  basicEditor: 0
+  generalProps: 0
+  limitsProps: 0
+  advancedProps: 0
+  minPointers: 1
   maxPointers: 1
   useSendMessage: 0
   sendStateChangeMessages: 0
@@ -167,18 +204,6 @@ MonoBehaviour:
   distanceLimit: Infinity
   combinePointers: 0
   combinePointersInterval: 0.3
---- !u!114 &114197951964619566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635612960749722}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3807f414efeacce408b32a83002fd2be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
 --- !u!114 &114669526158802206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,30 +237,6 @@ MonoBehaviour:
   minDistance: 1
   movementThreshold: 0.5
   direction: 0
---- !u!114 &114703635657128750
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635612960749722}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754b5df785f448b46948889050a27b40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move_treshold: 50
---- !u!114 &114880866109936634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635612960749722}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd45ea9d6e9fcde40b08d49891ca33ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
 --- !u!114 &114903651968913310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,6 +251,8 @@ MonoBehaviour:
   currentGameState: 0
   audioActive: 1
   audioSource: {fileID: 82349132546128268}
+  tapGesture: {fileID: 114063695805670026}
+  holdtapGesture: {fileID: 114261045445519908}
 --- !u!114 &114923047337888040
 MonoBehaviour:
   m_ObjectHideFlags: 1

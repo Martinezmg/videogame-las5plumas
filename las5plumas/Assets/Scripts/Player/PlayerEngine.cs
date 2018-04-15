@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using TouchScript.Gestures;
+using Project.GUI;
 using System;
 
 namespace Project.Game.Player
@@ -26,13 +27,17 @@ namespace Project.Game.Player
         private float rotationLerpSpeed = 0.35f;
 
         public float SpeedPercent { get { return speedPercent; } }
-        
+        public Vector2 StartScreenPosition { get { return startScreenPosition; } }
+        public bool IsMoving { get { return isMoving; } }
+
 
         #region Unity
         private void Awake()
         {
             MainManager.Instance.stopGesturesFromGame += DisableComponent;
             MainManager.Instance.playGesturesFromGame += EnableComponent;
+
+            tapGesture = MainManager.Instance.holdtapGesture;
         }
 
         private void OnEnable()
@@ -49,6 +54,8 @@ namespace Project.Game.Player
 
         private void Start()
         {
+            
+
             agent = GetComponent<NavMeshAgent>();
         }
 
@@ -61,11 +68,14 @@ namespace Project.Game.Player
                 RotatePlane();
 
                 Vector2 currentDirection = tapGesture.ScreenPosition - startScreenPosition;
-
+                
                 if (currentDirection.magnitude > movementTreshold)
                 {
                     float angle = Vector2.SignedAngle(currentDirection, Vector2.up);
                     float s = currentDirection.magnitude;
+
+
+                    GUIManager.instance.UpdateIndicator(angle);
 
                     RotateAgent(angle);
                     MoveAgent(s / (s + movementTreshold));
@@ -84,16 +94,22 @@ namespace Project.Game.Player
             {
                 isMoving = true;
                 startScreenPosition = tapGesture.ScreenPosition;
+
+                GUIManager.instance.SetIndicator(startScreenPosition);
             }
             if (tapGesture.State == GestureState.Failed)
             {
                 isMoving = false;
+
+                GUIManager.instance.UnsetIndicator();
             }
         }
 
         private void ResetMovement(object sender, EventArgs e)
         {
             isMoving = false;
+
+            GUIManager.instance.UnsetIndicator();
         }
 
         #endregion
@@ -129,9 +145,7 @@ namespace Project.Game.Player
             speedPercent = Mathf.Clamp01(s);
             agent.Move(rotation_pivot.forward * Time.deltaTime * speed);
         }
-
-        public void IsMoving(bool m) { isMoving = m; }
-
+        
         #endregion
 
         public void DisableComponent()

@@ -27,6 +27,8 @@ namespace Project.GUI
 
         public ObjectUI ObjectEquipped;
 
+        public Image MotionIndicator;
+
         private void OnEnable()
         {
             SceneManager.sceneLoaded += FadeIn;
@@ -64,6 +66,23 @@ namespace Project.GUI
         public void FadeOut(Scene scene)
         {
             //Debug.Log("OnSceneUnloaded: " + scene.name);
+        }
+
+        public void SetIndicator(Vector2 pos)
+        {
+            MotionIndicator.enabled = true;
+
+            MotionIndicator.transform.position = pos;
+        }
+
+        public void UpdateIndicator(float angle)
+        {
+            MotionIndicator.transform.eulerAngles = new Vector3(0, 0, -(angle + 180f));
+        }
+
+        public void UnsetIndicator()
+        {
+            MotionIndicator.enabled = false;
         }
     }
 }
