@@ -10,9 +10,9 @@ namespace Project.Interactables
     internal class StateTransition
     {
         readonly public Action CurrentState; //#0
-        readonly ActionType Command;      //#1
+        readonly ItemAction Command;      //#1
 
-        public StateTransition(Action currentState, ActionType command)
+        public StateTransition(Action currentState, ItemAction command)
         {       
             CurrentState = currentState;
             Command = command;
@@ -32,7 +32,7 @@ namespace Project.Interactables
 
     public class StateMachine
     {
-        private States states;
+        //private States states;
         private Transitions transitions;
         private Action currentState;
         private Action finalState;
@@ -46,12 +46,12 @@ namespace Project.Interactables
             currentState = iniState_;
             finalState = finalState_;
 
-            states = states_;
+            //states = states_;
             transitions = new Transitions();
             
         }
 
-        public void AddTransition(Action currentState, ActionType cmd, Action nextState)
+        public void AddTransition(Action currentState, ItemAction cmd, Action nextState)
         {
             StateTransition ts = new StateTransition(currentState, cmd);
 
@@ -62,7 +62,7 @@ namespace Project.Interactables
 
         }
 
-        private bool GetNext(ActionType command, out Action nextState)
+        private bool GetNext(ItemAction command, out Action nextState)
         {
             StateTransition tempTransition = new StateTransition(CurrentState, command);
 
@@ -70,7 +70,7 @@ namespace Project.Interactables
         }
 
         //Esto es lo que deberia estar dentro de Interact()
-        public bool MoveNext(ActionType command)
+        public bool MoveNext(ItemAction command)
         {
             Action tempState;
 

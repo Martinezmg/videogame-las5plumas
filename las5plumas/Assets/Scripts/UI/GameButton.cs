@@ -1,7 +1,7 @@
 ﻿using Project.Game;
 using UnityEngine;
 
-namespace Project.GUI
+namespace Project.UI
 {
     public class GameButton : MonoBehaviour
     {

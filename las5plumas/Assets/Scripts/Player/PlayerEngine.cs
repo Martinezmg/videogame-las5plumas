@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using TouchScript.Gestures;
-using Project.GUI;
+using Project.UI;
 using System;
 
 namespace Project.Game.Player
@@ -21,6 +21,7 @@ namespace Project.Game.Player
         public float speed = 1;
         private float speedPercent;
         private bool isMoving = false;
+        public bool canMove = true;
 
         //transform from GFX
         public Transform rotation_pivot;
@@ -78,7 +79,8 @@ namespace Project.Game.Player
                     GUIManager.instance.UpdateIndicator(angle);
 
                     RotateAgent(angle);
-                    MoveAgent(s / (s + movementTreshold));
+                    speedPercent = Mathf.Clamp01(s / (s + movementTreshold));
+                    MoveAgent();
                 }
             }
 
@@ -140,10 +142,10 @@ namespace Project.Game.Player
                 rotationLerpSpeed);
         }
 
-        public void MoveAgent(float s)
+        public void MoveAgent()
         {
-            speedPercent = Mathf.Clamp01(s);
-            agent.Move(rotation_pivot.forward * Time.deltaTime * speed);
+            if (canMove)
+                agent.Move(rotation_pivot.forward * Time.deltaTime * speed);
         }
         
         #endregion

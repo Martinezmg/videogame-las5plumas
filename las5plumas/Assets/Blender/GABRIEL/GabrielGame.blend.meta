@@ -129,6 +129,8 @@ ModelImporter:
     7400016: STAND
     7400018: WALK
     7400020: WALKaxe
+    7400022: takeCuatro
+    7400024: onlyPlayCuatro
     9500000: //RootNode
     13700000: AXE
     13700002: CUATRO
@@ -357,7 +359,7 @@ ModelImporter:
       name: PLAYcuatro
       takeName: PLAYcuatro
       firstFrame: -1
-      lastFrame: 143
+      lastFrame: 75
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -470,6 +472,62 @@ ModelImporter:
       takeName: WALKaxe
       firstFrame: -1
       lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: takeCuatro
+      takeName: PLAYcuatro
+      firstFrame: -1
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: onlyPlayCuatro
+      takeName: PLAYcuatro
+      firstFrame: 75
+      lastFrame: 134.6
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -164,7 +164,7 @@ MonoBehaviour:
     m_NumColorKeys: 4
     m_NumAlphaKeys: 8
   Name: Mouse Pressed
-  Resolution: 256
+  Resolution: 32
 --- !u!114 &11446012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189110}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d78b78253cc71a64ca6bf0978d7ac99e, type: 3}
   m_Name: 
@@ -246,7 +246,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 5
   Name: Mouse Default
-  Resolution: 256
+  Resolution: 32
 --- !u!114 &11453278
 MonoBehaviour:
   m_ObjectHideFlags: 1

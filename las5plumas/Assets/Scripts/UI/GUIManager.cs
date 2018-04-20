@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-namespace Project.GUI
+namespace Project.UI
 {
     public class GUIManager : MonoBehaviour
     {
@@ -21,6 +22,8 @@ namespace Project.GUI
         }
         #endregion
 
+        public event Action UpdateUI;
+
         public GameObject gameButtons;
         public GameObject inventoryButtons;
         public GameObject menuButtons;
@@ -28,7 +31,11 @@ namespace Project.GUI
         public ObjectUI ObjectEquipped;
 
         public Image MotionIndicator;
-
+        
+        //DB
+        [SerializeField]
+        private InventorySO inventory;
+        
         private void OnEnable()
         {
             SceneManager.sceneLoaded += FadeIn;
@@ -57,6 +64,8 @@ namespace Project.GUI
             inventoryButtons.SetActive(false);
         }
 
+        
+
         public void FadeIn(Scene scene, LoadSceneMode mode)
         {
             //Debug.Log("OnSceneLoaded: " + scene.name);
@@ -77,7 +86,7 @@ namespace Project.GUI
 
         public void UpdateIndicator(float angle)
         {
-            MotionIndicator.transform.eulerAngles = new Vector3(0, 0, -(angle + 180f));
+            MotionIndicator.transform.eulerAngles = new Vector3(0, 0, -(angle - 90f));
         }
 
         public void UnsetIndicator()

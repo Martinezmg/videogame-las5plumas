@@ -10,10 +10,10 @@ namespace Project.Game.Player
 
         public Interactable interactableTarget = null;
         
-        public static ActionType defaultAction = ActionType.USE;
+        public static ItemAction defaultAction = ItemAction.USE;
         [SerializeField]
-        private ActionType currentAction;
-        public ActionType CurrentAction { get { return currentAction; } set { currentAction = value; } }
+        private ItemAction currentAction;
+        public ItemAction CurrentAction { get { return currentAction; } set { currentAction = value; } }
 
 
         private void OnEnable()
@@ -41,7 +41,6 @@ namespace Project.Game.Player
 
         public void Action(object sender, System.EventArgs e)
         {
-            //OJO AQUI FALTA 
             if (interactableTarget != null)
                 interactableTarget.Interact(currentAction);
         }
@@ -55,8 +54,6 @@ namespace Project.Game.Player
                 interactableTarget = t;
                 interactableTarget.Interact();
             }
-                
-            //agarrar los comandos disponibles para este objecto con el que se puede interactuar
 
         }
 

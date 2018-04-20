@@ -3,7 +3,7 @@ using Project.Game;
 using TouchScript.Gestures;
 using System;
 
-namespace Project.GUI
+namespace Project.UI
 {
     public class GUIinGame : MonoBehaviour
     {

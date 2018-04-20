@@ -40,7 +40,7 @@ namespace Project.Interactables
                 Opened
                 );
 
-            SM.AddTransition(Locked, ActionType.OPEN, Opened);
+            SM.AddTransition(Locked, ItemAction.OPEN, Opened);
 
             CurrentState = SM.CurrentState.Method.Name;
 

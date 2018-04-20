@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Project.GUI
+namespace Project.UI
 {
     public class PauseButton : MonoBehaviour
     {

@@ -36,7 +36,7 @@ namespace Project.Interactables
                 Opened
                 );
 
-            SM.AddTransition(Closed, ActionType.USE, Opened);
+            SM.AddTransition(Closed, ItemAction.USE, Opened);
 
             CurrentState = SM.CurrentState.Method.Name;
         }

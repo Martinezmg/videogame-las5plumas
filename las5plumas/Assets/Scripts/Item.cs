@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Project
+/*namespace Project
 {
     public enum ActionType
     {
@@ -52,4 +52,4 @@ namespace Project
             sprite.name = name;            
         }
     }
-}
+}*/

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 namespace Project.Interactables
 {
     public class Interactable: MonoBehaviour
@@ -10,7 +11,7 @@ namespace Project.Interactables
 
         protected StateMachine SM;
 
-        public virtual void Interact(ActionType cmd)
+        public virtual void Interact(ItemAction cmd)
         {
             if (debug)
                 Debug.Log("Interacted with " + gameObject.name);
