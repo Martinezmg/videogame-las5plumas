@@ -80,9 +80,10 @@ namespace Project.Game
             #endregion
         }
 
-        public void SetNewTarget(Transform t)
+        public void SetNewTarget(Transform t, float z)
         {
             target = t;
+            defaultZoomSize = z;
 
             idle = false;
         }
@@ -92,11 +93,19 @@ namespace Project.Game
             float distanceA = Vector3.Distance(transform.position, target.position);
             float distanceB = Vector3.Distance(transform.eulerAngles, target.eulerAngles);
 
-            if (distanceA > 0.1f && distanceB > 0.1f)
+            float currentSize = GetComponent<Camera>().orthographicSize;
+
+            float distanceC = Mathf.Abs(currentSize - defaultZoomSize);
+
+            if (distanceA > 0.1f && distanceB > 0.1f && distanceC > 0.1f)
             {
                 transform.position = Vector3.Slerp(transform.position, target.position, Time.deltaTime * lerpSmothness);
 
-                transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, quaternionLerpSmothness);
+                transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, quaternionLerpSmothness);                
+
+                GetComponent<Camera>().orthographicSize = Mathf.Lerp(currentSize, defaultZoomSize, Time.deltaTime * lerpSmothness);
+
+
             }
             else
             {

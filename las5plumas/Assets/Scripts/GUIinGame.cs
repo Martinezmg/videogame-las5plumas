@@ -61,10 +61,10 @@ namespace Project.UI
             switch (currentPoint)
             {
                 case Points.progress:
-                    cameraController.SetNewTarget(pInventory);
+                    cameraController.SetNewTarget(pInventory, 6.4f);
                     break;
                 case Points.store:
-                    cameraController.SetNewTarget(pProgress);
+                    cameraController.SetNewTarget(pProgress, 6.4f);
                     currentPoint = Points.progress;
                     break;
                 default:
@@ -76,11 +76,11 @@ namespace Project.UI
             switch (currentPoint)
             {
                 case Points.inventory:
-                    cameraController.SetNewTarget(pProgress);
+                    cameraController.SetNewTarget(pProgress, 6.4f);
                     currentPoint = Points.progress;
                     break;
                 case Points.progress:
-                    cameraController.SetNewTarget(pStore);
+                    cameraController.SetNewTarget(pStore, 6.4f);
                     currentPoint = Points.store;
                     break;
                 default:
@@ -104,7 +104,7 @@ namespace Project.UI
             lastPointInGame.position = cameraController.target.position;
             lastPointInGame.rotation = cameraController.target.rotation;
 
-            cameraController.SetNewTarget(pInventory);
+            cameraController.SetNewTarget(pInventory, 6.4f);
         }
         private void OnDisable()
         {
@@ -112,7 +112,7 @@ namespace Project.UI
 
             MainManager.Instance.PlayGesturesFromGame();
 
-            cameraController.SetNewTarget(lastPointInGame); 
+            cameraController.SetNewTarget(lastPointInGame, 6.4f); 
         }
 
         private void SwipeHandler(object sender, EventArgs e)

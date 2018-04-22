@@ -32,9 +32,6 @@ namespace Project.UI
 
         public Image MotionIndicator;
         
-        //DB
-        [SerializeField]
-        private InventorySO inventory;
         
         private void OnEnable()
         {

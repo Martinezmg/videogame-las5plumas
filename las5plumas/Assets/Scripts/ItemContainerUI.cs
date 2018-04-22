@@ -32,7 +32,7 @@ namespace Project.UI
 
         private void UseItem(object sender, EventArgs e)
         {
-           //from inventoryt
+            Inventory.Instance.selector.Select(transform);
         }
 
         public virtual void UpdateItem(Item item)

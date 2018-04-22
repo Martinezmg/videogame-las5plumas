@@ -21,6 +21,57 @@ MonoBehaviour:
   - name: key
     action: 1
     available: 0
-  coins: 5
+  - name: feather1
+    action: 4
+    available: 0
+  - name: feather2
+    action: 4
+    available: 0
+  - name: feather3
+    action: 4
+    available: 0
+  - name: feather4
+    action: 4
+    available: 0
+  - name: feather5
+    action: 4
+    available: 0
+  - name: axe
+    action: 2
+    available: 0
+  - name: bow
+    action: 2
+    available: 0
+  - name: sword
+    action: 2
+    available: 0
+  - name: hammer
+    action: 2
+    available: 0
+  - name: lamp
+    action: 3
+    available: 0
+  - name: potion of life
+    action: 4
+    available: 0
+  - name: potion of mana
+    action: 4
+    available: 0
+  - name: scroll
+    action: 4
+    available: 0
+  - name: orange stone
+    action: 4
+    available: 0
+  - name: green stone
+    action: 4
+    available: 0
+  - name: blue stone
+    action: 4
+    available: 0
+  - name: purple stone
+    action: 4
+    available: 0
+  coins: 2
   shards: 0
   keys: 0

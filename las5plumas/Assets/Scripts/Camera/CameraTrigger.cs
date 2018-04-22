@@ -8,6 +8,9 @@ namespace Project.Game
         private CameraController camController;
         public Transform targetPoint;
 
+        [SerializeField]
+        private float zoom;
+
         // Use this for initialization
         void Start()
         {
@@ -20,7 +23,7 @@ namespace Project.Game
             if (other.gameObject.name != "Player")
                 return;
 
-            camController.SetNewTarget(targetPoint);
+            camController.SetNewTarget(targetPoint, zoom);
         }
     }
 }

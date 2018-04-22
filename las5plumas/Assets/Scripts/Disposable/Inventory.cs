@@ -11,32 +11,23 @@ namespace Project.UI
     {
         #region Singleton
         protected Inventory() { }
-        /*public static Inventory instance;
-        public static Inventory Instance { get { if (instance == null) { instance = this; } return instance; } }
-
-        private void Awake()
-        {
-            if (instance != null)
-            {
-                Debug.LogWarning("There is mora than one inventory instance.");
-                return;
-            }
-
-            instance = this;
-        }*/
         #endregion
         
         //trigger actions each time inventory object is updated
         public event Action<Item> InventoryUpdated;
 
-
         //selector
         [SerializeField]
-        private SelectorInventoryUI selector;
+        public SelectorInventoryUI selector;
 
         //DB
         [SerializeField]
         private InventorySO inventoryDB;
+
+        private void Start()
+        {
+                
+        }
 
         public void AddItem(string itemName)
         {
