@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using TouchScript.Gestures.TransformGestures;
 using System;
 
@@ -30,7 +29,11 @@ namespace Project.Game
 
         private void OnEnable()
         {
-            
+            if (zoomGesture == null)
+            {
+                zoomGesture = MainManager.Instance.GetComponent<ScreenTransformGesture>();
+            }
+
             zoomGesture.Transformed += ZoomHandler;
         }
 
@@ -57,7 +60,8 @@ namespace Project.Game
         }
 
         private void Start()
-        {
+        {           
+
             defaultZoomSize = GetComponent<Camera>().orthographicSize;
 
             if (target != null)

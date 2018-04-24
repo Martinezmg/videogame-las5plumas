@@ -26,18 +26,24 @@ namespace Project.Game
         public TapGesture tapGesture;
         public TapGesture holdtapGesture;
 
+
         #region Singleton
         public static MainManager Instance;
 
         private void Awake()
         {
-            if (Instance != null)
+            if (Instance == null)
             {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
                 return;
             }
 
-            Instance = this;
-        }
+            DontDestroyOnLoad(gameObject);
+        } 
         #endregion
 
         public void StopGesturesFromGame()
@@ -92,6 +98,8 @@ namespace Project.Game
         {
             Application.Quit();
         }
+
+        
     }
 
     

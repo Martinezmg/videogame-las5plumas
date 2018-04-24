@@ -25,14 +25,31 @@ ModelImporter:
     2100002: COVER_BOOK
     2100004: PAPER_BOOK
     2300000: Plane
+    2300002: BOOK
     3300000: Plane
+    3300002: BOOK
     4300000: Plane
     4300002: BOOK
     7400000: Default Take
     7400002: OPEN
     9500000: //RootNode
     13700000: BOOK
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COVER_BOOK
+    second: {fileID: 2100000, guid: b1d476c905422254dacd85bdbda28581, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: c2a9be4a8db5a3b488b36887c3386a4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_BOOK
+    second: {fileID: 2100000, guid: e46fabefcfc479b48a093356f29373d9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -51,7 +68,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -103,7 +120,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
