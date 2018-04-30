@@ -23,6 +23,17 @@ namespace Project.UI
         {
             tapGesture.Tapped += UseItem;
             Inventory.Instance.InventoryUpdated += UpdateItem;
+
+            Item i = Inventory.Instance.inventoryDB.listOfitems.Find(x => x.name == itemName);
+
+            if (i!=null && i.available)
+            {
+                render.enabled = true;
+            }
+            else
+            {
+                render.enabled = false;
+            }
         }
 
         private void OnDisable()

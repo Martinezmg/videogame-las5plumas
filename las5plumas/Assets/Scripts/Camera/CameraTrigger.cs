@@ -23,7 +23,8 @@ namespace Project.Game
             if (other.gameObject.name != "Player")
                 return;
 
-            camController.SetNewTarget(targetPoint, zoom);
+            camController.SetNewTarget(targetPoint);
+            camController.SetNewZoom(zoom);
         }
     }
 }

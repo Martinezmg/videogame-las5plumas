@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheBlackLagoonScene.unity
     guid: 70da173f8ff8c994dac23fe7fd048061
+  - enabled: 1
+    path: Assets/Scenes/WitchMazeScene.unity
+    guid: 114edd48dab93774789332dc58b01ec5

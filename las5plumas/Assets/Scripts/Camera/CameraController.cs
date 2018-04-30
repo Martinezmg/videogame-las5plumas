@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using TouchScript.Gestures.TransformGestures;
 using System;
+using System.Collections;
 
 namespace Project.Game
 {
     [RequireComponent(typeof(Camera))]
-    public class CameraController : MonoBehaviour
+    public class CameraController : MonoBehaviour, IManager
     {
         public Transform target;
 
@@ -14,27 +15,67 @@ namespace Project.Game
         public float lerpSmothness = 1f;
         [Range(0, 1)]
         public float quaternionLerpSmothness = 0.05f;
+        [Range(0.001f, 0.1f)]
+        public float posError = 0.1f;
+        [Range(0.001f, 0.1f)]
+        public float rotError = 0.1f;
 
+        [Space(10f)]
+        [Header("Camera size")]
         public ScreenTransformGesture zoomGesture;
-        private float defaultZoomSize;
+        public float zoomSize;
         [Range(5f, 10f)]
         public float maxZoom = 8f;
         [Range(1f, 4.5f)]
         public float minZoom = 4f;
+        [Range(0, 1)]
+        public float zoomLerpSmothness = 0.05f;
+        [Range(0.001f, 0.1f)]
+        public float zoomError = 0.1f;
 
-        public TouchScript.Gestures.Gesture.GestureState state;
+        public float posDistance;
+        public float rotDistance;
 
         //misc
         private bool idle = true;
 
-        private void OnEnable()
+        private void Awake()
         {
             if (zoomGesture == null)
             {
                 zoomGesture = MainManager.Instance.GetComponent<ScreenTransformGesture>();
             }
+        }
+
+        private void OnEnable()
+        {
+            transform.parent = null;
+            SetNewTarget(target);
 
             zoomGesture.Transformed += ZoomHandler;
+        }
+
+        private void Start()
+        {
+
+            zoomSize = GetComponent<Camera>().orthographicSize;
+
+            /*if (target != null)
+            {
+                transform.position = target.position;
+                transform.rotation = target.rotation;
+            }*/
+
+        }
+
+        private void Update()
+        {
+            #region MoveToPoint
+            if (!idle)
+            {
+                //MoveToNewTarget();
+            }
+            #endregion
         }
 
         private void OnDisable()
@@ -44,8 +85,6 @@ namespace Project.Game
 
         private void ZoomHandler(object sender, EventArgs e)
         {
-            //Debug.Log(zoomGesture.DeltaScale);
-
             float delta = zoomGesture.DeltaScale;
             float size = GetComponent<Camera>().orthographicSize;
 
@@ -57,49 +96,35 @@ namespace Project.Game
             {
                 GetComponent<Camera>().orthographicSize *= (1 + Mathf.Abs(1 - zoomGesture.DeltaScale));
             }
-        }
+        }        
 
-        private void Start()
-        {           
-
-            defaultZoomSize = GetComponent<Camera>().orthographicSize;
-
-            if (target != null)
-            {
-                transform.position = target.position;
-                transform.rotation = target.rotation;
-            }
-            
-        }
-
-        private void Update()
-        {
-            state = zoomGesture.State;
-
-            #region MoveToPoint
-            if (!idle)
-            {
-                MoveToNewTarget();
-            }
-            #endregion
-        }
-
-        public void SetNewTarget(Transform t, float z)
+        public void SetNewTarget(Transform t)
         {
             target = t;
-            defaultZoomSize = z;
 
-            idle = false;
+            //start courutine
+            //StopAllCoroutines();
+            StartCoroutine(MoveToNewTarget());
+            StartCoroutine(RotateToNewTarget());
         }
 
-        private void MoveToNewTarget()
+        public void SetNewZoom(float z)
+        {
+            zoomSize = z;
+
+            //start courutine
+            //StopAllCoroutines();
+            StartCoroutine(SetZoomSize());
+        }
+
+        /*private void MoveToNewTarget()
         {
             float distanceA = Vector3.Distance(transform.position, target.position);
             float distanceB = Vector3.Distance(transform.eulerAngles, target.eulerAngles);
 
             float currentSize = GetComponent<Camera>().orthographicSize;
 
-            float distanceC = Mathf.Abs(currentSize - defaultZoomSize);
+            float distanceC = Mathf.Abs(currentSize - zoomSize);
 
             if (distanceA > 0.1f && distanceB > 0.1f && distanceC > 0.1f)
             {
@@ -107,7 +132,7 @@ namespace Project.Game
 
                 transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, quaternionLerpSmothness);                
 
-                GetComponent<Camera>().orthographicSize = Mathf.Lerp(currentSize, defaultZoomSize, Time.deltaTime * lerpSmothness);
+                GetComponent<Camera>().orthographicSize = Mathf.Lerp(currentSize, zoomSize, Time.deltaTime * lerpSmothness);
 
 
             }
@@ -115,7 +140,68 @@ namespace Project.Game
             {
                 idle = true;
             }
+        }*/
+
+        private IEnumerator MoveToNewTarget()
+        {
+             posDistance = Vector3.Distance(transform.position, target.position);
+
+            while (posDistance > posError)
+            {
+                transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * lerpSmothness);
+
+                posDistance = Vector3.Distance(transform.position, target.position);
+                
+                yield return null;
+            }
+
+            
         }
 
+        private IEnumerator RotateToNewTarget()
+        {
+            rotDistance = Vector3.Distance(transform.eulerAngles, target.eulerAngles);
+
+            while (rotDistance > rotError)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, quaternionLerpSmothness);
+
+                rotDistance = Vector3.Distance(transform.eulerAngles, target.eulerAngles);
+
+                yield return null;
+            }
+        }
+
+        private IEnumerator SetZoomSize()
+        {
+            float currentSize = GetComponent<Camera>().orthographicSize;
+
+            float zoomDiff = Mathf.Abs(currentSize - zoomSize);
+
+            while (zoomDiff > zoomError)
+            {
+                currentSize = Mathf.Lerp(currentSize, zoomSize, Time.deltaTime * lerpSmothness);
+
+                GetComponent<Camera>().orthographicSize = currentSize;
+                zoomDiff = Mathf.Abs(currentSize - zoomSize);
+
+                yield return null;
+            }
+            
+        }
+
+
+        //Para usar junto con un boton
+        public void DisableComponent()
+        {
+            enabled = false;
+        }
+
+        public void EnableComponent()
+        {
+            Debug.Log("ENABLING CAMERAAAAAAAA");
+
+            enabled = true;
+        }
     }
 }

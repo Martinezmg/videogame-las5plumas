@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 
 namespace Project.Game
 {
@@ -7,17 +8,43 @@ namespace Project.Game
     public class AhkitobeEngine : MonoBehaviour
     {
         public NavMeshAgent agent;
-        public Transform player;
+        public Transform target;
+
+        //esto no deberia estar en esta clase
+        public GameObject dialogPop;
+
+        private void OnEnable()
+        {
+            StartCoroutine(SlowUpdate());
+        }
 
         private void Start()
         {
             agent = GetComponent<NavMeshAgent>();
-            agent.stoppingDistance = 2f;
+            //agent.stoppingDistance = 2f;
         }
 
-        private void Update()
+        private void OnDisable()
         {
-            agent.SetDestination(player.position);
+            StopAllCoroutines();
+        }
+
+        public void GoTo()
+        {
+            agent.SetDestination(target.position);
+        }
+
+        private IEnumerator SlowUpdate()
+        {
+            while (true)
+            {
+                if (agent.velocity.magnitude == 0)
+                {
+                    transform.rotation = target.rotation;
+                }
+
+                yield return new WaitForSeconds(5f);
+            }
         }
     }
 }

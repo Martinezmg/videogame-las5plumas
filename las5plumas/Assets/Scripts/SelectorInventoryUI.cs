@@ -9,7 +9,7 @@ namespace Project.UI
         private SpriteRenderer spriteRenderer;
 
         private Transform target;
-        private bool isSelecting = false;
+        //private bool isSelecting = false;
 
         private void Start()
         {
@@ -23,7 +23,7 @@ namespace Project.UI
                 Unselect();
             }
 
-            isSelecting = true;
+            //isSelecting = true;
             target = t;
             
             spriteRenderer.enabled = true;
@@ -32,7 +32,7 @@ namespace Project.UI
 
         public void Unselect()
         {
-            isSelecting = false;
+            //isSelecting = false;
             target = null;
             spriteRenderer.enabled = false;
         }

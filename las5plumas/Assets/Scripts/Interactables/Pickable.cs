@@ -6,6 +6,9 @@ namespace Project.Interactables
     public class Pickable : Interactable
     {
         public string itemName;
+        public Animator anim;
+
+        private int triggerHash = Animator.StringToHash("PickedUp"); 
 
         public override void Interact()
         {
@@ -17,10 +20,24 @@ namespace Project.Interactables
             Inventory.Instance.AddItem(itemName);
 
             //player anim for destroy
+            if (anim != null)
+            {
+                anim.SetTrigger(triggerHash);
+            }
+            else
+            {
+                PickedUp();
+            }
 
+            
+        }
 
+        public void PickedUp()
+        {
             //destroy coin
             Destroy(gameObject);
         }
+
+
     }
 }

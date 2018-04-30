@@ -17,10 +17,10 @@ MonoBehaviour:
     available: 1
   - name: shard
     action: 4
-    available: 0
+    available: 1
   - name: key
     action: 1
-    available: 0
+    available: 1
   - name: feather1
     action: 4
     available: 0
@@ -72,6 +72,6 @@ MonoBehaviour:
   - name: purple stone
     action: 4
     available: 0
-  coins: 2
-  shards: 0
-  keys: 0
+  coins: 15
+  shards: 10
+  keys: 1

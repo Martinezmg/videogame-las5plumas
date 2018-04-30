@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Project.Levels;
 
 namespace Project.Interactables
 {
@@ -57,7 +58,15 @@ namespace Project.Interactables
         private void Locked()
         {
             throw new NotImplementedException();
-        }       
+        }
 
+        public override void Interact(ItemAction cmd)
+        {
+            base.Interact(cmd);
+
+            //ojo cambiar esto
+            if (TheBlackLagoon.Instance.key == null)
+                base.Interact(ItemAction.OPEN);
+        }
     }
 }

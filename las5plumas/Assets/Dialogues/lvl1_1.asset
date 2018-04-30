@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bab64d2f43e0a4da2ecd3be8294cac, type: 3}
+  m_Name: lvl1_1
+  m_EditorClassIdentifier: 
+  name: lvl1_1
+  sentences:
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Como te ven\xEDa diciendo, debes conseguir las 5 plumas de las \xE1guilas blancas
+      de la leyenda, pero estoy seguro de que no pretendes hacerlo \xFAnicamente con
+      ese instrumento extra\xF1o que cargas\u2026"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\xBFTe refieres a mi Cuatro?"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Necesitas un <b><color=#ffffffff>arma</color></b>, digna de un guerrero de
+      tu talla\u2026 Supongo que un hacha /*gastada*/ servir\xE1"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - '...'
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Dice una leyenda que en esta zona hay una <b><color=#FFFFFFFF>entrada</color></b>
+      a la monta\xF1a que lleva directo a una guarida de <b><color=#ffffffff>brujas</color></b>\u2026 "
+    - "Las brujas siempre custodian tesoros, es posible que si consigues su guarida
+      consigas un arma\u2026"
+    - "Pero primero, debes aprender a <b><color=#ffffffff>moverte</color></b> por
+      estas tierras\u2026"
+    - "Para moverte <b><color=#ffffffff>mant\xE9n</color></b> <b><color=#ffffffff>pulsada</color></b>
+      <b><color=#ffffffff>la</color></b> <b><color=#ffffffff>pantalla</color></b>
+      y <b><color=#ffffffff>desplaza</color></b> <b><color=#ffffffff>tu</color></b>
+      <b><color=#ffffffff>dedo</color></b> sobre ella en la direcci\xF3n que desees
+      moverte\u2026"
+    - "Para <b><color=#ffffffff>interactuar</color></b> con alg\xFAn <b><color=#ffffffff>objeto</color></b>
+      o <b><color=#ffffffff>personaje</color></b> solo <b><color=#ffffffff>toca <b><color=#ffffffff>la</color></b>
+      <b><color=#ffffffff>pantalla</color></b>\u2026  "
+    - "No s\xE9 muy bien que significa esto de \u201Cla pantalla\u201D pero es lo
+      que supone que te diga en este punto\u2026 "
+    - "Intenta <b><color=#ffffffff>moverte</color></b>, yo me adelantare a buscar
+      la <b><color=#ffffffff>entrada</color></b> en la monta\xF1a\u2026"

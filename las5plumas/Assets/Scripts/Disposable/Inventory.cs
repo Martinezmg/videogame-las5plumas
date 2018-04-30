@@ -21,12 +21,10 @@ namespace Project.UI
         public SelectorInventoryUI selector;
 
         //DB
-        [SerializeField]
-        private InventorySO inventoryDB;
+        public InventorySO inventoryDB;
 
         private void Start()
         {
-                
         }
 
         public void AddItem(string itemName)

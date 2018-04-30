@@ -22,7 +22,6 @@ namespace Project.Interactables
 
             if (content != null)
             {
-                content.Interact();
                 /*.inventory.AddItem("keys");
                 Destroy(content);*/
             }
@@ -31,14 +30,23 @@ namespace Project.Interactables
         private void Start()
         {
             SM = new StateMachine(
-                new List<Action> { Closed, Opened },
+                new List<Action> { Closed, Opened, Searched },
                 Closed, 
                 Opened
                 );
 
             SM.AddTransition(Closed, ItemAction.USE, Opened);
+            SM.AddTransition(Opened, ItemAction.USE, Searched);
 
             CurrentState = SM.CurrentState.Method.Name;
+        }
+
+        private void Searched()
+        {
+            if (content != null)
+            {
+                content.Interact();
+            }
         }
 
         private void Closed()
@@ -54,6 +62,8 @@ namespace Project.Interactables
 
 
             anim.SetTrigger(openHash);
+
+
 
         }
     }

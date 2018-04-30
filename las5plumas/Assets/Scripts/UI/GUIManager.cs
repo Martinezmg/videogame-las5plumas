@@ -1,11 +1,11 @@
-﻿using System;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Project.UI
 {
-    public class GUIManager : MonoBehaviour
+    public class GUIManager : MonoBehaviour, IManager
     {
         #region Singleton
         public static GUIManager instance;
@@ -22,7 +22,7 @@ namespace Project.UI
         }
         #endregion
 
-        public event Action UpdateUI;
+        //public event Action UpdateUI;
 
         public GameObject gameButtons;
         public GameObject inventoryButtons;
@@ -31,13 +31,6 @@ namespace Project.UI
         public ObjectUI ObjectEquipped;
 
         public Image MotionIndicator;
-        
-        
-        private void OnEnable()
-        {
-            SceneManager.sceneLoaded += FadeIn;
-            SceneManager.sceneUnloaded += FadeOut;
-        }
 
         public void GoToGame()
         {
@@ -63,16 +56,9 @@ namespace Project.UI
 
         
 
-        public void FadeIn(Scene scene, LoadSceneMode mode)
-        {
-            //Debug.Log("OnSceneLoaded: " + scene.name);
-            //Debug.Log(mode);
-        }
+        
 
-        public void FadeOut(Scene scene)
-        {
-            //Debug.Log("OnSceneUnloaded: " + scene.name);
-        }
+        
 
         public void SetIndicator(Vector2 pos)
         {
@@ -89,6 +75,16 @@ namespace Project.UI
         public void UnsetIndicator()
         {
             MotionIndicator.enabled = false;
+        }
+
+        public void DisableComponent()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void EnableComponent()
+        {
+            gameObject.SetActive(true);
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TouchScript.Gestures;
 
@@ -23,9 +25,16 @@ namespace Project.Game
         public event Action stopGesturesFromGame;
         public event Action playGesturesFromGame;
 
+        public event Action<int> NextScene;
+
         public TapGesture tapGesture;
         public TapGesture holdtapGesture;
 
+
+        //public Image fadeImg;
+
+        //[SerializeField]
+        //private float fadeSmothness = 1f;
 
         #region Singleton
         public static MainManager Instance;
@@ -43,6 +52,9 @@ namespace Project.Game
             }
 
             DontDestroyOnLoad(gameObject);
+
+            //SceneManager.sceneLoaded += FadeIn;
+            //SceneManager.sceneUnloaded += FadeOut;
         } 
         #endregion
 
@@ -99,7 +111,59 @@ namespace Project.Game
             Application.Quit();
         }
 
-        
+        public void DebugWarning()
+        {
+            Debug.Log("Boton!!!!!!!!!!!!!!!!!!!!!!!!!");
+        }
+
+        /*public void FadeIn(Scene scene, LoadSceneMode mode)
+        {
+            //Debug.Log("OnSceneLoaded: " + scene.name);
+            //Debug.Log(mode);
+            StartCoroutine(FadeOut___());
+        }
+
+        public void FadeOut(Scene scene)
+        {
+            //Debug.Log("OnSceneUnloaded: " + scene.name);
+            StartCoroutine(FadeIn___());
+        }
+
+        private IEnumerator FadeIn___()
+        {
+            //en algun punto se puede hacer un trigger para los diagolos
+
+            yield return null;
+
+            Color iniColor = fadeImg.color;
+            Color finColor = new Color(iniColor.r, iniColor.g, iniColor.b, 255f);
+
+            while (fadeImg.color.a <= 255f)
+            {
+                iniColor += Color.Lerp(iniColor, finColor, fadeSmothness);
+                fadeImg.color = iniColor;
+
+                yield return new WaitForSeconds(2f);
+            }
+        }
+
+        private IEnumerator FadeOut___()
+        {
+            //en algun punto se puede hacer un trigger para los diagolos
+
+            yield return null;
+
+            Color iniColor = fadeImg.color;
+            Color finColor = new Color(iniColor.r, iniColor.g, iniColor.b, 0f);
+
+            while (fadeImg.color.a > 0f)
+            {
+                iniColor += Color.Lerp(iniColor, finColor, fadeSmothness);
+                fadeImg.color = iniColor;
+
+                yield return new WaitForSeconds(2f);
+            }
+        }*/
     }
 
     

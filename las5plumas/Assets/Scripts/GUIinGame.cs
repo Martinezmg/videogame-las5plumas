@@ -11,9 +11,9 @@ namespace Project.UI
         {
             inventory, progress, store
         }
-        
-        public FlickGesture swipeGesture;
-        public TouchScript.Gestures.Gesture.GestureState state;
+
+        //public FlickGesture swipeGesture;
+        public SwipeGesture swipeGesture;
         public CameraController cameraController;
 
         public Transform pInventory;
@@ -21,6 +21,7 @@ namespace Project.UI
         public Transform pStore;
 
         public Transform lastPointInGame;
+        public float lastZoomInGame;
 
         private Points currentPoint = Points.inventory;
 
@@ -29,42 +30,44 @@ namespace Project.UI
             cameraController = Camera.main.GetComponent<CameraController>();
         }
 
-        private void Update()
+
+        private void OnEnable()
         {
-            state = swipeGesture.State;
+            swipeGesture.SwipeLeft += Left;
+            swipeGesture.SwipeRigth += Rigth;
+
+            MainManager.Instance.StopGesturesFromGame();
+
+            lastPointInGame.position = cameraController.target.position;
+            lastPointInGame.rotation = cameraController.target.rotation;
+            lastZoomInGame = cameraController.zoomSize;
+
+            cameraController.SetNewTarget(pInventory);
+            cameraController.SetNewZoom(3f);
+        }
+        private void OnDisable()
+        {
+            swipeGesture.SwipeLeft -= Left;
+            swipeGesture.SwipeRigth -= Rigth;
+
+            MainManager.Instance.PlayGesturesFromGame();
+
+            cameraController.SetNewTarget(lastPointInGame);
+            cameraController.SetNewZoom(lastZoomInGame);
         }
 
         public void EnableGUIinGame() { enabled = true; }
-
-        public void GoTo(int d)
-        {
-            switch ((Swipe)d)
-            {
-                case Swipe.left:
-                    Left();
-                    break;
-                case Swipe.rigth:
-                    Rigth();
-                    break;
-                case Swipe.down:
-                    //return to game
-                    ReturnToGame();
-                    break;
-                default:
-                    break;
-            }
-
-        }
+                
 
         private void Left()
         {
             switch (currentPoint)
             {
                 case Points.progress:
-                    cameraController.SetNewTarget(pInventory, 6.4f);
+                    cameraController.SetNewTarget(pInventory);
                     break;
                 case Points.store:
-                    cameraController.SetNewTarget(pProgress, 6.4f);
+                    cameraController.SetNewTarget(pProgress);
                     currentPoint = Points.progress;
                     break;
                 default:
@@ -76,11 +79,11 @@ namespace Project.UI
             switch (currentPoint)
             {
                 case Points.inventory:
-                    cameraController.SetNewTarget(pProgress, 6.4f);
+                    cameraController.SetNewTarget(pProgress);
                     currentPoint = Points.progress;
                     break;
                 case Points.progress:
-                    cameraController.SetNewTarget(pStore, 6.4f);
+                    cameraController.SetNewTarget(pStore);
                     currentPoint = Points.store;
                     break;
                 default:
@@ -94,49 +97,5 @@ namespace Project.UI
             currentPoint = Points.inventory;
             GUIManager.instance.GoToGame();
         }
-
-        private void OnEnable()
-        {
-            swipeGesture.Flicked += SwipeHandler;
-
-            MainManager.Instance.StopGesturesFromGame();
-
-            lastPointInGame.position = cameraController.target.position;
-            lastPointInGame.rotation = cameraController.target.rotation;
-
-            cameraController.SetNewTarget(pInventory, 6.4f);
-        }
-        private void OnDisable()
-        {
-            swipeGesture.Flicked -= SwipeHandler;
-
-            MainManager.Instance.PlayGesturesFromGame();
-
-            cameraController.SetNewTarget(lastPointInGame, 6.4f); 
-        }
-
-        private void SwipeHandler(object sender, EventArgs e)
-        {
-            Vector2 v = swipeGesture.ScreenFlickVector;
-
-            float x = v.x;
-            float y = v.y;
-
-            if (Mathf.Abs(x) > Mathf.Abs(y))
-            {
-                if (x < 0)
-                    GoTo((int)Swipe.rigth);
-                else
-                    GoTo((int)Swipe.left);
-            }
-            else
-            {
-                if (y < 0)
-                    GoTo((int)Swipe.down);
-                else
-                    GoTo((int)Swipe.up);
-            }
-        }
-
     }
 }
