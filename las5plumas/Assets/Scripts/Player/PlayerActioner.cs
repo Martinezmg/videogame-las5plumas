@@ -28,7 +28,7 @@ namespace Project.Game.Player
 
         private void Awake()
         {
-            
+            tapGesture = MainManager.Instance.tapGesture;
 
             currentAction = defaultAction;
         }

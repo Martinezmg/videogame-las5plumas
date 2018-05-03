@@ -37,7 +37,11 @@ namespace Project.Game
         //private float fadeSmothness = 1f;
 
         #region Singleton
-        public static MainManager Instance;
+        private static MainManager instance;
+
+        public static MainManager Instance { get { return instance; } private set { instance = value; } }
+
+        private MainManager() { }
 
         private void Awake()
         {

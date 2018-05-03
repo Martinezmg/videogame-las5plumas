@@ -10,7 +10,11 @@ namespace Project.UI
     {
         private TapGesture tapGesture;
 
+        private bool check = false;
+
         public UnityEvent OnTap;
+        public UnityEvent OnCheck;
+        public UnityEvent OnUncheck;
 
         private void Awake()
         {
@@ -29,9 +33,21 @@ namespace Project.UI
 
         private void Tapped(object sender, System.EventArgs e)
         {
+            check = !check;
+
             if (OnTap != null)
             {
-                OnTap.Invoke();
+                OnTap.Invoke();                
+            }
+
+            if (OnCheck != null && check)
+            {
+                OnCheck.Invoke();
+            }
+
+            if (OnUncheck != null && !check)
+            {
+                OnUncheck.Invoke();
             }
         }
     }

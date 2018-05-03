@@ -26,8 +26,8 @@ MonoBehaviour:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Necesitas un <b><color=#ffffffff>arma</color></b>, digna de un guerrero de
-      tu talla\u2026 Supongo que un hacha /*gastada*/ servir\xE1"
+    - "Necesitas un <b><color=#BC9320>arma</color></b>, digna de un guerrero de tu
+      talla\u2026 Supongo que un hacha /*gastada*/ servir\xE1"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
@@ -35,21 +35,20 @@ MonoBehaviour:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Dice una leyenda que en esta zona hay una <b><color=#FFFFFFFF>entrada</color></b>
-      a la monta\xF1a que lleva directo a una guarida de <b><color=#ffffffff>brujas</color></b>\u2026 "
+    - "Dice una leyenda que en esta zona hay una <b><color=#BC9320>entrada</color></b>
+      a la monta\xF1a que lleva directo a una guarida de <b><color=#BC9320>brujas</color></b>\u2026 "
     - "Las brujas siempre custodian tesoros, es posible que si consigues su guarida
       consigas un arma\u2026"
-    - "Pero primero, debes aprender a <b><color=#ffffffff>moverte</color></b> por
-      estas tierras\u2026"
-    - "Para moverte <b><color=#ffffffff>mant\xE9n</color></b> <b><color=#ffffffff>pulsada</color></b>
-      <b><color=#ffffffff>la</color></b> <b><color=#ffffffff>pantalla</color></b>
-      y <b><color=#ffffffff>desplaza</color></b> <b><color=#ffffffff>tu</color></b>
-      <b><color=#ffffffff>dedo</color></b> sobre ella en la direcci\xF3n que desees
-      moverte\u2026"
-    - "Para <b><color=#ffffffff>interactuar</color></b> con alg\xFAn <b><color=#ffffffff>objeto</color></b>
-      o <b><color=#ffffffff>personaje</color></b> solo <b><color=#ffffffff>toca <b><color=#ffffffff>la</color></b>
-      <b><color=#ffffffff>pantalla</color></b>\u2026  "
+    - "Pero primero, debes aprender a <b><color=#BC9320>moverte</color></b> por estas
+      tierras\u2026"
+    - "Para moverte <b><color=#BC9320>mant\xE9n</color></b> <b><color=#BC9320>pulsada</color></b>
+      <b><color=#BC9320>la</color></b> <b><color=#BC9320>pantalla</color></b> y <b><color=#BC9320>desplaza</color></b>
+      <b><color=#BC9320>tu</color></b> <b><color=#BC9320>dedo</color></b> sobre ella
+      en la direcci\xF3n que desees moverte\u2026"
+    - "Para <b><color=#BC9320>interactuar</color></b> con alg\xFAn <b><color=#BC9320>objeto</color></b>
+      o <b><color=#BC9320>personaje</color></b> solo <b><color=#BC9320>toca <b><color=#BC9320>la</color></b>
+      <b><color=#BC9320>pantalla</color></b>\u2026  "
     - "No s\xE9 muy bien que significa esto de \u201Cla pantalla\u201D pero es lo
       que supone que te diga en este punto\u2026 "
-    - "Intenta <b><color=#ffffffff>moverte</color></b>, yo me adelantare a buscar
-      la <b><color=#ffffffff>entrada</color></b> en la monta\xF1a\u2026"
+    - "Intenta <b><color=#BC9320>moverte</color></b>, yo me adelantare a buscar la
+      <b><color=#BC9320>entrada</color></b> en la monta\xF1a\u2026"

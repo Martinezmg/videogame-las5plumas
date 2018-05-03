@@ -23,6 +23,11 @@ namespace Project.Game
             if (other.gameObject.name != "Player")
                 return;
 
+            SetCamera();
+        }
+
+        public void SetCamera()
+        {
             camController.SetNewTarget(targetPoint);
             camController.SetNewZoom(zoom);
         }

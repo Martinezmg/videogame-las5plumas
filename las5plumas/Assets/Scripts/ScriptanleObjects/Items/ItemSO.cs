@@ -10,5 +10,9 @@ namespace Project.ScriptableObjects
 
         [Header("Data")]
         public ItemAction actionType;
+        public bool available;
+
+        public virtual void Use() { }
+
     }
 }

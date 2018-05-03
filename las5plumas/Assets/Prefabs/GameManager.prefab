@@ -247,7 +247,7 @@ MonoBehaviour:
   sendStateChangeEvents: 0
   requireGestureToFail: {fileID: 0}
   friendlyGestures: []
-  flickTime: 0.1
+  flickTime: 0.15
   minDistance: 1
   movementThreshold: 0.5
   direction: 0
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texture: {fileID: 2800000, guid: 8afcc3d3c62d565409de1fb9fb6f2dad, type: 3}
-  fadeSpeed: 0.85
+  fadeSpeed: 0.5
 --- !u!114 &114903651968913310
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -13,6 +13,13 @@ namespace Project.Levels
 
         private void OnDisable()
         {
+            /*GameState.Level prolog = Array.Find(gameFile.levels, x => x.name == "Prolog");
+
+            prolog.completed = true;*/
+        }
+
+        public void Completed()
+        {
             GameState.Level prolog = Array.Find(gameFile.levels, x => x.name == "Prolog");
 
             prolog.completed = true;

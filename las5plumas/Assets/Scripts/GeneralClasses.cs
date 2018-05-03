@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Project
 {
     [Serializable]
-    public class Item
+    public class Item 
     {
         public string name;
         public ItemAction action;
