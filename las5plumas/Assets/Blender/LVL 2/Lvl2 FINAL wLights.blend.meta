@@ -1,0 +1,300 @@
+fileFormatVersion: 2
+guid: 5dcac1bf58dd85a46bfb5ebe25283bdb
+timeCreated: 1525560833
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: AXE
+    100002: BOOK
+    100004: Button_1
+    100006: Button_2
+    100008: Button_3
+    100010: Button_4
+    100012: Button_5
+    100014: ButtonA
+    100016: ButtonB
+    100018: ButtonC
+    100020: GATE1
+    100022: GATE2
+    100024: GATE_A
+    100026: GATE_B
+    100028: //RootNode
+    100030: MarkButtonA
+    100032: MarkButtonB
+    100034: MarkButtonC
+    100036: MazeWallsDoor
+    100038: ROAD
+    100040: SIGN
+    100042: TREAS2
+    100044: TREEwALL
+    400000: AXE
+    400002: BOOK
+    400004: Button_1
+    400006: Button_2
+    400008: Button_3
+    400010: Button_4
+    400012: Button_5
+    400014: ButtonA
+    400016: ButtonB
+    400018: ButtonC
+    400020: GATE1
+    400022: GATE2
+    400024: GATE_A
+    400026: GATE_B
+    400028: //RootNode
+    400030: MarkButtonA
+    400032: MarkButtonB
+    400034: MarkButtonC
+    400036: MazeWallsDoor
+    400038: ROAD
+    400040: SIGN
+    400042: TREAS2
+    400044: TREEwALL
+    2100000: SWITCH
+    2100002: MARK
+    2100004: BUTTON
+    2100006: TREES2
+    2100008: SIGN
+    2100010: GATE_C
+    2100012: GATE_B
+    2100014: PAPER_BOOK
+    2100016: COVER_BOOK
+    2100018: PAPER_ROAD
+    2100020: TREES
+    2100022: Material
+    2100024: WHITE
+    2100026: Green2
+    2100028: Green3
+    2100030: Green1
+    2100032: STONE
+    2300000: AXE
+    2300002: BOOK
+    2300004: Button_1
+    2300006: Button_2
+    2300008: Button_3
+    2300010: Button_4
+    2300012: Button_5
+    2300014: ButtonA
+    2300016: ButtonB
+    2300018: ButtonC
+    2300020: GATE1
+    2300022: GATE2
+    2300024: GATE_B
+    2300026: MarkButtonA
+    2300028: MarkButtonB
+    2300030: MarkButtonC
+    2300032: MazeWallsDoor
+    2300034: ROAD
+    2300036: SIGN
+    2300038: TREAS2
+    2300040: TREEwALL
+    3300000: AXE
+    3300002: BOOK
+    3300004: Button_1
+    3300006: Button_2
+    3300008: Button_3
+    3300010: Button_4
+    3300012: Button_5
+    3300014: ButtonA
+    3300016: ButtonB
+    3300018: ButtonC
+    3300020: GATE1
+    3300022: GATE2
+    3300024: GATE_B
+    3300026: MarkButtonA
+    3300028: MarkButtonB
+    3300030: MarkButtonC
+    3300032: MazeWallsDoor
+    3300034: ROAD
+    3300036: SIGN
+    3300038: TREAS2
+    3300040: TREEwALL
+    4300000: ButtonB
+    4300002: ButtonC
+    4300004: MarkButtonA
+    4300006: MarkButtonB
+    4300008: Button_5
+    4300010: Button_4
+    4300012: Button_3
+    4300014: Button_2
+    4300016: Button_1
+    4300018: TREAS2
+    4300020: SIGN
+    4300022: MarkButtonC
+    4300024: ButtonA
+    4300026: MazeWallsDoor
+    4300028: GATE_B
+    4300030: BOOK
+    4300032: ROAD
+    4300034: TREEwALL
+    4300036: AXE
+    4300038: GATE1
+    4300040: GATE2
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BUTTON
+    second: {fileID: 2100000, guid: 27064463d2548b547a34f0eb03df79e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COVER_BOOK
+    second: {fileID: 2100000, guid: 61a9c8c034582d44b9da3dc3aa817b72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GATE_B
+    second: {fileID: 2100000, guid: 391de174bd6175742a477e7d36d21026, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GATE_C
+    second: {fileID: 2100000, guid: 06c10894a047dc6409c75aa18d20fe3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green1
+    second: {fileID: 2100000, guid: edaef4de3675b704497ee8950f3a3af3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green2
+    second: {fileID: 2100000, guid: 1a6d15bb8038ed74ca92a5b452ddddf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green3
+    second: {fileID: 2100000, guid: 639c95bee794f8144a864aca24b5188f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MARK
+    second: {fileID: 2100000, guid: 8235163c0f6cb9845ac05014f6376105, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 400e71051ed3c0249a225287d74a8dd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_BOOK
+    second: {fileID: 2100000, guid: 0fda2a3ddf9fbe94a93ec7a8a856fa5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_ROAD
+    second: {fileID: 2100000, guid: e5f94a7222915cd4bac245196cad607d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SIGN
+    second: {fileID: 2100000, guid: f769b4a631e5a7448963a09927eccebb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: STONE
+    second: {fileID: 2100000, guid: d7f0eebe13035274381a73f69e3da448, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SWITCH
+    second: {fileID: 2100000, guid: ef1ad726db644ce4c9678c6044682dd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TREES
+    second: {fileID: 2100000, guid: dc7e60ec1c850ab4ba055ae835623c08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TREES2
+    second: {fileID: 2100000, guid: d32f5d59cc4c0be4891e75aaeb360ca9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WHITE
+    second: {fileID: 2100000, guid: fc465261ccf35624d828de27903506bd, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

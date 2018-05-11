@@ -61,10 +61,13 @@ namespace Project.UI
 
         private void Left()
         {
+            //Debug.Log("estoy yendo a la izquierda.");
+
             switch (currentPoint)
             {
                 case Points.progress:
                     cameraController.SetNewTarget(pInventory);
+                    currentPoint = Points.inventory;
                     break;
                 case Points.store:
                     cameraController.SetNewTarget(pProgress);
@@ -76,6 +79,8 @@ namespace Project.UI
         }
         private void Rigth()
         {
+            //Debug.Log("estoy yendo a la derecha.");
+
             switch (currentPoint)
             {
                 case Points.inventory:

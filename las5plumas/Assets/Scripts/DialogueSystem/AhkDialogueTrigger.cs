@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Project.Game;
-using Project.Interactables;
+using Project.Testing;
 
     namespace Project.DialogueSystem
 {
@@ -14,7 +14,7 @@ using Project.Interactables;
 
         public Dialogue dialogue;
 
-        public override void Interact(ItemAction cmd)
+        public override void Use(Testing.Item item)
         {
             //base.Interact(cmd);
 
@@ -24,7 +24,7 @@ using Project.Interactables;
         private void OnTriggerEnter(Collider other)
         {
 
-            if (other.tag == "Player")
+            if (other.name == "Player")
             {
                 //DialogManager.Instance.StartDialogue(dialogue);
                 ahkitobe.dialogPop.SetActive(true);
@@ -34,7 +34,7 @@ using Project.Interactables;
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.tag == "Player")
+            if (other.name == "Player")
             {
                 ahkitobe.transform.LookAt(other.transform);
             }
@@ -42,7 +42,7 @@ using Project.Interactables;
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.tag == "Player")
+            if (other.name == "Player")
             {
                 //DialogManager.Instance.StartDialogue(dialogue);
                 ahkitobe.dialogPop.SetActive(false);

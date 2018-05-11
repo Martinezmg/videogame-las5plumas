@@ -33,18 +33,14 @@ namespace Project.Game.Player
 
 
         #region Unity
-        private void Awake()
-        {
-            MainManager.Instance.stopGesturesFromGame += DisableComponent;
-            MainManager.Instance.playGesturesFromGame += EnableComponent;
-
-            tapGesture = MainManager.Instance.holdtapGesture;
-        }
 
         private void OnEnable()
         {
-            tapGesture.StateChanged += UpdateMovement;
-            tapGesture.Tapped += ResetMovement;
+            if (tapGesture != null)
+            {
+                tapGesture.StateChanged += UpdateMovement;
+                tapGesture.Tapped += ResetMovement;
+            }
         }
 
         private void OnDisable()
@@ -55,7 +51,13 @@ namespace Project.Game.Player
 
         private void Start()
         {
-            
+            MainManager.Instance.stopGesturesFromGame += DisableComponent;
+            MainManager.Instance.playGesturesFromGame += EnableComponent;
+
+            tapGesture = MainManager.Instance.holdtapGesture;
+
+            tapGesture.StateChanged += UpdateMovement;
+            tapGesture.Tapped += ResetMovement;
 
             agent = GetComponent<NavMeshAgent>();
         }

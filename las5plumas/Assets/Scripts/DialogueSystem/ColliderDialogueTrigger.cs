@@ -33,7 +33,7 @@ namespace Project.DialogueSystem
             if (dialogue == null)
                 return;
 
-            if (other.gameObject == target.gameObject && condition)
+            if (other.gameObject.name == "Player" && condition)
             {
                 DialogManager.Instance.StartDialogue(dialogue);
 

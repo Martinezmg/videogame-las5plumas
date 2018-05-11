@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: de0457417356fe0499900a47f384f369
+timeCreated: 1525985907
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ARM_Platform_1
+    100002: ARM_Platform_2
+    100004: BOOK
+    100006: //RootNode
+    100008: Platform2BONE
+    100010: Platform2BONE_0
+    100012: PLATFORM_1
+    100014: PLATFORM_2
+    100016: ROAD
+    100018: ROPE1
+    100020: ROPE2
+    400000: ARM_Platform_1
+    400002: ARM_Platform_2
+    400004: BOOK
+    400006: //RootNode
+    400008: Platform2BONE
+    400010: Platform2BONE_0
+    400012: PLATFORM_1
+    400014: PLATFORM_2
+    400016: ROAD
+    400018: ROPE1
+    400020: ROPE2
+    2100000: PLATFORM1
+    2100002: PLATFORM_2
+    2100004: PAPER_ROAD
+    2100006: COVER_BOOK
+    2100008: PAPER_BOOK
+    2300000: BOOK
+    2300002: ROAD
+    3300000: BOOK
+    3300002: ROAD
+    4300000: ROPE1
+    4300002: PLATFORM_1
+    4300004: ROPE2
+    4300006: PLATFORM_2
+    4300008: ROAD
+    4300010: BOOK
+    7400000: Default Take
+    7400002: SWING
+    7400004: SWING2
+    9500000: //RootNode
+    13700000: PLATFORM_1
+    13700002: PLATFORM_2
+    13700004: ROPE1
+    13700006: ROPE2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COVER_BOOK
+    second: {fileID: 2100000, guid: c7f90c9cb259af547a5cd1f8916d02b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_BOOK
+    second: {fileID: 2100000, guid: 774d526042ef2ba499e318eca01c6f62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_ROAD
+    second: {fileID: 2100000, guid: 9110d20b5a2cd694f98385c5eb981567, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PLATFORM1
+    second: {fileID: 2100000, guid: 5c269c0675718c3428f3a111849735cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PLATFORM_2
+    second: {fileID: 2100000, guid: 557d4735d31b22e43b61e6d82feffc5a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

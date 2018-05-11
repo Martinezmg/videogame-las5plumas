@@ -54,7 +54,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.27108565, g: 0.29719943, b: 0.33823532, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -62,7 +62,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 50
+  far clip plane: 75
   field of view: 39
   orthographic: 1
   orthographic size: 6.4
@@ -100,14 +100,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  lerpSmothness: 2.04
+  lerpSmothness: 1.8
   quaternionLerpSmothness: 0.05
   posError: 0.0293
   rotError: 0.1
+  zoomGesture: {fileID: 0}
+  zoomSize: 0
   maxZoom: 8.03
   minZoom: 1.93
   zoomLerpSmothness: 0.05
   zoomError: 0.1
+  posDistance: 0
+  rotDistance: 0
 --- !u!114 &114433343416470488
 MonoBehaviour:
   m_ObjectHideFlags: 1

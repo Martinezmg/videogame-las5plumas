@@ -31,6 +31,8 @@ namespace Project.UI
         public ObjectUI ObjectEquipped;
 
         public Image MotionIndicator;
+        public Image MotionIndicatorBackground;
+        public float IndicatorDistance = 100f;
 
         public void GoToGame()
         {
@@ -62,18 +64,30 @@ namespace Project.UI
 
         public void SetIndicator(Vector2 pos)
         {
-            MotionIndicator.enabled = true;
+            MotionIndicatorBackground.enabled = true;
+            //MotionIndicator.enabled = true;
 
-            MotionIndicator.transform.position = pos;
+            MotionIndicatorBackground.transform.position = pos;
         }
 
         public void UpdateIndicator(float angle)
         {
-            MotionIndicator.transform.eulerAngles = new Vector3(0, 0, -(angle - 90f));
+            if (MotionIndicator.enabled)
+            {
+                MotionIndicator.transform.eulerAngles = new Vector3(0, 0, -(angle - 90f));
+                MotionIndicator.transform.localPosition = new Vector3(IndicatorDistance * Mathf.Sin(Mathf.Deg2Rad * angle), IndicatorDistance * Mathf.Cos(Mathf.Deg2Rad * angle), 0);
+            }
+            else
+            {
+                MotionIndicator.enabled = true;
+            }
+
+            
         }
 
         public void UnsetIndicator()
         {
+            MotionIndicatorBackground.enabled = false;
             MotionIndicator.enabled = false;
         }
 

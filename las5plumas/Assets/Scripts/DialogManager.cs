@@ -136,7 +136,7 @@ namespace Project.DialogueSystem
                 nextDialog.enabled = true;
         }
 
-        void EndDialogue()
+        public void EndDialogue()
         {
             canvas.enabled = false;
             exitDialog.enabled = false;

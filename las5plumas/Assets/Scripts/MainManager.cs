@@ -55,7 +55,7 @@ namespace Project.Game
                 return;
             }
 
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
 
             //SceneManager.sceneLoaded += FadeIn;
             //SceneManager.sceneUnloaded += FadeOut;
@@ -64,12 +64,18 @@ namespace Project.Game
 
         public void StopGesturesFromGame()
         {
-            stopGesturesFromGame();
+            if (stopGesturesFromGame != null)
+            {
+                stopGesturesFromGame();
+            }
         }
 
         public void PlayGesturesFromGame()
         {
-            playGesturesFromGame();
+            if (playGesturesFromGame != null)
+            {
+                playGesturesFromGame();
+            }
         }
 
         public void StartGame()
@@ -118,6 +124,11 @@ namespace Project.Game
         public void DebugWarning()
         {
             Debug.Log("Boton!!!!!!!!!!!!!!!!!!!!!!!!!");
+        }
+
+        public void ResetCurrentScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         /*public void FadeIn(Scene scene, LoadSceneMode mode)

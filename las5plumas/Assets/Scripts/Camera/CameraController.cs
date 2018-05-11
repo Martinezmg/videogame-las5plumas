@@ -39,32 +39,27 @@ namespace Project.Game
         //misc
         private bool idle = true;
 
-        private void Awake()
-        {
-            if (zoomGesture == null)
-            {
-                zoomGesture = MainManager.Instance.GetComponent<ScreenTransformGesture>();
-            }
-        }
-
         private void OnEnable()
         {
             transform.parent = null;
             SetNewTarget(target);
+
+            if (zoomGesture == null)
+            {
+                zoomGesture = MainManager.Instance.GetComponent<ScreenTransformGesture>();
+            }
 
             zoomGesture.Transformed += ZoomHandler;
         }
 
         private void Start()
         {
+            if (zoomGesture == null)
+            {
+                zoomGesture = MainManager.Instance.GetComponent<ScreenTransformGesture>();
+            }
 
             zoomSize = GetComponent<Camera>().orthographicSize;
-
-            /*if (target != null)
-            {
-                transform.position = target.position;
-                transform.rotation = target.rotation;
-            }*/
 
         }
 
@@ -102,8 +97,6 @@ namespace Project.Game
         {
             target = t;
 
-            //start courutine
-            //StopAllCoroutines();
             StartCoroutine(MoveToNewTarget());
             StartCoroutine(RotateToNewTarget());
         }
@@ -111,40 +104,12 @@ namespace Project.Game
         public void SetNewZoom(float z)
         {
             zoomSize = z;
-
-            //start courutine
-            //StopAllCoroutines();
             StartCoroutine(SetZoomSize());
         }
 
-        /*private void MoveToNewTarget()
-        {
-            float distanceA = Vector3.Distance(transform.position, target.position);
-            float distanceB = Vector3.Distance(transform.eulerAngles, target.eulerAngles);
-
-            float currentSize = GetComponent<Camera>().orthographicSize;
-
-            float distanceC = Mathf.Abs(currentSize - zoomSize);
-
-            if (distanceA > 0.1f && distanceB > 0.1f && distanceC > 0.1f)
-            {
-                transform.position = Vector3.Slerp(transform.position, target.position, Time.deltaTime * lerpSmothness);
-
-                transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, quaternionLerpSmothness);                
-
-                GetComponent<Camera>().orthographicSize = Mathf.Lerp(currentSize, zoomSize, Time.deltaTime * lerpSmothness);
-
-
-            }
-            else
-            {
-                idle = true;
-            }
-        }*/
-
         private IEnumerator MoveToNewTarget()
         {
-             posDistance = Vector3.Distance(transform.position, target.position);
+            posDistance = Vector3.Distance(transform.position, target.position);
 
             while (posDistance > posError)
             {
