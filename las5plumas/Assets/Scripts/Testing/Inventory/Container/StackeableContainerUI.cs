@@ -11,6 +11,7 @@ namespace Project.Testing
         public string itemName_;
 
         public StackeableContainer container_;
+        public LevelProgress currentLvlAsset;
 
         private TapGesture tapGesture_;
         private SpriteRenderer render_;
@@ -21,6 +22,7 @@ namespace Project.Testing
         {
             tapGesture_ = GetComponent<TapGesture>();
             render_ = GetComponent<SpriteRenderer>();
+            render_.color = currentLvlAsset.lvlColor;
 
             container_.Set();
 
@@ -50,6 +52,14 @@ namespace Project.Testing
             container_.OnCountChange -= SetCount;
         }
 
+        private void OnDestroy()
+        {
+            tapGesture_.Tapped -= TakeItem;
+
+            container_.OnAvailableChange -= SetStatus;
+            container_.OnCountChange -= SetCount;
+        }
+
         private void TakeItem(object sender, EventArgs e)
         {
             InventoryManager.Instance.selector.SelectItem(container_, transform);
@@ -57,7 +67,8 @@ namespace Project.Testing
 
         private void SetStatus(bool available)
         {
-            tapGesture_.enabled = available;
+            GetComponent<TapGesture>().enabled = available;
+            //tapGesture_.enabled = available;
             render_.enabled = available;
             text_.enabled = available;
         }

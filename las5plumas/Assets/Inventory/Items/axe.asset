@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: axe
   m_EditorClassIdentifier: 
   action_: 3
+  spriteGUI: {fileID: 21300000, guid: ab170b3741220634ab7028a6d24ad61a, type: 3}

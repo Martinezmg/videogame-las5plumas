@@ -11,6 +11,7 @@ namespace Project.Testing
         public string itemName_;
 
         public Container container_;
+        public LevelProgress currentLvl;
 
         private TapGesture tapGesture_;
         private SpriteRenderer render_;
@@ -26,7 +27,7 @@ namespace Project.Testing
 
             tapGesture_.enabled = container_.Available;
             render_.enabled = container_.Available;
-
+            render_.color = currentLvl.lvlColor;
             //SetStatus(container_.Available);
         }
 
@@ -42,6 +43,11 @@ namespace Project.Testing
         {
             tapGesture_.Tapped -= TakeItem;
             //container_.OnAvailableChange -= SetStatus;
+        }
+
+        private void OnDestroy()
+        {
+            tapGesture_.Tapped -= TakeItem;
         }
 
         private void TakeItem(object sender, EventArgs e)

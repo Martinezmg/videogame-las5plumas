@@ -23,12 +23,12 @@ namespace Project.Testing
             transform.position = t.position;
 
             //entregar al personaje
-            playercontainer.itemContainer = c;
+            playercontainer.ItemContainer = c;
         }
 
         private void Update()
         {
-            if (playercontainer.itemContainer != null && !playercontainer.itemContainer.Available)
+            if (playercontainer.ItemContainer != null && !playercontainer.ItemContainer.Available)
                 render.enabled = false;
         }
     }

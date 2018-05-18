@@ -4,9 +4,17 @@ using UnityEngine;
 
 namespace Project.Testing
 {
-    public class InventoryManager : Singleton<InventoryManager>
+    public class InventoryManager : MonoBehaviour
     {
-        protected InventoryManager() { }
+        public static InventoryManager Instance;
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+        }
 
         //public Inventory inventory;
         public SelectorUI selector;

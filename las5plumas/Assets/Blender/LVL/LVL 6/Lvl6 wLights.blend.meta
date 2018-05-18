@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 7f34d7a228b039e44890b5b2ddc46767
+timeCreated: 1526596759
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BARRIER1
+    100002: BOOK
+    100004: BRIDGE
+    100006: Button1
+    100008: //RootNode
+    100010: ROAD
+    100012: RUINS
+    100014: TREE
+    400000: BARRIER1
+    400002: BOOK
+    400004: BRIDGE
+    400006: Button1
+    400008: //RootNode
+    400010: ROAD
+    400012: RUINS
+    400014: TREE
+    2100000: RUINS
+    2100002: TREES
+    2100004: BARRIER
+    2100006: BRIDGE
+    2100008: PAPER_ROAD
+    2100010: PAPER_BOOK
+    2100012: COVER_BOOK
+    2100014: BUTTON
+    2300000: BARRIER1
+    2300002: BOOK
+    2300004: BRIDGE
+    2300006: Button1
+    2300008: ROAD
+    2300010: RUINS
+    2300012: TREE
+    3300000: BARRIER1
+    3300002: BOOK
+    3300004: BRIDGE
+    3300006: Button1
+    3300008: ROAD
+    3300010: RUINS
+    3300012: TREE
+    4300000: RUINS
+    4300002: TREE
+    4300004: BARRIER1
+    4300006: BRIDGE
+    4300008: ROAD
+    4300010: BOOK
+    4300012: Button1
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BARRIER
+    second: {fileID: 2100000, guid: 63a14aa169f87e74cb6129891e8bbfde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BRIDGE
+    second: {fileID: 2100000, guid: 72df9010f6d91ab4bacdde8699478f32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BUTTON
+    second: {fileID: 2100000, guid: 4508f78e050808b4b99b049981203305, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COVER_BOOK
+    second: {fileID: 2100000, guid: bea5c79725d051e41928571378a38e6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_BOOK
+    second: {fileID: 2100000, guid: 56dfd014687df564584d93e72b7e2576, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_ROAD
+    second: {fileID: 2100000, guid: ac43bd56e888d12428f5629ef54cbcc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RUINS
+    second: {fileID: 2100000, guid: acdabbbd51b4e8e4aa0891623004a768, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TREES
+    second: {fileID: 2100000, guid: 2717181049d325d4e95aa1c0f019fc8a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

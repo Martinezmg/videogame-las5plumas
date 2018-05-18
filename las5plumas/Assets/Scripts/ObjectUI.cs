@@ -1,34 +1,42 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Project.Game.Player;
+using Project.Testing;
 
 namespace Project.UI
 {
     public class ObjectUI : MonoBehaviour
     {
-        public Image spriteContainer;
+        public PlayersItem itemEquipped;
+        public Sprite defaultSprite;
 
-        public PlayerActioner player;
-        //public ItemUI item;
+        private Image thisSprite;
 
-        //public void EquipObjectUI(ItemUI i)
-       // {
-       //     item = i;/
-//
-//            spriteContainer.sprite = i.sprite.sprite;
-//        }
-
-        public void UseObject(bool activeObject)
+        private void Start()
         {
-            if (activeObject)
-            {
-                //player.CurrentAction = item.action;
-            }
-            else
-            {
-                player.CurrentAction = PlayerActioner.defaultAction;
-            }
+            itemEquipped.PlayerItemUpdated += updateSprite;
+            thisSprite = GetComponent<Image>();
         }
 
+        private void OnDestroy()
+        {
+            itemEquipped.PlayerItemUpdated -= updateSprite;
+        }
+
+        private void updateSprite()
+        {
+            Container currentItemContainer = itemEquipped.ItemContainer;
+
+            if (currentItemContainer != null)
+            {
+                Sprite currentItemSprite = currentItemContainer.item_.spriteGUI;
+
+                if (currentItemSprite != null)
+                    thisSprite.sprite = itemEquipped.ItemContainer.item_.spriteGUI;
+                else
+                    thisSprite.sprite = defaultSprite;
+            }else
+                thisSprite.sprite = defaultSprite;
+
+        }
     }
 }

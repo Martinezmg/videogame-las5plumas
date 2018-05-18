@@ -25,7 +25,7 @@ namespace Project.Testing
 
             name = "Player";
 
-            itemContainer.itemContainer = null;
+            itemContainer.ItemContainer = null;
         }
 
         private void OnEnable()
@@ -44,8 +44,8 @@ namespace Project.Testing
         {
             if (interactableTarget != null)
             {
-                if (itemContainer.itemContainer != null && itemContainer.itemContainer.Available)
-                    interactableTarget.Use(itemContainer.itemContainer.item_);
+                if (itemContainer.ItemContainer != null && itemContainer.ItemContainer.Available)
+                    interactableTarget.Use(itemContainer.ItemContainer.item_);
                 else
                     interactableTarget.Use(null);
             } 

@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: key
   m_EditorClassIdentifier: 
   action_: 1
+  spriteGUI: {fileID: 21300000, guid: 84ad3287a35f1014f88d7317e08b44fa, type: 3}

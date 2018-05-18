@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Project.Testing
 {
@@ -16,6 +17,7 @@ namespace Project.Testing
 
         //public string name_;
         public ItemAction action_;
+        public Sprite spriteGUI;
 
         public virtual void Use()
         {

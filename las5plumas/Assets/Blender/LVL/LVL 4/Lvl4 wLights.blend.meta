@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 72032dc2fe96d3a40a0486b68a3627d5
+timeCreated: 1526509465
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ARM_Platform_1
+    100002: BOOK
+    100004: Button1
+    100006: Button2
+    100008: Button3
+    100010: Button4
+    100012: BUTTONback
+    100014: BUTTONfront
+    100016: BUTTONleft
+    100018: BUTTONright
+    100020: ELEVATOR
+    100022: //RootNode
+    100024: MarkButton3
+    100026: Platform2BONE
+    100028: PLATFORM_1
+    100030: PLATFORMarrows
+    100032: PLATFORMforest
+    100034: ROAD
+    100036: ROPE1
+    100038: TREEs
+    400000: ARM_Platform_1
+    400002: BOOK
+    400004: Button1
+    400006: Button2
+    400008: Button3
+    400010: Button4
+    400012: BUTTONback
+    400014: BUTTONfront
+    400016: BUTTONleft
+    400018: BUTTONright
+    400020: ELEVATOR
+    400022: //RootNode
+    400024: MarkButton3
+    400026: Platform2BONE
+    400028: PLATFORM_1
+    400030: PLATFORMarrows
+    400032: PLATFORMforest
+    400034: ROAD
+    400036: ROPE1
+    400038: TREEs
+    2100000: BUTTON
+    2100002: PLATFORMforest
+    2100004: MarkBUTTON
+    2100006: PLATFORMarrows
+    2100008: ELEVATOR
+    2100010: TREES
+    2100012: PAPER_ROAD
+    2100014: PAPER_BOOK
+    2100016: COVER_BOOK
+    2100018: PLATFORMrope
+    2300000: BOOK
+    2300002: Button1
+    2300004: Button2
+    2300006: Button3
+    2300008: Button4
+    2300010: BUTTONback
+    2300012: BUTTONfront
+    2300014: BUTTONleft
+    2300016: BUTTONright
+    2300018: ELEVATOR
+    2300020: MarkButton3
+    2300022: PLATFORMarrows
+    2300024: PLATFORMforest
+    2300026: ROAD
+    2300028: TREEs
+    3300000: BOOK
+    3300002: Button1
+    3300004: Button2
+    3300006: Button3
+    3300008: Button4
+    3300010: BUTTONback
+    3300012: BUTTONfront
+    3300014: BUTTONleft
+    3300016: BUTTONright
+    3300018: ELEVATOR
+    3300020: MarkButton3
+    3300022: PLATFORMarrows
+    3300024: PLATFORMforest
+    3300026: ROAD
+    3300028: TREEs
+    4300000: Button2
+    4300002: Button3
+    4300004: BUTTONfront
+    4300006: BUTTONright
+    4300008: BUTTONleft
+    4300010: BUTTONback
+    4300012: Button4
+    4300014: PLATFORMforest
+    4300016: MarkButton3
+    4300018: PLATFORMarrows
+    4300020: ELEVATOR
+    4300022: TREEs
+    4300024: ROAD
+    4300026: BOOK
+    4300028: Button1
+    4300030: PLATFORM_1
+    4300032: ROPE1
+    7400000: Default Take
+    7400002: SWING
+    7400004: SWING_002
+    7400006: SWING_003
+    9500000: //RootNode
+    13700000: PLATFORM_1
+    13700002: ROPE1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BUTTON
+    second: {fileID: 2100000, guid: 83fa7cdc083494b4e93e4893a6e48b9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COVER_BOOK
+    second: {fileID: 2100000, guid: bf0aef4d617418e40a8e57908efa376d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ELEVATOR
+    second: {fileID: 2100000, guid: fa00b7107d4ad0549b16af968cc8e58b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MarkBUTTON
+    second: {fileID: 2100000, guid: 69800df0044ecc64fa62591a66258cce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_BOOK
+    second: {fileID: 2100000, guid: 5ed9c2e7004a6be4db4a522d37209781, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PAPER_ROAD
+    second: {fileID: 2100000, guid: 0f916b95ee5535d4b93a736ecf2f7b1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PLATFORMarrows
+    second: {fileID: 2100000, guid: 9ec89bad8fce52843be7efcb2f4e4563, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PLATFORMforest
+    second: {fileID: 2100000, guid: bc0ab403b6731ac4e8c2ce3ea616e003, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PLATFORMrope
+    second: {fileID: 2100000, guid: 105d62e36dd245541a1f9833d8e2209a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TREES
+    second: {fileID: 2100000, guid: f12c32012bb12034fac68bfaf28f08cb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

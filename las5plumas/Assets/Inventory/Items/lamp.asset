@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: lamp
   m_EditorClassIdentifier: 
   action_: 2
+  spriteGUI: {fileID: 21300000, guid: f7ae22de391c5fe458763dd2e1f8805e, type: 3}
