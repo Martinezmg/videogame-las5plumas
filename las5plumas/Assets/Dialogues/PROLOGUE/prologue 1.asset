@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bab64d2f43e0a4da2ecd3be8294cac, type: 3}
+  m_Name: prologue 1
+  m_EditorClassIdentifier: 
+  name: dialogo1
+  sentences:
+  - name: 
+    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    lines:
+    - "Era la \xE9poca de los caballos y los guerreros de acero en la que vivi\xF3
+      un hombre, com\xFAn y corriente, que sus semejantes llamaban <b>Gabriel</b>\u2026 "
+    - "<b>Gabriel</b>, padre de una hermosa ni\xF1a llamada <b>Ch\xEDa</b>, un d\xEDa
+      decidi\xF3 salir de <b>excursi\xF3n</b> con su peque\xF1a a trav\xE9s del <b>p\xE1ramo</b>
+      <b>andino</b>. "
+    - "Luego de un largo camino, padre e hija se encontraron frente a una imponente
+      laguna\u2026 Conocida como <b>La</b> <b>Laguna</b> <b>Negra</b>."
+    - Ante su belleza se detuvieron a descansar y pasar un rato agradable bajo el
+      sol de la sierra.
+    - "Sin darse cuenta pasaron las horas y empez\xF3 a disminuir la luz del d\xEDa;
+      <b>Ch\xEDa</b>, se escap\xF3 de su padre con la intenci\xF3n de jugar a las
+      escondidas aprovechando la poca visibilidad que otorgaba la cercan\xEDa de la
+      noche y la llegada de la conocida neblina andina\u2026"
+    - "\u2026 Sin embargo su padre, conocedor de las <b>leyendas</b> de este lugar
+      y, un tanto sobreprotector y temeroso, se desesper\xF3 al no tenerla a la vista
+      y comenz\xF3 a llamarla entre <b>gritos</b> y <b>rega\xF1os</b>."
+    - "<b>Ch\xEDa</b>, intimidada por los reclamos de su padre, regres\xF3 sollozando
+      y <b>molesta</b> con \xE9l, argumentando que nunca la dejaba divertirse. Entre
+      la discusi\xF3n ella comenz\xF3 a llorar y estall\xF3 de c\xF3lera con un fuerte
+      <b>\"\xA1Te</b> <b>odio!\" </b> mientras arrojaba una enorme <b>piedra</b> a
+      la laguna\u2026"
+    - "\u2026 Grave error\u2026"
+    - "Al instante, un profundo <b>silencio invadi\xF3 el lugar a medida que la <b>niebla</b>
+      r\xE1pidamente se tornaba <b>densa</b> y <b>oscura</b>\u2026"
+    - "De repente, el silencio se rompi\xF3 por un estruendoso <b>rel\xE1mpago</b>
+      y ambos divisaron, por un instante, una <b>extra\xF1a</b> <b>sombra</b> a su
+      lado\u2026"
+    - "El padre, asustado, encendi\xF3 apresuradamente su <b>l\xE1mpara</b> y al levantar
+      la vista se encontr\xF3 frente a frente con lo que parec\xEDa un ni\xF1o, de
+      largas orejas, afilados dientes, y una piel escamosa de tonos verdosos."
+    - "Este ser extra\xF1o tom\xF3 fuertemente a <b>Ch\xEDa</b>, susurr\xE1ndole al
+      o\xEDdo: <b>\"Nunca</b> <b>hagas</b> <b>enojar</b> <b>a</b> <b>la</b> <b>reina</b>
+      <b>negra\"</b> justo antes de desvanecerse entre la oscuridad\u2026"
+    - "<b>Gabriel</b>, desconcertado, empez\xF3 a buscar a su hija entre las sombras\u2026
+      Sin embargo, su inminente fracaso lo sumergi\xF3 en un estado de desesperaci\xF3n
+      y llanto\u2026\r"
+    - "Entre l\xE1grimas, <b>Gabriel</b> sinti\xF3 una <b>fr\xEDa</b> <b>mano</b>
+      sobre su hombro\u2026 \r"
+    - "Al levantar la vista, se encontr\xF3 con una <b>criatura</b> muy similar a
+      aquel que le hab\xEDa arrebatado a su <b>hija</b>\u2026 Sin embargo, este ten\xEDa
+      un aspecto mucho m\xE1s <b>amigable</b>\u2026"
+    - "<b>Gabriel</b>, desconcertado y desesperado por lo sucedido retrocedi\xF3 de
+      un salto e intent\xF3 enfrentar al misterioso ser agitando su l\xE1mpara sobre
+      la oscuridad de la noche\u2026\r"
+    - "El extra\xF1o sujeto, por otro lado, levant\xF3 sus manos pidi\xE9ndole a <b>Gabriel</b>
+      que no lo lastimara y afirmando que \xE9l solo deseaba ayudar."
+    - "<b>Gabriel</b>, dudoso de las intenciones de la criatura pero temeroso por
+      el futuro de su hija decidi\xF3 escuchar lo que la extra\xF1a aparici\xF3n quer\xEDa
+      decir\u2026"
+    - "D\xE9jame presentarme - dijo -  mi nombre es <b>Ahkitobe</b>, soy un <b>duende</b>\u2026\r"

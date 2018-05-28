@@ -21,6 +21,7 @@ namespace Project.Game
         private void Start()
         {
             agent = GetComponent<NavMeshAgent>();
+            GoTo();
             //agent.stoppingDistance = 2f;
         }
 

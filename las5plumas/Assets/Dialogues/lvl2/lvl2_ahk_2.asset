@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bab64d2f43e0a4da2ecd3be8294cac, type: 3}
+  m_Name: lvl2_ahk_2
+  m_EditorClassIdentifier: 
+  name: SEGUNDO DIALOGO
+  sentences:
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "\xA1Mira! \xA1Adelante hay <b><color=#BC9320>hacha</color></b>! Es perfecta
+      para poder salir de aqu\xED.\r"
+    - "Solo debes atravesar el laberinto custodiado por las <b><color=#BC9320>Brujas</color></b>
+      <b><color=#BC9320>del</color></b> <b><color=#BC9320>Valle</color></b>.\r"
+    - "No es por alarmarte; pero solo con un vistazo te convertir\xE1n en piedra.\r"
+    - "As\xED que\u2026 Bueno\u2026 Evita que te vean\u2026 \r"
+    - "\xA1Buena suerte! \r"

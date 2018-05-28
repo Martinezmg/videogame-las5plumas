@@ -10,7 +10,7 @@ namespace Project.Testing
 
         public override void Use(Item item)
         {
-            if (item.action_ == action && item != null)
+            if (item != null && item.action_ == action )
             {
                 ChopTreeDaown(item);
             }

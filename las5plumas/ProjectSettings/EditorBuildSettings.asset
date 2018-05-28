@@ -18,5 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/LooseRopeScene.unity
     guid: d629dcd85b5b3e6419b236d24533f375
   - enabled: 1
+    path: Assets/Scenes/MovingBlocksScene.unity
+    guid: 8617fc023d60f60439769aba2ef5d6e6
+  - enabled: 1
+    path: Assets/Scenes/TheFisrtFeatherScene.unity
+    guid: 3526fb24d1860f34b86cafb05a202d47
+  - enabled: 1
     path: Assets/Scenes/Prolog.unity
     guid: 99fe287d922c6aa4680e820c393ad54a

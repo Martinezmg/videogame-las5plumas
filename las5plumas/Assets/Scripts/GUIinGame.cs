@@ -22,6 +22,7 @@ namespace Project.UI
 
         public Transform lastPointInGame;
         public float lastZoomInGame;
+        public float zoomMultiplier = 1f;
 
         private Points currentPoint = Points.inventory;
 
@@ -43,7 +44,7 @@ namespace Project.UI
             lastZoomInGame = cameraController.zoomSize;
 
             cameraController.SetNewTarget(pInventory);
-            cameraController.SetNewZoom(3f);
+            cameraController.SetNewZoom(3f* zoomMultiplier);
         }
         private void OnDisable()
         {

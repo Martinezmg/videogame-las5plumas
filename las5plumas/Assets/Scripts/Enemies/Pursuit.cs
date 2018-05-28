@@ -3,7 +3,9 @@ using UnityEngine.AI;
 
 public class Pursuit : MonoBehaviour
 {
-    private Sight sight;
+    [SerializeField]
+    private Transform target;
+    [SerializeField]
     private NavMeshAgent agent;
 
     [SerializeField]
@@ -25,21 +27,19 @@ public class Pursuit : MonoBehaviour
 
     private void Start()
     {
-        sight = GetComponent<Sight>();
-        agent = GetComponent<NavMeshAgent>();
+        if (agent == null)
+            agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
-        PursuitTarget();
+        if (enemyOnSight)
+            PursuitTarget();
     }
 
     public void PursuitTarget()
     {
-        if (enemyOnSight)
-        {
-            agent.speed = pursuitSpeed;
-            agent.destination = sight.target.position;
-        }
+        agent.speed = pursuitSpeed;
+        agent.destination = target.position;
     }
 }

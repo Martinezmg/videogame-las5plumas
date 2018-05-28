@@ -18,18 +18,26 @@ public class GroundBotton : MonoBehaviour
     private float speed = 1;
 
     public UnityEvent OnPushDown;
+    public UnityEvent OnReset;
     private bool topRuning = false;
     private bool isPushedDown = false;
+    public bool buttonActive = true;
+
+    [SerializeField]
+    private bool autoReset = false;
 
     private void Start()
     {
-        iniSurfacePos = surface.position;
-        iniButtonPos = transform.position;
-        topButtonPos = iniSurfacePos + new Vector3(0, transform.position.y - offSet, 0);
+        iniSurfacePos = surface.localPosition;
+        iniButtonPos = transform.localPosition;
+        topButtonPos = iniSurfacePos + new Vector3(0, transform.localPosition.y - offSet, 0);
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!buttonActive)
+            return;
+
         if (other.name == "Player")
         {
             topRuning = true;
@@ -40,11 +48,14 @@ public class GroundBotton : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (!buttonActive)
+            return;
+
         if (other.name == "Player")
         {
             if (!topRuning)
             {
-                topButtonPos = iniSurfacePos + new Vector3(0, transform.position.y - offSet, 0);
+                topButtonPos = iniSurfacePos + new Vector3(0, transform.localPosition.y - offSet, 0);
                 surface.position = topButtonPos;
             }
         }
@@ -52,12 +63,15 @@ public class GroundBotton : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!buttonActive)
+            return;
+
         if (other.name == "Player")
         {
             StopAllCoroutines();
             StartCoroutine(Down());
 
-            if (!isPushedDown)
+            if (!isPushedDown || autoReset)
             {
                 ResetButton();
             }
@@ -66,20 +80,24 @@ public class GroundBotton : MonoBehaviour
 
     public void ResetButton()
     {
+        StopAllCoroutines();
+
         isPushedDown = false;
-        transform.position = iniButtonPos;
+        transform.localPosition = iniButtonPos;
+
+        OnReset.Invoke();
     }
 
     private IEnumerator Top()
     {    
-        while (surface.position.y < topButtonPos.y)
+        while (surface.localPosition.y < topButtonPos.y)
         {
-            surface.position += Vector3.up *Time.deltaTime* speed;
+            surface.localPosition += Vector3.up *Time.deltaTime* speed;
 
             yield return null;
         }
 
-        surface.position = topButtonPos;
+        surface.localPosition = topButtonPos;
         topRuning = false;
 
         if (!isPushedDown)
@@ -96,21 +114,21 @@ public class GroundBotton : MonoBehaviour
 
     private IEnumerator Down()
     {
-        while (surface.position.y > iniSurfacePos.y)
+        while (surface.localPosition.y > iniSurfacePos.y)
         {
-            surface.position -= Vector3.up *Time.deltaTime* speed;
+            surface.localPosition -= Vector3.up *Time.deltaTime* speed;
 
             yield return null;
         }
 
-        surface.position = iniSurfacePos;
+        surface.localPosition = iniSurfacePos;
     }
 
     private IEnumerator pushButtonDown()
     {
-        while (transform.position.y > yaxis)
+        while (transform.localPosition.y > yaxis)
         {
-            transform.position -= Vector3.up * Time.deltaTime * speed;
+            transform.localPosition -= Vector3.up * Time.deltaTime * speed;
 
             yield return null;
         }

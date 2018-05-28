@@ -16,7 +16,7 @@ using Project.Testing;
 
         public override void Use(Testing.Item item)
         {
-            //base.Interact(cmd);
+            base.Use(item);
 
             DialogManager.Instance.StartDialogue(dialogue);
         }

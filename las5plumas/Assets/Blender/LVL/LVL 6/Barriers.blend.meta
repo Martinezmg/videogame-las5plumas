@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 90ef66cd8b5d4274bb0a2e403f243aa1
+timeCreated: 1527022138
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BARRIER1
+    100002: BARRIER1_007
+    100004: BARRIER1_008
+    100006: BARRIER1_009
+    100008: BARRIER1_010
+    100010: BARRIER1_011
+    100012: BARRIER1_012
+    100014: //RootNode
+    100016: Button1
+    100018: Button1_001
+    100020: Button1_002
+    100022: Button1_003
+    100024: Button1_004
+    100026: Button1_005
+    100028: Button1_006
+    100030: Button1_007
+    100032: Button1_008
+    100034: Button1_009
+    100036: Button1_010
+    100038: Button1_011
+    100040: Button1_012
+    100042: Button1_013
+    100044: Button1_014
+    100046: Button1_015
+    100048: Button1_016
+    100050: Button1_017
+    100052: Button1_018
+    100054: Button1_019
+    100056: Button1_020
+    400000: BARRIER1
+    400002: BARRIER1_007
+    400004: BARRIER1_008
+    400006: BARRIER1_009
+    400008: BARRIER1_010
+    400010: BARRIER1_011
+    400012: BARRIER1_012
+    400014: //RootNode
+    400016: Button1
+    400018: Button1_001
+    400020: Button1_002
+    400022: Button1_003
+    400024: Button1_004
+    400026: Button1_005
+    400028: Button1_006
+    400030: Button1_007
+    400032: Button1_008
+    400034: Button1_009
+    400036: Button1_010
+    400038: Button1_011
+    400040: Button1_012
+    400042: Button1_013
+    400044: Button1_014
+    400046: Button1_015
+    400048: Button1_016
+    400050: Button1_017
+    400052: Button1_018
+    400054: Button1_019
+    400056: Button1_020
+    2100000: BARRIER
+    2100002: BUTTON
+    2300000: BARRIER1
+    2300002: BARRIER1_007
+    2300004: BARRIER1_008
+    2300006: BARRIER1_009
+    2300008: BARRIER1_010
+    2300010: BARRIER1_011
+    2300012: BARRIER1_012
+    2300014: Button1
+    2300016: Button1_001
+    2300018: Button1_002
+    2300020: Button1_003
+    2300022: Button1_004
+    2300024: Button1_005
+    2300026: Button1_006
+    2300028: Button1_007
+    2300030: Button1_008
+    2300032: Button1_009
+    2300034: Button1_010
+    2300036: Button1_011
+    2300038: Button1_012
+    2300040: Button1_013
+    2300042: Button1_014
+    2300044: Button1_015
+    2300046: Button1_016
+    2300048: Button1_017
+    2300050: Button1_018
+    2300052: Button1_019
+    2300054: Button1_020
+    3300000: BARRIER1
+    3300002: BARRIER1_007
+    3300004: BARRIER1_008
+    3300006: BARRIER1_009
+    3300008: BARRIER1_010
+    3300010: BARRIER1_011
+    3300012: BARRIER1_012
+    3300014: Button1
+    3300016: Button1_001
+    3300018: Button1_002
+    3300020: Button1_003
+    3300022: Button1_004
+    3300024: Button1_005
+    3300026: Button1_006
+    3300028: Button1_007
+    3300030: Button1_008
+    3300032: Button1_009
+    3300034: Button1_010
+    3300036: Button1_011
+    3300038: Button1_012
+    3300040: Button1_013
+    3300042: Button1_014
+    3300044: Button1_015
+    3300046: Button1_016
+    3300048: Button1_017
+    3300050: Button1_018
+    3300052: Button1_019
+    3300054: Button1_020
+    4300000: BARRIER1_012
+    4300002: BARRIER1_011
+    4300004: BARRIER1_010
+    4300006: BARRIER1_009
+    4300008: BARRIER1_008
+    4300010: BARRIER1_007
+    4300012: Button1_020
+    4300014: Button1_019
+    4300016: Button1_018
+    4300018: Button1_017
+    4300020: Button1_016
+    4300022: Button1_015
+    4300024: Button1_014
+    4300026: Button1_013
+    4300028: Button1_012
+    4300030: Button1_011
+    4300032: Button1_010
+    4300034: Button1_009
+    4300036: Button1_008
+    4300038: Button1_007
+    4300040: Button1_006
+    4300042: Button1_005
+    4300044: Button1_004
+    4300046: Button1_003
+    4300048: Button1_002
+    4300050: Button1_001
+    4300052: BARRIER1
+    4300054: Button1
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bab64d2f43e0a4da2ecd3be8294cac, type: 3}
+  m_Name: prologue
+  m_EditorClassIdentifier: 
+  name: dialogo1
+  sentences:
+  - name: THE FIVE FEATHERS
+    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    lines:
+    - "Cuenta una leyenda que en lo profundo de los p\xE1ramos de <b>Los</b> <b>Andes</b>
+      existen criaturas paranormales; guardianes de estas tierras, seres m\xE1gicos
+      capaces de controlar a la misma naturaleza con el fin de castigar a aquellos
+      que perturben la tranquilad de su ambiente\u2026"

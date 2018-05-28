@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bab64d2f43e0a4da2ecd3be8294cac, type: 3}
+  m_Name: lvl2_ahk_4
+  m_EditorClassIdentifier: 
+  name: CUARTO DIALOGO
+  sentences:
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "\xBFVes el s\xEDmbolo tras los arboles? Es el mismo que encontraste tras la
+      <b><color=#BC9320>puerta</color></b> en la <b><color=#BC9320>monta\xF1a</color></b>.\r"
+    - "Es el emblema del <b><color=#BC9320>C\xF3ndor</color></b>, y marca antiguos
+      <b><color=#BC9320>portales</color></b> creados por los <b><color=#BC9320>Genios</color></b>
+      <b><color=#BC9320>del</color></b> <b><color=#BC9320>Bosque</color></b> para
+      movilizarnos r\xE1pidamente en nuestro mundo.\r"
+    - "B\xFAscalos siempre para poder <b><color=#BC9320>salir</color></b> del lugar
+      donde est\xE9s y <b><color=#BC9320>avanzar</color></b> al siguiente <b><color=#BC9320>desaf\xEDo</color></b>
+      en tu aventura.\r"
+    - "Por el momento estos \xE1rboles bloquean nuestro camino al <b><color=#BC9320>portal</color></b>,
+      pero seguro encontraremos algo por aqu\xED para <b><color=#BC9320>cortar</color></b>
+      alg\xFAn <b><color=#BC9320>\xE1rbol</color></b> y abrirnos camino.\r"
