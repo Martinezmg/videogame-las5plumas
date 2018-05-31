@@ -15,13 +15,13 @@ namespace Project.DialogueSystem
 
         private void Awake()
         {
-            MainManager.Instance.GetComponent<Fading>().FadeFinished += EnableComponent;
+            //MainManager.Instance.GetComponent<Fading>().FadeFinished += EnableComponent;
             DialogManager.Instance.DialogEnd += AhkNextPoint;
         }
 
         private void OnDisable()
         {
-            MainManager.Instance.GetComponent<Fading>().FadeFinished -= EnableComponent;
+            //MainManager.Instance.GetComponent<Fading>().FadeFinished -= EnableComponent;
         }
 
         public void DisableComponent()

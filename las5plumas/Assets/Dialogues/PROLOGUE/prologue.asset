@@ -16,7 +16,7 @@ MonoBehaviour:
   - name: THE FIVE FEATHERS
     sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     lines:
-    - "Cuenta una leyenda que en lo profundo de los p\xE1ramos de <b>Los</b> <b>Andes</b>
-      existen criaturas paranormales; guardianes de estas tierras, seres m\xE1gicos
-      capaces de controlar a la misma naturaleza con el fin de castigar a aquellos
-      que perturben la tranquilad de su ambiente\u2026"
+    - "Cuenta la leyenda que en lo profundo de los p\xE1ramos de Los Andes existen
+      criaturas m\xE1gicas, guardianes de estas tierras, seres mitol\xF3gicos capaces
+      de controlar a la misma naturaleza; con el fin de castigar a aquellos que perturben
+      la tranquilad de su ambiente\u2026."

@@ -16,103 +16,100 @@ MonoBehaviour:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Entiendo que est\xE9s asustado y confundido por lo que pas\xF3, pero quiero
-      <b><color=#BC9320>ayudarte</color></b>\u2026 \r"
-    - "Tu hija fue <b><color=#BC9320>secuestrada</color></b> por un malvado duende,
-      llamado <b><color=#BC9320>Kurko</color></b>, al servicio de la <b><color=#BC9320>Reina</color></b>
-      <b><color=#BC9320>Negra</color></b>\u2026\r"
+    - "Respiraciones lentas y profundas muchacho, entiendo que est\xE9s asustado y
+      confundido, pero quiero ayudarte\u2026 \r"
+    - "Tu hija fue <color=#BC9320>secuestrada</color> por un malvado <color=#BC9320>duende</color>,
+      llamado <color=#BC9320>Kurko</color>, al servicio de la <color=#BC9320>Reina</color>
+      <color=#BC9320>Negra</color>.\r"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBF<b><color=#BC9320>La</color></b> <b><color=#BC9320>Reina</color></b> <b><color=#BC9320>Negra</color></b>?\r"
+    - "\xBFLa <color=#BC9320>Reina</color> <color=#BC9320>Negra</color>?\r"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Lo siento, se me olvida siempre que ustedes los <b><color=#BC9320>humanos</color></b>
-      no saben nada\r"
+    - "Lo siento, se me olvida siempre que ustedes los <color=#BC9320>humanos</color>
+      no saben nada.\r"
     - "D\xE9jame comenzar por el principio\u2026\r"
-    - "Hace mucho tiempo, en los tiempos de los <b><color=#BC9320>Genios</color></b>
-      <b><color=#BC9320>del</color></b> <b><color=#BC9320>Bosque</color></b>, viv\xEDa
-      una <b><color=#BC9320>Princesa</color></b>, hija del <b><color=#BC9320>Sol</color></b>
-      y la <b><color=#BC9320>Luna</color></b>...\r"
-    - "Cuenta la leyenda que la <b><color=#BC9320>Princesa</color></b>, guardiana
-      de los bosques, un d\xEDa vio pasar <b><color=#BC9320>cinco</color></b> <b><color=#BC9320>enormes</color></b>
-      <b><color=#BC9320>\xE1guilas</color></b> sobre su cabeza\u2026\r"
-    - "<b><color=#BC9320>Cinco</color></b> <b><color=#BC9320>\xC1guilas</color></b>
-      <b><color=#BC9320>Blancas</color></b> con plumas brillantes como monedas de
-      plata. La <b><color=#BC9320>Princesa</color></b>, enamorada de tan espl\xE9ndido
-      plumaje quiso adornar su vestido con \xE9l\u2026\r"
-    - "Persigui\xF3 a las <b><color=#BC9320>Cinco</color></b> <b><color=#BC9320>\xC1guilas</color></b>
-      a trav\xE9s del toda la sierra del <b><color=#BC9320>p\xE1ramo</color></b> <b><color=#BC9320>andino</color></b>
-      hasta que finalmente las imponentes aves se posaron sobre cinco <b><color=#BC9320>enormes</color></b>
-      <b><color=#BC9320>picos</color></b>\u2026\r"
-    - "Sin embargo, justo antes de que la <b><color=#BC9320>Princesa</color></b> alcanzara
+    - "Hace mucho tiempo, en los tiempos de los <color=#BC9320>Genios</color> <color=#BC9320>del</color>
+      <color=#BC9320>Bosque</color>, viv\xEDa una <color=#BC9320>Princesa</color>,
+      hija del <color=#BC9320>Sol</color> y la <color=#BC9320>Luna</color>.\r"
+    - "Cuenta la leyenda que la <color=#BC9320>Princesa</color>, guardiana de los
+      bosques, un d\xEDa vio pasar <color=#BC9320>cinco</color> <color=#BC9320>enormes</color>
+      <color=#BC9320>\xE1guilas</color> sobre su cabeza\u2026\r"
+    - "Cuenta la leyenda que la <color=#BC9320>Princesa</color>, guardiana de los
+      bosques, un d\xEDa vio pasar <color=#BC9320>cinco</color> <color=#BC9320>enormes</color>
+      <color=#BC9320>\xE1guilas</color> sobre su cabeza\u2026\r"
+    - "<color=#BC9320>Cinco</color> <color=#BC9320>\xC1guilas</color> <color=#BC9320>Blancas</color>
+      con plumas brillantes como monedas de plata. La <color=#BC9320>Princesa</color>,
+      enamorada de tan espl\xE9ndido plumaje quiso adornar su vestido con \xE9l\u2026\r"
+    - "Persigui\xF3 a las <color=#BC9320>Cinco</color> <color=#BC9320>\xC1guilas</color>
+      a trav\xE9s del toda la sierra del <color=#BC9320>p\xE1ramo</color> <color=#BC9320>andino</color>
+      hasta que finalmente las imponentes aves se posaron sobre cinco enormes picos\u2026\r"
+    - "Sin embargo, justo antes de que la <color=#BC9320>Princesa</color> alcanzara
       la cumbre del pico m\xE1s alto y estirara su mano para tomar el plumaje de una
-      de las <b><color=#BC9320>\xE1guilas</color></b>, las cinco aves abrieron sus
-      enormes alas, levantando vuelo y escapando en direcci\xF3n a la luna mientras
-      cubr\xEDan los cinco picos con plateados copos de nieve\u2026\r"
-    - "Dicen, que cada <b><color=#BC9320>\xE1guila</color></b> solt\xF3 <b><color=#BC9320>una</color></b>
-      <b><color=#BC9320>pluma</color></b> mientras volaban, y que cada una de estas
-      <b><color=#BC9320>cinco</color></b> <b><color=#BC9320>plumas</color></b> sigue
-      escondidas en alg\xFAn lugar del p\xE1ramo\u2026\r"
-    - "Sin embargo, La <b><color=#BC9320>Princesa</color></b>, sola y cubierta de
-      nieve vag\xF3 errante por toda la sierra hasta llegar a esta misma laguna, La
-      Laguna Negra\u2026\r"
+      de las <color=#BC9320>\xE1guilas</color>, las cinco aves abrieron sus enormes
+      alas, levantando vuelo y escapando en direcci\xF3n a la luna mientras cubr\xEDan
+      los cinco picos con plateados copos de nieve\u2026\r"
+    - "Dicen, que cada <color=#BC9320>\xE1guila</color> solt\xF3 <color=#BC9320>una</color>
+      <color=#BC9320>pluma</color> mientras volaban, y que cada una de estas <color=#BC9320>cinco</color>
+      <color=#BC9320>plumas</color> sigue escondidas en alg\xFAn lugar del p\xE1ramo\u2026\r"
+    - "Sin embargo, la <color=#BC9320>Princesa</color>, sola y cubierta de nieve vag\xF3
+      errante por toda la sierra hasta llegar a esta misma laguna, <color=#BC9320>La</color>
+      <color=#BC9320>Laguna</color> <color=#BC9320>Negra</color>\u2026\r"
     - "Y, hundida en su fracaso, decidi\xF3 apoderarse del lugar, esclavizando a todas
-      las criaturas que ah\xED viv\xEDan  y convirti\xE9ndose as\xED en la <b><color=#BC9320>Reina</color></b>
-      <b><color=#BC9320>Negra</color></b>\r"
-    - "Dicen que <b><color=#BC9320>bajo</color></b> la <b><color=#BC9320>laguna</color></b>
-      hay un enorme portal de piedra, grabado con <b><color=#BC9320>las</color></b>
-      <b><color=#BC9320>cinco</color></b> <b><color=#BC9320>plumas</color></b> perdidas
-      de la leyenda\u2026\r"
+      las criaturas que ah\xED viv\xEDan  y convirti\xE9ndose as\xED en la <color=#BC9320>Reina</color>
+      <color=#BC9320>Negra</color>.\r"
+    - "Dicen que <color=#BC9320>bajo</color> la <color=#BC9320>laguna</color> hay
+      un enorme portal de piedra, grabado con las <color=#BC9320>cinco</color> <color=#BC9320>plumas</color>
+      perdidas de la leyenda\u2026\r"
     - "Y que si alguien lograra conseguir estas plumas, y las colocara sobre el portal,
-      este se abrir\xEDa permitiendo as\xED acceder al reino de la <b><color=#BC9320>Reina</color></b>
-      <b><color=#BC9320>Negra</color></b>\r"
-    - "Quiz\xE1s, si consigues <b><color=#BC9320>las</color></b> <b><color=#BC9320>cinco</color></b>
-      <b><color=#BC9320>plumas</color></b> perdidas de la leyenda, puedas usarlas
-      para acceder a su <b><color=#BC9320>reino</color></b> y darlas de <b><color=#BC9320>ofrenda</color></b>
-      a la <b><color=#BC9320>Reina</color></b> <b><color=#BC9320>Negra</color></b>
-      a cambio de tu <b><color=#BC9320>hija</color></b>\u2026\r"
+      este se abrir\xEDa permitiendo as\xED acceder al reino de la <color=#BC9320>Reina</color>
+      <color=#BC9320>Negra</color>\r"
+    - "Quiz\xE1s, si consigues las <color=#BC9320>cinco</color> <color=#BC9320>plumas</color>
+      perdidas de la leyenda, puedas usarlas para acceder a su <color=#BC9320>reino</color>
+      y darlas de <color=#BC9320>ofrenda</color> a la <color=#BC9320>Reina</color>
+      <color=#BC9320>Negra</color> a cambio de tu <color=#BC9320>hija</color>\u2026\r"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "Entiendo, pero, si nadie las ha encontrado hasta ahora, \xBFC\xF3mo podr\xEDa
-      hacerlo yo? \r"
+    - "Espera, pero si nadie las ha encontrado hasta ahora, \xBFC\xF3mo podr\xEDa
+      hacerlo yo? "
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "<b><color=#BC9320>Las</color></b> <b><color=#BC9320>cinco</color></b> <b><color=#BC9320>plumas</color></b>
+    - "<color=#BC9320>Las</color> <color=#BC9320>cinco</color> <color=#BC9320>plumas</color>
       cayeron en el reino de los humanos, en lugares que nosotros los seres m\xE1gicos
       no podemos acceder\u2026 \r"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "Espera, pero estas aqu\xED conmigo\u2026\r"
+    - "Pero t\xFA est\xE1s aqu\xED conmigo\u2026\r"
     - "Si los seres m\xE1gicos no pueden acceder a nuestro \u201Creino\u201D\u2026
       \xBFC\xF3mo es que estamos hablando? \r"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Solo un humano afectado por alg\xFAn <b><color=#BC9320>evento</color></b> <b><color=#BC9320>m\xE1gico</color></b>
-      puede ver e interactuar con el <b><color=#BC9320>mundo</color></b> <b><color=#BC9320>m\xE1gico</color></b>.\r"
-    - "Tu hija, al haber perturbado la tranquilidad de la <b><color=#BC9320>Laguna</color></b>
-      <b><color=#BC9320>Negra</color></b>, desato un <b><color=#BC9320>evento</color></b>
-      <b><color=#BC9320>m\xE1gico</color></b>. \r"
-    - "Y al tu haberlo presenciado ahora eres un <b><color=#BC9320>puente</color></b>
+    - "Solo un humano afectado por alg\xFAn <color=#BC9320>evento</color> <color=#BC9320>m\xE1gico</color>
+      puede ver e interactuar con el <color=#BC9320>mundo</color> <color=#BC9320>m\xE1gico</color>.\r"
+    - "Tu hija, al haber perturbado la tranquilidad de la <color=#BC9320>Laguna</color>
+      <color=#BC9320>Negra</color>, desato un <color=#BC9320>evento</color> <color=#BC9320>m\xE1gico</color>.
+      \r"
+    - "Y t\xFA al haberlo presenciado ahora eres un <color=#BC9320>puente</color>
       entre ambos mundos\u2026\r"
-    - "\u2026 Y el \xFAnico ser <b><color=#BC9320>vivo</color></b> capaz de conseguir
-      <b><color=#BC9320>las</color></b> <b><color=#BC9320>cinco</color></b> <b><color=#BC9320>plumas</color></b>
-      de la leyenda\r"
+    - "Y el \xFAnico ser vivo capaz de conseguir las <color=#BC9320>cinco</color>
+      <color=#BC9320>plumas</color> de la leyenda.\r"
     - "Varios humanos lo han intentado antes de ti, sin embargo ninguno lo ha logrado\u2026\r"
-    - "Pero no te preocupes, ellos no ten\xEDan algo muy especial que si tienes t\xFA\u2026\r"
+    - "Pero no te preocupes muchacho, ellos no ten\xEDan la enorme ventaja que tienes
+      t\xFA\u2026\r"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBFQu\xE9 cosa?\r\n"
+    - "\xBFCu\xE1l ventaja?\r"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Pues a m\xED, por supuesto. \r"
+    - "Al grandioso Ahkitobe, por supuesto. \r"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
@@ -120,6 +117,22 @@ MonoBehaviour:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Con mi gran sabidur\xEDa y valor, todo saldr\xE1 bien.\r"
-    - "\xA1Hora de que empiece la aventura del gran <b><color=#BC9320>Ahkitobe</color></b>\u2026
-      Y su amigo el humano!\r"
+    - "\xBFQu\xE9?\r"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\xBFNo hay alguien m\xE1s?\r"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - Nop
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "Pues ser\xE1.\r"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Con mi infinita sabidur\xEDa y valor, todo saldr\xE1 bien.\r"
+    - "\xA1Hora de que empiece la aventura del gran h\xE9roe <color=#BC9320>Ahkitobe</color>\u2026
+      ah s\xED, y  su mascota el humano!\r"

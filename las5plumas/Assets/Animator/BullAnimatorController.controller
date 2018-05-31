@@ -389,7 +389,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: hittedTrigger
+    m_ConditionEvent: hitTrigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102830313309577998}
@@ -399,7 +399,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 1.000723
+  m_ExitTime: 0.9997273
   m_HasExitTime: 0
   m_HasFixedDuration: 0
   m_InterruptionSource: 0

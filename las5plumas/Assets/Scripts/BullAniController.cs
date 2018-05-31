@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AI;
 
 public class BullAniController : MonoBehaviour
@@ -16,6 +17,7 @@ public class BullAniController : MonoBehaviour
     private Animator anim;
     private NavMeshAgent agent;
     public Transform target;
+    public IntVariable targetLife;
 
     private bool isAttacking = false;
 
@@ -42,6 +44,11 @@ public class BullAniController : MonoBehaviour
     private float runSpeed = 1f;
     [SerializeField]
     private float attackDistance = 1f;
+
+    [Header("Events")]
+    public UnityEvent OnHit;
+    public UnityEvent OnHitted;
+    public UnityEvent OnCrash;
 
     private void Start()
     {
@@ -107,18 +114,24 @@ public class BullAniController : MonoBehaviour
 
         agent.isStopped = true;
 
+        OnCrash.Invoke();
+
         Precharge(patrolPoints[0]);
     }
     private void Hitted()
     {
         Debug.Log("Reduce BULL Life");
+        OnHitted.Invoke();
     }
     private void Hit()
     {
         Debug.Log("Reduce Target Life");
+        targetLife.Value--;
         
         isAttacking = false;
         isPatroling = true;
+
+        OnHit.Invoke();
 
         agent.isStopped = true;
 

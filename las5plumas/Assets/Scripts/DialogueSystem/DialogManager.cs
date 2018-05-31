@@ -39,10 +39,38 @@ namespace Project.DialogueSystem
         public Image exitDialog;
         private bool finalSentense = false;
 
+        private bool escape = false;
+        private Coroutine currentDisplay;
+
+        public bool Escape
+        {
+            get
+            {
+                return escape;
+            }
+
+            set
+            {
+                escape = value;
+            }
+        }
+
         private void Start()
         {
             sentences = new Queue<Sentence>();
             lines = new Queue<string>();
+        }
+
+        public void Next()
+        {
+            if (escape)
+            {
+                DisplayNextSentence();
+            }
+            else
+            {
+                escape = true;
+            }
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -67,13 +95,20 @@ namespace Project.DialogueSystem
             if (DialogBegan != null) DialogBegan.Invoke(currentDialog);
 
 
+
             DisplayNextSentence();
         }
 
         public void DisplayNextSentence()
         {
+            /*if (!exitDialog.enabled && !nextDialog.enabled)
+            {
+                return;
+            }*/
+
             exitDialog.enabled = false;
             nextDialog.enabled = false;
+            escape = false;
 
             if (sentences.Count == 0 && lines.Count == 0)
             {
@@ -104,6 +139,7 @@ namespace Project.DialogueSystem
 
             //Debug.Log(speaker + ": " + sentence);
             StopAllCoroutines();
+            escape = false;
             StartCoroutine(TypeSentence(sentence));
         }
 
@@ -116,6 +152,16 @@ namespace Project.DialogueSystem
             //foreach (char letter in sentence.ToCharArray())
             foreach (string word in sentence.Split(' '))
             {
+                //escape
+
+                if (escape)
+                {
+                    sentenceText.text = sentence;
+                    break;
+                }
+
+                //fin de escape
+
                 wholeWord = false;
 
                 foreach (var letter in word.ToCharArray())
@@ -142,6 +188,8 @@ namespace Project.DialogueSystem
                 exitDialog.enabled = true;
             else
                 nextDialog.enabled = true;
+
+            escape = true;
         }
 
         public void EndDialogue()

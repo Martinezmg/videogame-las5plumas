@@ -19,7 +19,7 @@ namespace Project.Game.Player
 
         public NavMeshAgent agent;
         public float speed = 1;
-        private float speedPercent;
+        public float speedPercent;
         private bool isMoving = false;
         public bool canMove = true;
 
@@ -146,7 +146,7 @@ namespace Project.Game.Player
 
         public void MoveAgent()
         {
-            if (canMove)
+            //if (canMove)
                 agent.Move(rotation_pivot.forward * Time.deltaTime * speed);
         }
         

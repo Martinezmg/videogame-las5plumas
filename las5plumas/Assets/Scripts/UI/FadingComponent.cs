@@ -9,22 +9,22 @@ public class FadingComponent : MonoBehaviour
     [SerializeField]
     private Animator anim;
     [SerializeField]
-    private bool isFadeOut = true;
+    private bool isFadeIn = true;
     [SerializeField]
     private bool playInStart = true;
 
     public UnityEvent OnfadeIn;
     public UnityEvent OnfadeOut;
 
-    public bool FadeInOut
+    public bool FadeInIn
     {
         get
         {
-            return isFadeOut;
+            return isFadeIn;
         }
         set
         {
-            isFadeOut = value;
+            isFadeIn = value;
 
             //llamar a evento
             //anim.SetBool(fadeInOutHash, isFadeOut);
@@ -46,16 +46,25 @@ public class FadingComponent : MonoBehaviour
             StartCoroutine(OnFade());
     }
 
+    public void FadeInAndOut()
+    {
+
+    }
+    public void FadeOutAndIn()
+    {
+
+    }
+
     IEnumerator OnFade()
     {
-        anim.SetBool(fadeInOutHash, isFadeOut);
+        anim.SetBool(fadeInOutHash, isFadeIn);
         anim.SetTrigger(startFadingHash);
         float speed = anim.GetCurrentAnimatorStateInfo(0).speed;
         speed = Mathf.Abs(speed);
 
         yield return new WaitForSeconds(2.5f/speed); //tiempo de la animacion actual
 
-        if (isFadeOut)
+        if (isFadeIn)
             Invoke(OnfadeIn);
         else
             Invoke(OnfadeOut);

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f170720b854d2bc41bab2eb8893657c6, type: 3}
   m_Name: LVL4
   m_EditorClassIdentifier: 
-  isActive: 1
+  isActive: 0
   lvlColor: {r: 1, g: 0, b: 1, a: 1}
   shard: 0
   coin1: 0
@@ -19,4 +19,3 @@ MonoBehaviour:
   coin3: 0
   coin4: 0
   coin5: 0
-  interactables: 

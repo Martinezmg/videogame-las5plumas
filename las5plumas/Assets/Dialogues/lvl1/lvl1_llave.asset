@@ -16,4 +16,4 @@ MonoBehaviour:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBFUna <b><color=#ffffffff>llave</color></b>? \xBFQu\xE9 abrir\xE1?"
+    - "\xBFUna <color=#BC9320>llave</color>? \xBFQu\xE9 abrir\xE1?\r\n"

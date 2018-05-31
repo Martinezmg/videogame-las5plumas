@@ -40,7 +40,7 @@ MonoBehaviour:
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       intensity: 1
       radius: 0.3
@@ -71,13 +71,13 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: 0.1
+      focusDistance: 0.55
       aperture: 32
-      focalLength: 1
+      focalLength: 70
       useCameraFov: 0
       kernelSize: 0
   motionBlur:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       shutterAngle: 270
       sampleCount: 10
@@ -97,7 +97,7 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       bloom:
         intensity: 0.78
@@ -281,22 +281,22 @@ MonoBehaviour:
       lut: {fileID: 0}
       contribution: 1
   chromaticAberration:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0
+      intensity: 0.35
   grain:
     m_Enabled: 0
     m_Settings:
       colored: 1
-      intensity: 0.245
+      intensity: 0.2
       size: 1
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
-      color: {r: 0, g: 0, b: 0, a: 1}
+      color: {r: 0.30882353, g: 0.24918865, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
       intensity: 0.45
       smoothness: 0.2

@@ -13,12 +13,32 @@ using Project.Testing;
         public AhkitobeEngine ahkitobe;
 
         public Dialogue dialogue;
+        public Dialogue extraDialogue;
+
+        public bool enableExtreDialogue = false;
+
+        private Dialogue defaultDialogue;
+
+        private void Start()
+        {
+            defaultDialogue = dialogue;
+        }
 
         public override void Use(Testing.Item item)
         {
             base.Use(item);
 
-            DialogManager.Instance.StartDialogue(dialogue);
+            if (!active)
+            {
+                return;
+            }
+
+            DialogManager.Instance.StartDialogue(defaultDialogue);
+
+            if (enableExtreDialogue)
+            {
+                defaultDialogue = extraDialogue;
+            }
         }
 
         private void OnTriggerEnter(Collider other)

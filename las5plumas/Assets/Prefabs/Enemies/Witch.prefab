@@ -589,6 +589,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36184119e9cb3d4d861040d4a7bcc13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 256
   sightCenter: {x: 0, y: 0.2, z: 0}
   sightDistance: 5
   sightAngle: 20
@@ -655,6 +658,14 @@ MonoBehaviour:
     m_TypeName: Sight+SightEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   isTargetInSight: 0
+  focusEnabled: 0
+  focusDelay: 1
+  OnFocus:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  enableGizmos: 0
 --- !u!114 &114834711736295322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -666,6 +677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b099a78a7fc956f42a40496fcb9ddc24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  agent: {fileID: 0}
   pursuitSpeed: 2
 --- !u!114 &114856667290831804
 MonoBehaviour:
@@ -697,6 +710,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  agent: {fileID: 0}
   patrolSpeed: 1
 --- !u!114 &114955166599876352
 MonoBehaviour:

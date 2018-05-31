@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Keys container
   m_EditorClassIdentifier: 
   item_: {fileID: 11400000, guid: ff81fa3191d451346b729a71d3aa3ca6, type: 2}
-  available_: 1
-  count_: 1
+  available_: 0
+  count_: 0

@@ -16,6 +16,6 @@ MonoBehaviour:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "Esta debe ser la <b><color=#ffffffff>entrada</color></b> que mencion\xF3 Ahkitobe\u2026"
-    - "<b><color=#ffffffff>Est\xE1</color></b> cerrada\u2026 Quiz\xE1s la <b><color=#ffffffff>llave</color></b>
-      est\xE9 cerca."
+    - "Esta debe ser la <color=#BC9320>entrada</color> que mencion\xF3 Ahkitobe\u2026\r\n"
+    - "Est\xE1 <color=#BC9320>cerrada</color>\u2026 Quiz\xE1s la <color=#BC9320>llave</color>
+      est\xE9 cerca.\r\n"

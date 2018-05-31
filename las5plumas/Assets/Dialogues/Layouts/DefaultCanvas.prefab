@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 223740624366575148}
   - component: {fileID: 114289614070412326}
   - component: {fileID: 114117814451143820}
+  - component: {fileID: 114889152449458034}
   m_Layer: 5
   m_Name: DefaultCanvas
   m_TagString: Untagged
@@ -329,7 +330,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: DisplayNextSentence
+        m_MethodName: Next
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -387,8 +388,8 @@ MonoBehaviour:
     lobortis nisl ut aliquip ex ea\r\ncommodo consequat. <sprite=\"coins_inventory\"
     index=0>"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1584917b70f9df14e8439e3959c04726, type: 2}
-  m_sharedMaterial: {fileID: 21408136804277586, guid: 1584917b70f9df14e8439e3959c04726,
+  m_fontAsset: {fileID: 11400000, guid: c22d7f0c6c4a9e143a7fb3b4caa19957, type: 2}
+  m_sharedMaterial: {fileID: 21855712535093408, guid: c22d7f0c6c4a9e143a7fb3b4caa19957,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -430,7 +431,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 1
+  m_overflowMode: 3
   m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
@@ -667,8 +668,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 536dde8fc5cdcd14ebf6fdfa13892205, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -702,6 +703,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114889152449458034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715185492660256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c9f1b36a5cb8e419cf7abcdad168eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 223740624366575148}
+  speakerName: {fileID: 0}
+  sentenceText: {fileID: 0}
+  speakerImage: {fileID: 0}
+  next: {fileID: 0}
+  exit: {fileID: 0}
 --- !u!114 &114894903213151854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -957,7 +975,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 679, y: -61}
-  m_SizeDelta: {x: 44, y: 35.2}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224931804956092252
 RectTransform:
@@ -1014,6 +1032,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.17, y: 4.58}
+  m_AnchoredPosition: {x: -0.000017046928, y: -0.000017166138}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -6,6 +6,6 @@ public class FreezeAttack : Attack
     public override void AttackTarget()
     {
         base.AttackTarget();
-        target.GetComponent<PlayerEngine>().speed = 0;
+        sight.target.GetComponent<PlayerEngine>().speed = 0;
     }
 }

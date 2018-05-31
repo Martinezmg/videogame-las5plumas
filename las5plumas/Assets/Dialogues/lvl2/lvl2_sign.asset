@@ -16,14 +16,7 @@ MonoBehaviour:
   - name: CARTEL
     sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     lines:
-    - "\u201CBajo la fuerte <b><color=#BC9320>lluvia</color></b>,\r"
-    - "Y el estruendoso <b><color=#BC9320>trueno</color></b>.\r"
-    - "Ante la p\xE1lida <b><color=#BC9320>luna</color></b>,\r"
-    - "Y el ardiente <b><color=#BC9320>sol</color></b>.\r"
-    - "El c\xF3ndor vuela,\r"
-    - "Como si controlara el <b><color=#BC9320>viento</color></b>.\u201D\r"
-  - name: Gabriel
-    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
-    lines:
-    - "Interesante verso.\r"
-    - "\xBFQu\xE9 podr\xE1 significar?\r"
+    - "\u201CBajo la fuerte <b><color=#BC9320>lluvia</color></b>,\r\n\nY el estruendoso
+      <b><color=#BC9320>trueno</color></b>.\r\n\nAnte la p\xE1lida <b><color=#BC9320>luna</color></b>,\r\n\nY
+      el ardiente <b><color=#BC9320>sol</color></b>.\r\n\nEl c\xF3ndor vuela,\r\n\nComo
+      si controlara el <b><color=#BC9320>viento</color></b>.\u201D\r"

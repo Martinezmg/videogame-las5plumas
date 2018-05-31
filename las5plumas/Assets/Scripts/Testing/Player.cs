@@ -13,7 +13,6 @@ namespace Project.Testing
         public Interactable interactableTarget = null;
 
         public PlayersItem itemContainer;
-        
 
         private void Start()
         {

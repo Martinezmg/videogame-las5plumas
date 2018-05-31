@@ -10,7 +10,7 @@ namespace Project.Testing
 
         public float delay = 0f;
         public UnityEvent OnTouch;
-        public UnityEvent OnDestroy;
+        public UnityEvent OnDestroyy;
 
         public override void Touch()
         {
@@ -31,7 +31,7 @@ namespace Project.Testing
         {
             item_.Take();
 
-            OnDestroy.Invoke();
+            OnDestroyy.Invoke();
             Destroy(gameObject);
         }
     }

@@ -1725,6 +1725,10 @@ MonoBehaviour:
   tapGesture: {fileID: 0}
   interactableTarget: {fileID: 0}
   itemContainer: {fileID: 11400000, guid: 18d28c36d61757d40b765bee3a2a3a53, type: 2}
+  playerLife:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 037e7b375759664409186c541639f09e, type: 2}
 --- !u!114 &114633130145586218
 MonoBehaviour:
   m_ObjectHideFlags: 1

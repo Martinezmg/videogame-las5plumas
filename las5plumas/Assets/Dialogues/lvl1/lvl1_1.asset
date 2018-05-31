@@ -16,18 +16,35 @@ MonoBehaviour:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Como te ven\xEDa diciendo, debes conseguir las 5 plumas de las \xE1guilas blancas
-      de la leyenda, pero estoy seguro de que no pretendes hacerlo \xFAnicamente con
-      ese instrumento extra\xF1o que cargas\u2026"
+    - "As\xED que repitiendo lo que acabo de decir, debes conseguir las <color=#BC9320>cinco</color>
+      <color=#BC9320>plumas</color> de las \xE1guilas blancas de la leyenda, para
+      hacerlo necesitar\xE1s un <color=#BC9320>arma</color>, cu\xE9ntame guerrero
+      qu\xE9 poderosa herramienta tienes en tu espalda\r\n"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBFTe refieres a mi Cuatro?"
+    - "\xBFTe refieres a mi Cuatro?\r\n"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Necesitas un <b><color=#BC9320>arma</color></b>, digna de un guerrero de tu
-      talla\u2026 Supongo que un hacha /*gastada*/ servir\xE1"
+    - "\xBFQu\xE9 es un cuatro?\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "Un instrumento musical\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Oh si claro, les dar\xE1s serenata a tus enemigos hasta matarlos de encanto\u2026
+      No, necesitar\xE1s un hacha desgastada.\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\xBFPor qu\xE9 desgastada?\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Es el principio de la aventura hombre, un arma desgastada es \xA1fundamental!\r\n"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
@@ -35,20 +52,27 @@ MonoBehaviour:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Dice una leyenda que en esta zona hay una <b><color=#BC9320>entrada</color></b>
-      a la monta\xF1a que lleva directo a una guarida de <b><color=#BC9320>brujas</color></b>\u2026 "
-    - "Las brujas siempre custodian tesoros, es posible que si consigues su guarida
-      consigas un arma\u2026"
-    - "Pero primero, debes aprender a <b><color=#BC9320>moverte</color></b> por estas
-      tierras\u2026"
-    - "Para moverte <b><color=#BC9320>mant\xE9n</color></b> <b><color=#BC9320>pulsada</color></b>
-      <b><color=#BC9320>la</color></b> <b><color=#BC9320>pantalla</color></b> y <b><color=#BC9320>desplaza</color></b>
-      <b><color=#BC9320>tu</color></b> <b><color=#BC9320>dedo</color></b> sobre ella
-      en la direcci\xF3n que desees moverte\u2026"
-    - "Para <b><color=#BC9320>interactuar</color></b> con alg\xFAn <b><color=#BC9320>objeto</color></b>
-      o <b><color=#BC9320>personaje</color></b> solo <b><color=#BC9320>toca <b><color=#BC9320>la</color></b>
-      <b><color=#BC9320>pantalla</color></b>\u2026  "
+    - "Dice la leyenda que en esta zona hay una <color=#BC9320>entrada</color> a la
+      <color=#BC9320>monta\xF1a</color> que lleva directo la guarida de unas <color=#BC9320>brujas</color>.\r\n"
+    - "Las <color=#BC9320>brujas</color> siempre custodian <color=#BC9320>tesoros</color>,
+      es posible que si consigues su guarida consigas un <color=#BC9320>arma</color>.\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\xBFNo son los dragones los que suelen custodiar tesoros?\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Pues en esta leyenda son las brujas, as\xFAmelo.\r\n"
+    - "Pero primero, debes aprender a <color=#BC9320>moverte</color> por estas tierras.\r\n"
+    - "Para moverte <color=#BC9320>mant\xE9n</color> <color=#BC9320>pulsada</color>
+      <color=#BC9320>la</color> <color=#BC9320>pantalla</color> y <color=#BC9320>desplaza</color>
+      <color=#BC9320>tu</color> <color=#BC9320>dedo</color> sobre ella en la direcci\xF3n
+      que desees moverte\u2026\r\n"
+    - "Para <color=#BC9320>interactuar</color> con alg\xFAn <color=#BC9320>objeto</color>
+      o <color=#BC9320>personaje</color> solo <color=#BC9320>toca</color> <color=#BC9320>la</color>
+      <color=#BC9320>pantalla</color>\u2026  \r\n"
     - "No s\xE9 muy bien que significa esto de \u201Cla pantalla\u201D pero es lo
-      que supone que te diga en este punto\u2026 "
-    - "Intenta <b><color=#BC9320>moverte</color></b>, yo me adelantare a buscar la
-      <b><color=#BC9320>entrada</color></b> en la monta\xF1a\u2026"
+      que supone que te diga en este punto\u2026 \r\n"
+    - "Intenta <color=#BC9320>moverte</color>, yo me adelantar\xE9 a buscar la <color=#BC9320>entrada</color>
+      en la monta\xF1a.\r\n"

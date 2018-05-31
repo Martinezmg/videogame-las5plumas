@@ -15,4 +15,18 @@ public class NavSurfaceUpdater : MonoBehaviour
             surface.BuildNavMesh();
         }
     }
+
+    public void UpdateSurface(float t)
+    {
+        StartCoroutine(_updateSurface(t));
+    }
+
+    IEnumerator _updateSurface(float t)
+    {
+        surfaceMoving = true;
+
+        yield return new WaitForSeconds(t);
+
+        surfaceMoving = false;
+    }
 }
