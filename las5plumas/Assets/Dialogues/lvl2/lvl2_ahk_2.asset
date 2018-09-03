@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Name: lvl2_ahk_2
   m_EditorClassIdentifier: 
   name: SEGUNDO DIALOGO
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "\xA1Mira! \xA1Adelante hay <b><color=#BC9320>hacha</color></b>! Es perfecta
-      para poder salir de aqu\xED.\r"
-    - "Solo debes atravesar el laberinto custodiado por las <b><color=#BC9320>Brujas</color></b>
-      <b><color=#BC9320>del</color></b> <b><color=#BC9320>Valle</color></b>.\r"
-    - "No es por alarmarte; pero solo con un vistazo te convertir\xE1n en piedra.\r"
-    - "As\xED que\u2026 Bueno\u2026 Evita que te vean\u2026 \r"
-    - "\xA1Buena suerte! \r"
+    - "\xA1Mira! \xA1Adelante hay un <hacha! Es perfecta para poder salir de aqu\xED.\r\n"
+    - "Solo debes atravesar el laberinto custodiado por las <Brujas <del <Valle.\r\n"
+    - "No es por alarmarte; pero solo con un vistazo te convertir\xE1n en piedra.\r\n"
+    - "As\xED que\u2026 Bueno\u2026 Evita que te vean\u2026 \r\n"
+    - "\xA1Buena suerte! \r\n"

@@ -1644,6 +1644,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &304475714 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1212888505571396, guid: 69c80179b4192ab448d3ddfbea3304cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 574250372}
 --- !u!1 &324769532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4618,6 +4623,11 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114148277948565504, guid: b7fa79fad1b60a84c86aadab441fdf93,
+        type: 2}
+      propertyPath: tapAlert
+      value: 
+      objectReference: {fileID: 304475714}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7fa79fad1b60a84c86aadab441fdf93, type: 2}
   m_IsPrefabParent: 0

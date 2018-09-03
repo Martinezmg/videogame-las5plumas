@@ -326,8 +326,8 @@ MonoBehaviour:
     lobortis nisl ut aliquip ex ea\r\ncommodo consequat. <sprite=\"coins_inventory\"
     index=0>"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1584917b70f9df14e8439e3959c04726, type: 2}
-  m_sharedMaterial: {fileID: 21408136804277586, guid: 1584917b70f9df14e8439e3959c04726,
+  m_fontAsset: {fileID: 11400000, guid: c22d7f0c6c4a9e143a7fb3b4caa19957, type: 2}
+  m_sharedMaterial: {fileID: 21855712535093408, guid: c22d7f0c6c4a9e143a7fb3b4caa19957,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -768,8 +768,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 536dde8fc5cdcd14ebf6fdfa13892205, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -854,7 +854,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &224012137109341124
 RectTransform:
@@ -911,7 +911,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 679, y: -61}
-  m_SizeDelta: {x: 44, y: 35.2}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224266985717529182
 RectTransform:
@@ -1038,7 +1038,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.17, y: 4.58}
+  m_AnchoredPosition: {x: -0.000017046928, y: -0.000017166138}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224926056773876308

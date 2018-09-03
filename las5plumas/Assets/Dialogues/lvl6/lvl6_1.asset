@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Name: lvl6_1
   m_EditorClassIdentifier: 
   name: Primer dialogo
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Hemos llegado a <color=#BC9320>Michurao</color>.\r\n"
-    - El hogar de <color=#BC9320>Bolkh</color>
-    - "El <color=#BC9320>toro</color> gigante.\r\n"
-    - "Cuenta la leyenda que <color=#BC9320>Bolkh</color> fue el primer ser vivo del
-      mundo humano que consigui\xF3 una <color=#BC9320>pluma</color>.\r\n"
-    - "El poder de la <color=#BC9320>pluma</color> le dio fuerza sobrenatural.\r\n"
+    - "Hemos llegado a <Michurao.\r\n"
+    - "El hogar de <Bolkh\u2026\r\n"
+    - "El <toro gigante.\r\n"
+    - "Cuenta la leyenda que <Bolkh fue el primer ser vivo del mundo humano que consigui\xF3
+      una <pluma.\r\n"
+    - "El poder de la <pluma le dio fuerza sobrenatural.\r\n"
     - "Y ahora la custodia con su vida.\r\n"
     - "Para protegerla atacar\xE1 cualquier cosa que se mueva a su alrededor.\r\n"
     - "Ten mucho cuidado, pues su embestida podr\xEDa matarte.\r\n"

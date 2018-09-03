@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Name: lvl1_llave
   m_EditorClassIdentifier: 
   name: lvl1_llave
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBFUna <color=#BC9320>llave</color>? \xBFQu\xE9 abrir\xE1?\r\n"
+    - "\xBFUna <llave? \xBFQu\xE9 abrir\xE1?\r\n"

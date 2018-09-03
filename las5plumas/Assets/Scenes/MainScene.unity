@@ -1319,6 +1319,44 @@ Prefab:
       propertyPath: OnUncheck.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+        type: 2}
+      propertyPath: m_text
+      value: "Cuenta la leyenda que en lo profundo de los p\xE1ramos de Los Andes
+        existen criaturas m\xE1gicas, guardianes de estas tierras, seres m\xEDticos
+        capaces de controlar a la misma naturaleza; con el fin de castigar a aquellos
+        que perturben la tranquilad de su ambiente\u2026. \r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+        type: 2}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 247
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 259
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+        type: 2}
+      propertyPath: m_textInfo.spaceCount
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+        type: 2}
+      propertyPath: m_textInfo.wordCount
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+        type: 2}
+      propertyPath: m_textInfo.materialCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+        type: 2}
+      propertyPath: m_subTextObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 2077943269}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a2423ca6fb8d4b4e912a51a9318b272, type: 2}
   m_IsPrefabParent: 0
@@ -7648,6 +7686,12 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1763405420}
+--- !u!114 &1774091620 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
+    type: 2}
+  m_PrefabInternal: {fileID: 316823551}
+  m_Script: {fileID: -806885394, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
 --- !u!1 &1774590714
 GameObject:
   m_ObjectHideFlags: 0
@@ -8310,12 +8354,12 @@ Prefab:
     - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
         type: 2}
       propertyPath: m_text
-      value: hola
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
         type: 2}
@@ -8325,12 +8369,12 @@ Prefab:
     - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
         type: 2}
       propertyPath: m_textInfo.wordCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114244783691017754, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
         type: 2}
@@ -8366,7 +8410,7 @@ Prefab:
     - target: {fileID: 114588016987402522, guid: 6a2423ca6fb8d4b4e912a51a9318b272,
         type: 2}
       propertyPath: m_textInfo.pageCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a2423ca6fb8d4b4e912a51a9318b272, type: 2}
@@ -8838,6 +8882,99 @@ Transform:
   m_Father: {fileID: 1911901592}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2077943267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2077943268}
+  - component: {fileID: 2077943271}
+  - component: {fileID: 2077943270}
+  - component: {fileID: 2077943269}
+  m_Layer: 9
+  m_Name: TMP SubMesh [Chapbook Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2077943268
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077943267}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 370517465}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2077943269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077943267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1330537494, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 0.5
+  m_renderer: {fileID: 2077943270}
+  m_meshFilter: {fileID: 2077943271}
+  m_boxCollider: {fileID: 0}
+  m_TextComponent: {fileID: 1774091620}
+--- !u!23 &2077943270
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077943267}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2077943271
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077943267}
+  m_Mesh: {fileID: 0}
 --- !u!1 &2087702269
 GameObject:
   m_ObjectHideFlags: 0

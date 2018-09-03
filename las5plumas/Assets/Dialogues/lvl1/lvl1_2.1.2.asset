@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bab64d2f43e0a4da2ecd3be8294cac, type: 3}
+  m_Name: lvl1_2.1.2
+  m_EditorClassIdentifier: 
+  name: SEGUNDA POSICION 2.1.2
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
+  sentences:
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "\xBFViste las <m<o<n<e<d<a<s que estaban en el camino?\r\n"
+    - "<E<n <c<a<d<a <n<i<v<e<l <e<n<c<o<n<t<r<a<r<a<s <5 <d<e <e<l<l<a<s, son muy
+      valiosas y seguro podr\xE1s <i<n<t<e<r<c<a<m<b<i<a<r<l<a<s luego por alg\xFAn
+      <o<b<j<e<t<o o <a<r<m<a interesante\u2026 \r\n"
+    - "Por otro lado, tambi\xE9n debes estar muy atento a estos <o<b<j<e<t<o<s.\n"
+    - "Los conocemos como <f<r<a<g<m<e<n<t<o<s <d<e <l<u<n<a, dicen que son l\xE1grimas
+      materializadas de la misma luna.\r\n"
+    - "Presta mucha atenci\xF3n a lo que te voy a decir, pues la vida de tu peque\xF1a
+      hija depender\xE1 estos peque\xF1os <f<r<a<g<m<e<n<t<o<s <d<e <l<u<n<a.\r\n"
+    - "\xBFEstas prestando atenci\xF3n?\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "Si, por supuesto.\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "La peque\xF1a <Ch\xEDa es solo una ni\xF1a, la magia que la rodea es demasiado
+      fuerte para ella y <cada <d\xEDa que tu hija pase en ese <mundo <oscuro corromper\xE1
+      su cuerpo\u2026\r\n"
+    - "Por su tama\xF1o y edad, estimo que solo durara <15  <d\xEDas antes de que
+      ocurra un da\xF1o irreversible\u2026 No morir\xE1, pero quiz\xE1s no vuelva
+      a ser la misma\u2026\r\n"
+    - "Luego de <30 <d\xEDas, el da\xF1o ser\xE1 demasiado fuerte, quiz\xE1s no pueda
+      salir ya de este mundo, o quiz\xE1s tome <medidas <extremas para hacerlo \r\n"
+    - "Lo que s\xED es seguro es que luego de <45 d\xEDas...\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\xBF\xA1Qu\xE9!? \xBF\xA1Que pasar\xE1 luego de <45 <d\xEDas!?\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Sera demasiado tarde, su llama podr\xEDa extinguirse para siempre\u2026.\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "Eso no suceder\xE1, \xA1no puede suceder!\r\n"
+    - "Debo rescatarla <al <menos en <15 <d\xEDas para que ninguna magia oscura la
+      afecte\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Por eso debes estar muy atento en <cada <nivel a los <fragmentos <de <luna\u2026\r\n"
+    - "<Cada <nivel de tu b\xFAsqueda ser\xE1 equivalente a <un <d\xEDa\u2026\r\n"
+    - "Recuerda esto bien, pues deber\xE1s recorrer al menos <30 <niveles para conseguir
+      las <5 <plumas\r\n"
+    - "Lo quiere decir que <completar <tu <aventura te tomara <al <menos <30 <d\xEDas\u2026\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\xBFY c\xF3mo voy a rescatar a <Ch\xEDa en <15 <d\xEDas, <sana <y <salva si
+      me tomara <al <menos <30 <d\xEDas <conseguir <las <5 <plumas?\r"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Ah\xED es donde entran en juego los <fragmentos <de <luna\u2026 En <cada <nivel
+      encontraras <uno\u2026"
+    - "Y con cada <fragmento <de <luna podr\xE1s hacer una ofrenda a la <diosa <luna
+      para que <un <nivel de tu aventura <no <cuente como <un d\xEDa\u2026\r"
+    - "O, en otras palabras, con cada <fragmento <de <luna podr\xE1s otorgarle <un
+      <d\xEDa <m\xE1s <de <vida a tu hija\u2026\r"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "Si estoy entendiendo bien debo conseguir <al <menos <15 <fragmentos <de <luna
+      y usarlos de <ofrenda a la luna para poder <rescatar <a <Ch\xEDa <sana <y <salva.\r"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "\xA1Exacto! Con esas habilidades en c\xE1lculo avanzado has alcanzado el nivel
+      de un ni\xF1o de 10 a\xF1os.\r\n"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\u2026 Te odio.\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Recuerda: \r\n"
+    - "15 d\xEDas o menos, sana y salva\u2026 \r\n"
+    - "Luego de los 15 d\xEDas y hasta el d\xEDa n\xFAmero 30\u2026 Medio sana y salva\u2026
+      \r\n"
+    - "Luego de los 30 d\xEDas y hasta el d\xEDa n\xFAmero 45\u2026 El da\xF1o ser\xE1
+      muy fuerte, quiz\xE1s tome <medidas <extremas rescatarla.\r"
+    - "Y m\xE1s de 45 d\xEDas, <no <deber\xEDan <ocurrir, la peque\xF1a no lo aguantar\xE1\u2026
+      \r"
+  - name: Gabriel
+    sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
+    lines:
+    - "\xA1Entendido!\r\n"
+  - name: Ahkitobe
+    sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
+    lines:
+    - "Creo que vi un <color=#BC9320>fragmento</color> <color=#BC9320>de</color> <color=#BC9320>luna</color>
+      m\xE1s adelante. \xA1Ve por el!\r\n"
+    - "Si sigues un poco confundido al respecto, no dudes en hablar de nuevo conmigo,
+      con gusto te lo vuelvo a explicar.\r\n"

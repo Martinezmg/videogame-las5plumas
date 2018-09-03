@@ -12,19 +12,17 @@ MonoBehaviour:
   m_Name: lvl2_ahk_4
   m_EditorClassIdentifier: 
   name: CUARTO DIALOGO
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
     - "\xBFVes el s\xEDmbolo tras los arboles? Es el mismo que encontraste tras la
-      <b><color=#BC9320>puerta</color></b> en la <b><color=#BC9320>monta\xF1a</color></b>.\r"
-    - "Es el emblema del <b><color=#BC9320>C\xF3ndor</color></b>, y marca antiguos
-      <b><color=#BC9320>portales</color></b> creados por los <b><color=#BC9320>Genios</color></b>
-      <b><color=#BC9320>del</color></b> <b><color=#BC9320>Bosque</color></b> para
-      movilizarnos r\xE1pidamente en nuestro mundo.\r"
-    - "B\xFAscalos siempre para poder <b><color=#BC9320>salir</color></b> del lugar
-      donde est\xE9s y <b><color=#BC9320>avanzar</color></b> al siguiente <b><color=#BC9320>desaf\xEDo</color></b>
-      en tu aventura.\r"
-    - "Por el momento estos \xE1rboles bloquean nuestro camino al <b><color=#BC9320>portal</color></b>,
-      pero seguro encontraremos algo por aqu\xED para <b><color=#BC9320>cortar</color></b>
-      alg\xFAn <b><color=#BC9320>\xE1rbol</color></b> y abrirnos camino.\r"
+      <puerta en la <monta\xF1a.\r\n"
+    - "Es el emblema del <C\xF3ndor, y marca antiguos <portales creados por los <Genios
+      <del <Bosque para movilizarnos r\xE1pidamente en nuestro mundo.\r\n"
+    - "B\xFAscalos siempre para poder <salir del lugar donde est\xE9s y <avanzar al
+      siguiente <desaf\xEDo en tu aventura.\r\n"
+    - "Por el momento estos \xE1rboles bloquean nuestro camino al <portal, pero seguro
+      encontraremos algo por aqu\xED para <cortar alg\xFAn <\xE1rbol y abrirnos camino.\r\n"

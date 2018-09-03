@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: lvl3_2
   m_EditorClassIdentifier: 
   name: PRIMER DIALOGO
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "\xBFVes esta <color=#BC9320>cuerda</color>?\r\n"
-    - "Est\xE1 sosteniendo el <color=#BC9320>puente</color>\u2026\r\n"
-    - "Usa tu <color=#BC9320>hacha</color>, quiz\xE1s la puedas <color=#BC9320>cortar</color>.\r\n"
+    - "\xBFVes esta <cuerda?\r\n"
+    - "Est\xE1 sosteniendo el <puente\u2026\r\n"
+    - "Usa tu <hacha, quiz\xE1s la puedas <cortar.\r\n"

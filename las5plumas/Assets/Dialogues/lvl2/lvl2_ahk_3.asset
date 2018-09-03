@@ -12,19 +12,18 @@ MonoBehaviour:
   m_Name: lvl2_ahk_3
   m_EditorClassIdentifier: 
   name: TERCER DIALOGO
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "\xA1Conseguiste el <b><color=#BC9320>hacha</color></b>! \r"
-    - "Excelente, ahora solo debes aprender a usarla.\r"
-    - "Podr\xE1s cortar <b><color=#BC9320>\xE1rboles</color></b> y otros <b><color=#BC9320>objetos</color></b>
-      con ella.\r"
-    - "Para hacerlo, primero debes equiparla.\r"
-    - "Ahora, solo camina hasta estar <b><color=#BC9320>frente</color></b> <b><color=#BC9320>al</color></b>
-      <b><color=#BC9320>objeto</color></b> que desees <b><color=#BC9320>cortar</color></b>
-      y <b><color=#BC9320>toca</color></b> <b><color=#BC9320>la</color></b> <b><color=#BC9320>pantalla</color></b>.\r"
-    - "\xA1Sencillo! Incluso para un humano.\r"
+    - "\xA1Conseguiste el <hacha! \r\n"
+    - "Excelente, ahora solo debes aprender a usarla.\r\n"
+    - "Podr\xE1s cortar <\xE1rboles y otros <objetos con ella.\r\n"
+    - "Para hacerlo, primero debes equiparla.\r\n"
+    - "Ahora, solo camina hasta estar <frente al <objeto que desees <cortar y <toca
+      <la <pantalla.\r\n"
+    - "\xA1Sencillo! Incluso para un humano.\r\n"
     - "Yo me adelantar\xE9 a la salida, no soporto este olor. \r\n"
-    - "No te asust\xE9 \xBFverdad?"
-    - "\xA1Nos vemos!\r"
+    - "\xA1Nos vemos!\r\n"

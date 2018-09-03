@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: lvl2_sign 1
   m_EditorClassIdentifier: 
   name: DIALOGO CARTEL
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}

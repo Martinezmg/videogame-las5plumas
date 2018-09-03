@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: lvl1_2.1
   m_EditorClassIdentifier: 
   name: SEGUNDA POSICION2.1
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
@@ -41,20 +43,20 @@ MonoBehaviour:
     lines:
     - "La peque\xF1a <color=#BC9320>Ch\xEDa</color> es solo una ni\xF1a, la magia
       que la rodea es demasiado fuerte para ella y <color=#BC9320>cada</color> <color=#BC9320>d\xEDa</color>
-      </color>que tu hija pase en ese <color=#BC9320>mundo</color> <color=#BC9320>oscuro</color>
+      que tu hija pase en ese <color=#BC9320>mundo</color> <color=#BC9320>oscuro</color>
       corromper\xE1 su cuerpo\u2026\r\n"
-    - "Por su tama\xF1o y edad, estimo que solo durara <color=#BC9320>15</color> <color=#BC9320>d\xEDas</color>
+    - "Por su tama\xF1o y edad, estimo que solo durara <color=#BC9320>15 d\xEDas</color>
       antes de que ocurra un da\xF1o irreversible\u2026 No morir\xE1, pero quiz\xE1s
       no vuelva a ser la misma\u2026\r\n"
     - "Luego de <color=#BC9320>30</color> <color=#BC9320>d\xEDas</color>, el da\xF1o
       ser\xE1 demasiado fuerte, quiz\xE1s no pueda salir ya de este mundo, o quiz\xE1s
       tome <color=#BC9320>medidas</color> <color=#BC9320>extremas</color> hacerlo
       \r\n"
-    - "Lo que s\xED es seguro es que luego de <color=#BC9320>45</color> <color=#BC9320>d\xEDas</color>...\r\n"
+    - "Lo que s\xED es seguro es que luego de <color=#BC9320>45</color> %d\xEDas</color>...\r\n"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBFQu\xE9, que pasar\xE1 luego de <color=#BC9320>45</color> <color=#BC9320>d\xEDas</color>?\r\n"
+    - "\xBF\xA1Qu\xE9!? \xBF\xA1Que pasar\xE1 luego de <color=#BC9320>45</color> <color=#BC9320>d\xEDas</color>!?\r\n"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
@@ -82,7 +84,7 @@ MonoBehaviour:
     lines:
     - "\xBFY c\xF3mo voy a rescatar a <color=#BC9320>Ch\xEDa</color> en <color=#BC9320>15</color>
       <color=#BC9320>d\xEDas,</color> <color=#BC9320>sana</color> <color=#BC9320>y</color>
-      <color=#BC9320>salva,</color> si me tomara <color=#BC9320>al</color> <color=#BC9320>menos</color>
+      <color=#BC9320>salva</color> si me tomara <color=#BC9320>al</color> <color=#BC9320>menos</color>
       <color=#BC9320>30</color> <color=#BC9320>d\xEDas</color> <color=#BC9320>conseguir</color>
       <color=#BC9320>las</color> <color=#BC9320>5</color> <color=#BC9320>plumas</color>?\r\n"
   - name: Ahkitobe
@@ -95,7 +97,7 @@ MonoBehaviour:
       podr\xE1s hacer una ofrenda a la <color=#BC9320>diosa</color> <color=#BC9320>luna</color>
       para que <color=#BC9320>un</color> <color=#BC9320>nivel</color> de tu aventura
       <color=#BC9320>no</color> <color=#BC9320>cuente</color> como <color=#BC9320>un</color>
-      <color=#BC9320>d\xEDa</color>\u2026\r\n"
+      d\xEDa</color>\u2026\r\n"
     - "O, en otras palabras, con cada <color=#BC9320>fragmento</color> <color=#BC9320>de</color>
       <color=#BC9320>luna</color> podr\xE1s otorgarle <color=#BC9320>un</color> <color=#BC9320>d\xEDa</color>
       <color=#BC9320>m\xE1s</color> <color=#BC9320>de</color> <color=#BC9320>vida</color>
@@ -116,11 +118,11 @@ MonoBehaviour:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\u2026 Te odio."
+    - "\u2026 Te odio.\r\n"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - 'Recuerda: '
+    - "Recuerda: \r\n"
     - "15 d\xEDas o menos, sana y salva\u2026 \r\n"
     - "Luego de los 15 d\xEDas y hasta el d\xEDa n\xFAmero 30\u2026 Medio sana y salva\u2026
       \r\n"
@@ -132,7 +134,7 @@ MonoBehaviour:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xA1Entendido!"
+    - "\xA1Entendido!\r\n"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:

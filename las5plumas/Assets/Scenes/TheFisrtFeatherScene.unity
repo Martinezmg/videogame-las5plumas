@@ -1724,6 +1724,11 @@ Transform:
   m_Father: {fileID: 1259430169}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &439817057 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1212888505571396, guid: 69c80179b4192ab448d3ddfbea3304cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1676560155}
 --- !u!1 &475941779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3916,21 +3921,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 224783955516266276, guid: 193b5c58db491214c8474b433168378f,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.000017046928
-      objectReference: {fileID: 0}
-    - target: {fileID: 224783955516266276, guid: 193b5c58db491214c8474b433168378f,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.000017166138
-      objectReference: {fileID: 0}
-    - target: {fileID: 223069496911852226, guid: 193b5c58db491214c8474b433168378f,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 193b5c58db491214c8474b433168378f, type: 2}
   m_IsPrefabParent: 0
@@ -5101,6 +5091,11 @@ Prefab:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114148277948565504, guid: b7fa79fad1b60a84c86aadab441fdf93,
+        type: 2}
+      propertyPath: tapAlert
+      value: 
+      objectReference: {fileID: 439817057}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7fa79fad1b60a84c86aadab441fdf93, type: 2}
   m_IsPrefabParent: 0
@@ -6287,8 +6282,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.81409734, b: 0.71323526, a: 1}
+  m_Intensity: 0.57
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

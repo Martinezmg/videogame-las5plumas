@@ -14,6 +14,8 @@ namespace Project.Testing
 
         public PlayersItem itemContainer;
 
+        public GameObject tapAlert;
+
         private void Start()
         {
             tapGesture = MainManager.Instance.tapGesture;
@@ -25,6 +27,18 @@ namespace Project.Testing
             name = "Player";
 
             itemContainer.ItemContainer = null;
+        }
+
+        private void Update()
+        {
+            if (interactableTarget != null)
+            {
+                tapAlert.SetActive(true);
+            }
+            else
+            {
+                tapAlert.SetActive(false);
+            }
         }
 
         private void OnEnable()
@@ -67,7 +81,9 @@ namespace Project.Testing
             Interactable t = other.GetComponent<Interactable>();
 
             if (t != null)
+            {
                 interactableTarget = null;
+            }
         }
 
         public void DisableComponent()

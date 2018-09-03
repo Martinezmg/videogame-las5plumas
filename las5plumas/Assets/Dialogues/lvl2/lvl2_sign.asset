@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Name: lvl2_sign
   m_EditorClassIdentifier: 
   name: DIALOGO CARTEL
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: CARTEL
     sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     lines:
-    - "\u201CBajo la fuerte <b><color=#BC9320>lluvia</color></b>,\r\n\nY el estruendoso
-      <b><color=#BC9320>trueno</color></b>.\r\n\nAnte la p\xE1lida <b><color=#BC9320>luna</color></b>,\r\n\nY
-      el ardiente <b><color=#BC9320>sol</color></b>.\r\n\nEl c\xF3ndor vuela,\r\n\nComo
-      si controlara el <b><color=#BC9320>viento</color></b>.\u201D\r"
+    - "\u201CBajo la fuerte <lluvia,\r\n\r\nY el estruendoso <trueno.\r\n\r\nAnte
+      la p\xE1lida <luna,\r\n\r\nY el ardiente <sol.\r\n\r\nEl c\xF3ndor vuela,\r\n\r\nComo
+      si controlara el <viento.\u201D"

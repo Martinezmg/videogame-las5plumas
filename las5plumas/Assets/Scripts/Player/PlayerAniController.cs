@@ -21,7 +21,7 @@ namespace Project.Game.Player
             //wait idleTime seconds until start idle animation
             yield return new WaitForSeconds(idleTime);
 
-            animator.SetBool("idle", true);
+            //animator.SetBool("idle", true);
         }
 
         // Use this for initialization

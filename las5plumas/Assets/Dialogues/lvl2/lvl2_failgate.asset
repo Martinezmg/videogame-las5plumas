@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: lvl2_failgate
   m_EditorClassIdentifier: 
   name: BOTONES EN ORDEN INCORRECTO
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "Quiz\xE1s estos s\xEDmbolos tengan un significado\u2026\r"
-    - "\u2026 O un orden"
+    - "Quiz\xE1s estos s\xEDmbolos tengan un significado\u2026 \r\n"
+    - O un orden.

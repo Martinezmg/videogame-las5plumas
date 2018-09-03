@@ -12,23 +12,25 @@ MonoBehaviour:
   m_Name: lvl2_ahk_1
   m_EditorClassIdentifier: 
   name: PRIMER DIALOGO
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Hemos logrado entrar a la cueva de las <b><color=#BC9320>brujas</color></b>,
-      ahora solo debemos conseguir algo para poder <b><color=#BC9320>cortar</color></b>
-      esos <b><color=#BC9320>\xE1rboles</color></b> y salir de aqu\xED\u2026\r"
+    - "Hemos logrado entrar a la cueva de las <brujas, ahora solo debemos conseguir
+      algo para poder <cortar esos <\xE1rboles a mi espalda y salir de aqu\xED cuanto
+      antes.\r\n"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBFAcaso El Gran Ahkitobe est\xE1 asustado?"
+    - "\xBFAcaso El Gran Ahkitobe est\xE1 asustado?\r\n"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "\xBFQu\xE9? \xBFAsustado, yo? \xA1Jam\xE1s!\r"
-    - "Es solo que\u2026 Mi nariz es muy sensible y aqu\xED apesta\u2026 \r"
+    - "\xBFQu\xE9? \xBFAsustado, yo? \xA1Jam\xE1s!\r\n"
+    - "Es solo que\u2026 Mi nariz es muy sensible y aqu\xED apesta\u2026 \r\n"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "Claro, claro\u2026 Lo que t\xFA digas, Ahkitobe.\r"
+    - "Claro, claro\u2026 Lo que t\xFA digas, Ahkitobe.\r\n"

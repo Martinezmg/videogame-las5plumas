@@ -147,41 +147,31 @@ namespace Project.DialogueSystem
         {
             //yield return null;
             sentenceText.text = "";
-            bool wholeWord = false;
+
+            bool isHighlight = false;
 
             //foreach (char letter in sentence.ToCharArray())
             foreach (string word in sentence.Split(' '))
-            {
-                //escape
-
-                if (escape)
-                {
-                    sentenceText.text = sentence;
-                    break;
-                }
-
-                //fin de escape
-
-                wholeWord = false;
-
-                foreach (var letter in word.ToCharArray())
-                {                    
-                    if (letter == '<')
-                    {
-                        wholeWord = true;
-                        break;
-                    }
-
-                    sentenceText.text += letter;
-
-                    yield return null;
-                }
-                if (wholeWord)
-                    sentenceText.text += word + " ";
-                else
-                    sentenceText.text += " ";
+            {                
+                isHighlight = (word[0] == '<');
                 
-                yield return null;
+                foreach(char letter in word)
+                {
+                    if (letter == '<')
+                        continue;
+
+                    sentenceText.text += (!isHighlight) ?
+                        letter + "" :
+                        "<color=#" + currentDialog.highlightCode + ">" + letter + "</color>";
+                    
+                    if (!escape)
+                        yield return null;
+                }
+
+                sentenceText.text += " ";
+
+                if (!escape)
+                    yield return null;
             }
 
             if (finalSentense)

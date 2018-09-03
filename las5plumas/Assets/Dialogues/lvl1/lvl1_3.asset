@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: lvl1_3
   m_EditorClassIdentifier: 
   name: AL CULMINAR EL NIVEL SI TIENE EL PEDAZO DE LUNA
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "\xA1Excelente! Conseguiste el <color=#BC9320>fragmento</color> <color=#BC9320>de</color>
-      <color=#BC9320>luna</color>\r\n"
-    - "\xBFQuieres darlo de <color=#BC9320>ofrenda</color> a la luna para que el d\xEDa
-      invertido en este nivel <color=#BC9320>no</color> <color=#BC9320>afecte</color>
-      la salud de tu hija?\r\n"
+    - "\xA1Excelente! Conseguiste el <fragmento <de <luna.\r\n"
+    - "\xBFQuieres darlo de <ofrenda a la luna para que el d\xEDa invertido en este
+      nivel <no <afecte la salud de tu hija?\r\n"

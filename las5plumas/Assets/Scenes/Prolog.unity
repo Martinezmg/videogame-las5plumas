@@ -760,13 +760,13 @@ MonoBehaviour:
   clips:
   - name: 
     clip: {fileID: 8300000, guid: 5fa72cc3d0fa24f4dbc83572efc89848, type: 3}
-    volume: 0
+    volume: 1
   - name: 
     clip: {fileID: 8300000, guid: 871ad5f77b6191442a694acea7098329, type: 3}
-    volume: 0
+    volume: 1
   - name: 
     clip: {fileID: 8300000, guid: 89549b0eb888907408f79410b1adbeba, type: 3}
-    volume: 0
+    volume: 0.6
 --- !u!114 &881769084 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114911237008050972, guid: f7214515cc4594e4086dbc588937e10b,

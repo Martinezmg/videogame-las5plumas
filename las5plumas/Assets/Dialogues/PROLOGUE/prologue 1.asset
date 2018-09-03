@@ -12,64 +12,59 @@ MonoBehaviour:
   m_Name: prologue 1
   m_EditorClassIdentifier: 
   name: dialogo1
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: 
     sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     lines:
     - "En una \xE9poca anterior a la nuestra vivi\xF3 un hombre, como cualquier otro,
-      al cual sus semejantes llamaban <color=#BC9320>Gabriel</color>."
-    - "<color=#BC9320>Gabriel</color> era un padre, su amada hija <color=#BC9320>Ch\xEDa</color>
-      era su adoraci\xF3n, un d\xEDa decidi\xF3 salir de excursi\xF3n con su peque\xF1a
-      ni\xF1a a trav\xE9s del <color=#BC9320>p\xE1ramo</color> <color=#BC9320>andino</color>.
-      \r"
+      al cual sus semejantes llamaban <Gabriel. \r\n"
+    - "<Gabriel era un padre, su amada hija <Ch\xEDa era su adoraci\xF3n, un d\xEDa
+      decidi\xF3 salir de excursi\xF3n con su peque\xF1a ni\xF1a a trav\xE9s del <p\xE1ramo
+      andino. \r\n"
     - "Luego de un largo camino, padre e hija se encontraron frente a una imponente
-      laguna\u2026 Conocida como <color=#BC9320>La</color> <color=#BC9320>Laguna</color>
-      <color=#BC9320>Negra</color>.\r"
+      laguna\u2026 Conocida como <La <Laguna <Negra.\r\n"
     - "Ante su majestuosidad decidieron detenerse a descansar, disfrutando bajo el
-      sol provisto por la sierra, el cual los ba\xF1aba con su resplandor.\r"
+      sol provisto por la sierra, el cual los ba\xF1aba con su resplandor.\r\n"
     - "Sin darse cuenta pasaron las horas y empez\xF3 a disminuir la luz del d\xEDa;
-      <color=#BC9320>Ch\xEDa</color>, se escap\xF3 de su padre con la intenci\xF3n
-      de jugar a las escondidas, aprovechando la poca visibilidad que otorgaba la
-      cercan\xEDa de la noche y la llegada de la conocida neblina andina\u2026\r"
+      <Ch\xEDa, se escap\xF3 de su padre con la intenci\xF3n de jugar a las escondidas,
+      aprovechando la poca visibilidad que otorgaba la cercan\xEDa de la noche y la
+      llegada de la conocida neblina andina\u2026\r\n"
     - "Sin embargo su padre, conocedor de las leyendas andinas y, un tanto sobreprotector
       y temeroso, se desesper\xF3 al no tenerla a la vista y comenz\xF3 a llamarla
-      entre gritos y rega\xF1os.\r"
-    - "<color=#BC9320>Ch\xEDa</color>, intimidada por los reclamos de su padre, regres\xF3
-      sollozando y molesta con \xE9l, argumentando que nunca la dejaba divertirse.
-      Entre la discusi\xF3n ella comenz\xF3 a llorar y estall\xF3 en c\xF3lera con
-      un fuerte \"<color=#BC9320>\xA1Te</color> <color=#BC9320>odio!</color>\" mientras
-      arrojaba una enorme piedra a la laguna\u2026\r"
-    - "Grave error\u2026\r"
+      entre gritos y rega\xF1os.\r\n"
+    - "<Ch\xEDa, intimidada por los reclamos de su padre, regres\xF3 sollozando y
+      molesta con \xE9l, argumentando que nunca la dejaba divertirse. Entre la discusi\xF3n
+      ella comenz\xF3 a llorar y estall\xF3 en c\xF3lera con un fuerte \"<\xA1Te <odio!\"
+      mientras arrojaba una enorme piedra a la laguna\u2026\r\n"
+    - "Grave error\u2026\r\n"
     - "Inmediatamente un profundo silencio invadi\xF3 el lugar a medida que la niebla
-      r\xE1pidamente se tornaba densa y oscura.\r"
+      r\xE1pidamente se tornaba densa y oscura.\r\n"
     - "De repente, el silencio se rompi\xF3 por un estruendoso rel\xE1mpago y ambos
-      divisaron, por un instante, una <color=#BC9320>extra\xF1a</color> <color=#BC9320>sombra</color>
-      a su lado.\r"
-    - "El padre, asustado, encendi\xF3 apresuradamente su <color=#BC9320>l\xE1mpara</color>
-      y al levantar la vista se encontr\xF3 frente a frente con lo que parec\xEDa
-      un ni\xF1o, de largas orejas, afilados dientes, y una piel escamosa de tonos
-      verdosos.\r"
-    - "Este misterioso ser tom\xF3 fuertemente a <color=#BC9320>Ch\xEDa</color>, susurr\xE1ndole
-      al o\xEDdo: <color=#BC9320>\"Nunca</color> <color=#BC9320>hagas</color> <color=#BC9320>enojar</color>
-      <color=#BC9320>a</color> <color=#BC9320>la</color> <color=#BC9320>Reina</color>
-      <color=#BC9320>Negra\"</color> justo antes de desvanecerse entre la oscuridad\u2026\r"
-    - "<color=#BC9320>Gabriel</color>, desconcertado, empez\xF3 a buscar a su hija
-      entre las tinieblas\u2026 Sin embargo, sus esfuerzos fueron en vano, la ni\xF1a
-      se hab\xEDa ido. Sucumbi\xF3 entonces en un estado de desesperaci\xF3n y llanto.\r"
-    - "Entre l\xE1grimas, <color=#BC9320>Gabriel</color> sinti\xF3 una <color=#BC9320>fr\xEDa</color>
-      <color=#BC9320>mano</color> sobre su hombro\u2026 \r"
-    - "Al levantar la vista, se encontr\xF3 con una <color=#BC9320>criatura</color>
-      muy similar a aquella que le hab\xEDa arrebatado a su <color=#BC9320>hija</color>\u2026
-      Sin embargo, este ten\xEDa un aspecto mucho m\xE1s <color=#BC9320>amigable</color>.\r"
-    - "<color=#BC9320>Gabriel</color>, desconcertado y desesperado por lo sucedido,
-      retrocedi\xF3 de un salto e intent\xF3 enfrentar al misterioso ser agitando
-      su l\xE1mpara sobre la oscuridad de la noche.\r"
+      divisaron, por un instante, una <extra\xF1a <sombra a su lado.\r\n"
+    - "El padre, asustado, encendi\xF3 apresuradamente su <l\xE1mpara y al levantar
+      la vista se encontr\xF3 frente a frente con lo que parec\xEDa un ni\xF1o, de
+      largas orejas, afilados dientes, y una piel escamosa de tonos verdosos.\r\n"
+    - "Este misterioso ser tom\xF3 fuertemente a <Ch\xEDa, susurr\xE1ndole al o\xEDdo:
+      <\"Nunca <hagas <enojar <a <la <Reina <Negra\" justo antes de desvanecerse entre
+      la oscuridad\u2026\r\n"
+    - "<Gabriel, desconcertado, empez\xF3 a buscar a su hija entre las tinieblas\u2026
+      Sin embargo, sus esfuerzos fueron en vano, la ni\xF1a se hab\xEDa ido. Sucumbi\xF3
+      entonces en un estado de desesperaci\xF3n y llanto.\r\n"
+    - "Entre l\xE1grimas, <Gabriel sinti\xF3 una <fr\xEDa <mano sobre su hombro\u2026
+      \r\n"
+    - "Al levantar la vista, se encontr\xF3 con una <criatura muy similar a aquella
+      que le hab\xEDa arrebatado a su <hija\u2026 Sin embargo, este ten\xEDa un aspecto
+      mucho m\xE1s <amigable.\r\n"
+    - "<Gabriel, desconcertado y desesperado por lo sucedido, retrocedi\xF3 de un
+      salto e intent\xF3 enfrentar al misterioso ser agitando su l\xE1mpara sobre
+      la oscuridad de la noche.\r\n"
     - "El extra\xF1o personaje, por su parte, levant\xF3 sus manos en gesto apaciguador,
-      asegur\xE1ndole a <color=#BC9320>Gabriel</color> que no deseaba hacerle da\xF1o
-      y que su \xFAnica motivaci\xF3n era ayudar. \r"
-    - "<color=#BC9320>Gabriel</color> dudaba de las intenciones de la criatura pero
-      temeroso por el bienestar de su hija renuentemente escuch\xF3 lo que la extra\xF1a
-      aparici\xF3n ten\xEDa que decir.\r"
-    - "Permite presentarme - dijo -  mi nombre es <color=#BC9320>Ahkitobe</color>
-      el \xA1magn\xEDfico! \r"
-    - "El m\xE1s hermoso de todos los <color=#BC9320>duendes</color>\u2026\r"
+      asegur\xE1ndole a <Gabriel que no deseaba hacerle da\xF1o y que su \xFAnica
+      motivaci\xF3n era ayudar. \r\n"
+    - "<Gabriel dudaba de las intenciones de la criatura, pero temeroso por el bienestar
+      de su hija renuentemente escuch\xF3 lo que la extra\xF1a aparici\xF3n ten\xEDa
+      que decir.\r\n"
+    - "Permite presentarme - dijo -  mi nombre es <Ahkitobe el \xA1magn\xEDfico! \r\n"
+    - "El m\xE1s hermoso de todos los <duendes\u2026\r\n"

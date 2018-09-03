@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Name: lvl1_1
   m_EditorClassIdentifier: 
   name: lvl1_1
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "As\xED que repitiendo lo que acabo de decir, debes conseguir las <color=#BC9320>cinco</color>
-      <color=#BC9320>plumas</color> de las \xE1guilas blancas de la leyenda, para
-      hacerlo necesitar\xE1s un <color=#BC9320>arma</color>, cu\xE9ntame guerrero
-      qu\xE9 poderosa herramienta tienes en tu espalda\r\n"
+    - "As\xED que, repitiendo lo que acabo de decir, debes conseguir las <cinco <p<l<u<m<a<s
+      de las \xE1guilas blancas de la leyenda. Para hacerlo necesitar\xE1s un <a<r<m<a,
+      cu\xE9ntame guerrero \xBFqu\xE9 poderosa herramienta tienes en tu espalda?\r\n"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
@@ -31,7 +32,7 @@ MonoBehaviour:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "Un instrumento musical\r\n"
+    - "Un instrumento musical\r.\n"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
@@ -52,27 +53,28 @@ MonoBehaviour:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Dice la leyenda que en esta zona hay una <color=#BC9320>entrada</color> a la
-      <color=#BC9320>monta\xF1a</color> que lleva directo la guarida de unas <color=#BC9320>brujas</color>.\r\n"
-    - "Las <color=#BC9320>brujas</color> siempre custodian <color=#BC9320>tesoros</color>,
-      es posible que si consigues su guarida consigas un <color=#BC9320>arma</color>.\r\n"
+    - "Una vez un conejo me cont\xF3 que en esta zona hay una <entrada a la <m<o<n<t<a<\xF1<a
+      que lleva directo la guarida de unas <b<r<u<j<a<s.\r\n"
+    - "Aunque los conejos pueden ser muy mentirosos y ladrones, pero yo conf\xEDo
+      en Aurelio \xA1Deber\xEDas conocerlo alg\xFAn d\xEDa!\r\n"
+    - "Sea como sea, las <b<r<u<j<a<s siempre custodian <t<e<s<o<r<o<s, es posible
+      que si consigues su guarida consigas un <a<r<m<a.\r\n"
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "\xBFNo son los dragones los que suelen custodiar tesoros?\r\n"
+    - "\xBFBrujas? \xBFNo son peligrosas las brujas? \r\n"
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Pues en esta leyenda son las brujas, as\xFAmelo.\r\n"
-    - "Pero primero, debes aprender a <color=#BC9320>moverte</color> por estas tierras.\r\n"
-    - "Para moverte <color=#BC9320>mant\xE9n</color> <color=#BC9320>pulsada</color>
-      <color=#BC9320>la</color> <color=#BC9320>pantalla</color> y <color=#BC9320>desplaza</color>
-      <color=#BC9320>tu</color> <color=#BC9320>dedo</color> sobre ella en la direcci\xF3n
-      que desees moverte\u2026\r\n"
-    - "Para <color=#BC9320>interactuar</color> con alg\xFAn <color=#BC9320>objeto</color>
-      o <color=#BC9320>personaje</color> solo <color=#BC9320>toca</color> <color=#BC9320>la</color>
-      <color=#BC9320>pantalla</color>\u2026  \r\n"
+    - "Oh, lo son, y bastante. Pero tranquilo, estas ancianas no ser\xE1n mayor problema
+      por su condici\xF3n actual. \r\n"
+    - "Pero primero, debes aprender a <m<o<v<e<r<t<e por estas tierras.\r\n"
+    - "Para moverte <m<a<n<t<\xE9<n <p<u<l<s<a<d<a <l<a <p<a<n<t<a<l<l<a <y <d<e<s<p<l<a<z<a
+      <t<u <d<e<d<o sobre ella en la direcci\xF3n que desees moverte\u2026\r\n"
+    - "Para <i<n<t<e<r<a<c<t<u<a<r con alg\xFAn <o<b<j<e<t<o o <p<e<r<s<o<n<a<j<e
+      solo <t<o<c<a <l<a  <p<a<n<t<a<l<l<a\u2026  Sabras que puedes <i<n<t<e<r<a<c<t<u<a<r
+      cuando la pantalla cambia de color...\n"
     - "No s\xE9 muy bien que significa esto de \u201Cla pantalla\u201D pero es lo
       que supone que te diga en este punto\u2026 \r\n"
-    - "Intenta <color=#BC9320>moverte</color>, yo me adelantar\xE9 a buscar la <color=#BC9320>entrada</color>
-      en la monta\xF1a.\r\n"
+    - "Intenta <m<o<v<e<r<t<e, yo me adelantar\xE9 a buscar la <e<n<t<r<a<d<a en la
+      monta\xF1a.\r\n"

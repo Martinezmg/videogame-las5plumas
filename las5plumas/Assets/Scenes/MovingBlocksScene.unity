@@ -2681,6 +2681,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &455166757 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1212888505571396, guid: 69c80179b4192ab448d3ddfbea3304cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 771874743}
 --- !u!1 &466942202
 GameObject:
   m_ObjectHideFlags: 0
@@ -9012,6 +9017,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114849682597170314, guid: 193b5c58db491214c8474b433168378f,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 536dde8fc5cdcd14ebf6fdfa13892205,
+        type: 3}
+    - target: {fileID: 114849682597170314, guid: 193b5c58db491214c8474b433168378f,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 193b5c58db491214c8474b433168378f, type: 2}
   m_IsPrefabParent: 0
@@ -12348,6 +12364,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114148277948565504, guid: b7fa79fad1b60a84c86aadab441fdf93,
+        type: 2}
+      propertyPath: tapAlert
+      value: 
+      objectReference: {fileID: 455166757}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7fa79fad1b60a84c86aadab441fdf93, type: 2}
   m_IsPrefabParent: 0

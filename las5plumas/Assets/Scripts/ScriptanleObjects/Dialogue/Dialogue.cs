@@ -8,6 +8,9 @@ namespace Project.DialogueSystem
     {
         public new string name;
 
+        public Color highlightColor = Color.white;
+        public string highlightCode;
+
         public Sentence[] sentences;
     }
 }

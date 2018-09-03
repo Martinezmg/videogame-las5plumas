@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Name: lvl3_1
   m_EditorClassIdentifier: 
   name: PRIMER DIALOGO
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Ahkitobe
     sprite: {fileID: 21300000, guid: 08eb5ca9ce3fd934e9a45396232d6197, type: 3}
     lines:
-    - "Debe haber una forma de llegar al <color=#BC9320>portal</color>.\r\n"
-    - "Podr\xEDamos hacer un <color=#BC9320>puente</color>.\r\n"
+    - "Debe haber una forma de llegar al <portal.\r\n"
+    - "Podr\xEDamos hacer un <puente.\r\n"
     - "\xBFPero c\xF3mo?\r\n"

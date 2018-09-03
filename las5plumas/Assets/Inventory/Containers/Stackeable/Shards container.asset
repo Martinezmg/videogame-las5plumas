@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Shards container
   m_EditorClassIdentifier: 
   item_: {fileID: 11400000, guid: ced4f27c89e8de7489c6dffe3db266e1, type: 2}
-  available_: 1
-  count_: 8
+  available_: 0
+  count_: 0

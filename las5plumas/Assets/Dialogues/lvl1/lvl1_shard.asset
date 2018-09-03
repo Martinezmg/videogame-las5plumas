@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: lvl1_shard
   m_EditorClassIdentifier: 
   name: lvl1_shard
+  highlightColor: {r: 0.7372549, g: 0.5764706, b: 0.1254902, a: 1}
+  highlightCode: BC9320
   sentences:
   - name: Gabriel
     sprite: {fileID: 21300000, guid: 16a7dc8a79094494ebf96cd67668b735, type: 3}
     lines:
-    - "Un <color=#BC9320>fragmento</color> <color=#BC9320>de</color> <color=#BC9320>luna</color>\u2026\r\n"
-    - "\xA1<color=#BC9320>Ch\xEDa</color>, resiste, voy a rescatarte lo antes posible!\r\n"
+    - "Un <fragmento <de <luna\u2026\r\n"
+    - "\xA1<Ch\xEDa, resiste, voy a rescatarte lo antes posible!\r\n"
